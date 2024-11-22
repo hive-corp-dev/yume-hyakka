@@ -1,0 +1,25 @@
+{
+  "name": "dream",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-sans-jp": "^5.1.0",
+    "@fontsource/zen-kaku-gothic-antique": "^5.1.0",
+    "@fontsource/zen-old-mincho": "^5.1.0",
+    "astro": "^4.16.12",
+    "sass": "^1.81.0",
+    "the-new-css-reset": "^1.11.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
+  }
+}

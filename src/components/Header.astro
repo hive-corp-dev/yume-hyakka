@@ -1,0 +1,63 @@
+---
+import Container from "./Container.astro";
+---
+
+<header class="header">
+<Container>
+  <div class="header__content">
+    <h1 class="header__title">夢百科</h1>
+    <nav>
+      <ul class="header__nav-list">
+        <li><a href="/">ホーム</a></li>
+        <li><a href="/article">夢占い</a></li>
+        <li><a href="/about">このサイトについて</a></li>
+      </ul>
+    </nav>
+  </div>
+</Container>
+</header>
+
+<style lang="scss">
+
+.header {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  border-bottom: .1rem solid rgba(0,0,0,.1);
+  z-index: mixin.$z-header;
+  background-color: white;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("../../texture-02.jpg");
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap:2.4rem;
+  }
+}
+</style>

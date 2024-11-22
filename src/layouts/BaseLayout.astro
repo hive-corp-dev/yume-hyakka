@@ -1,0 +1,34 @@
+---
+import Header from "../components/Header.astro";
+
+import '@fontsource/zen-old-mincho/400.css';
+import '@fontsource/zen-old-mincho/500.css';
+import '@fontsource/zen-old-mincho/600.css';
+import '@fontsource/zen-old-mincho/700.css';
+import '@fontsource/zen-old-mincho/900.css';
+
+import '@fontsource/zen-kaku-gothic-antique/400.css';
+import '@fontsource/zen-kaku-gothic-antique/500.css';
+import '@fontsource/zen-kaku-gothic-antique/700.css';
+
+import '@fontsource/ibm-plex-sans-jp/400.css';
+import '@fontsource/ibm-plex-sans-jp/500.css';
+import '@fontsource/ibm-plex-sans-jp/700.css';
+
+import 'the-new-css-reset';
+import '../styles/global.scss';
+---
+
+<html lang="ja">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+    <Header />
+    <slot />
+	</body>
+</html>

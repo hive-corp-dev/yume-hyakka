@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+const articleEntries = await getCollection('article');
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<h1>夢百科</h1>
+	<ul>
+		{articleEntries.map(articlePostEntry => (
+			<li>
+				<a href={`/article/${articlePostEntry.slug}`}>{articlePostEntry.data.title}</a>
+			</li>
+		))}
+	</ul>
+</BaseLayout>

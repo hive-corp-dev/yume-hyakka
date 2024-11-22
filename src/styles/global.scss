@@ -1,0 +1,46 @@
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-smoothing: antialiased;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -moz-font-smoothing: antialiased;
+  -moz-text-size-adjust: 100%;
+  -ms-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -o-font-smoothing: antialiased;
+  -o-text-size-adjust: 100%;
+
+  font-family: mixin.$font-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #3b3b3b;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url("../../texture-02.jpg");
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: baseline;
+}
