@@ -2,15 +2,55 @@
 import { getCollection } from 'astro:content';
 const articleEntries = await getCollection('article');
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
 ---
 
 <BaseLayout>
-	<h1>夢百科</h1>
-	<ul>
-		{articleEntries.map(articlePostEntry => (
-			<li>
-				<a href={`/article/${articlePostEntry.slug}`}>{articlePostEntry.data.title}</a>
-			</li>
-		))}
-	</ul>
+	<Container>
+		<div class="wrap">
+			<main class="main">
+			<p>TOPページは制作中</p>
+			<ul class="article">
+				{articleEntries.map(articlePostEntry => (
+				<li class="article__item">
+					<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
+						<div class="article__thumb">
+							<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
+						</div>
+						<span class="article__title">{articlePostEntry.data.title}</span>
+					</a>
+				</li>
+				))}
+			</ul>
+			</main>
+		</div>
+	</Container>
 </BaseLayout>
+
+<style lang="scss">
+	.wrap {
+  display: flex;
+  gap: 4.8rem;
+  padding: 16rem 0 12rem;
+}
+
+.main {
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+}
+
+.article {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 3rem;
+
+	&__item {}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+</style>
