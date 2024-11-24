@@ -4,7 +4,7 @@ import Container from '../../components/Container.astro';
 import ArticleSidebar from '../../components/ArticleSidebar.astro';
 import {articleTags} from '../../data/article-tags';
 import SnsShare from '../../components/Article/SnsShare.astro';
-import {getTagDataBySlug} from '../../utils/getTagDataBySlug';
+import {getTagDataBySlug} from '../../utils/articleTags';
 import TableOfContents from '../../components/TableOfContents.astro';
 
 import { getCollection } from 'astro:content';
@@ -18,6 +18,12 @@ export async function getStaticPaths() {
 }
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
 const { entry } = Astro.props;
+
+const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
+const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
+
+console.log(sortedTags);
+
 ---
 
 <BaseLayout>
@@ -26,10 +32,10 @@ const { entry } = Astro.props;
     <main class="main">
       <ul class="tag">
         {
-          entry.data.tags.map((tag)  => (
+          sortedTags.map((tag)  => (
             <li class="tag__item">
               <span class="tag__link">
-                <span>{getTagDataBySlug(tag).label}</span>
+                <span>{tag.label}</span>
               </span>
             </li>
           ))

@@ -2,35 +2,53 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
-import {getTagDataBySlug} from '../utils/getTagDataBySlug';
+import {getTagDataBySlug} from '../utils/articleTags';
+import { articleTags } from '../data/article-tags';
+import { sortTagsByKana } from '../utils/articleTags';
+import TagCloud from '../components/Home/TagCloud.astro';
 
 const articleEntries = await getCollection('article');
+const sortedTags = sortTagsByKana(articleTags);
 ---
 
 <BaseLayout>
+	<div class="mv">
+		<div class="mv__content">
+			<p class="mv__title">夢が語るあなたの物語</p>
+			<p class="mv__text">夢は単なる幻想ではなく、私たちの心の奥に隠された深いメッセージを伝えています。『夢百科』では、夢占いの力を借りて、あなたが見る夢の象徴的な意味を解き明かし、人生の道しるべを見つけるお手伝いをします。</p>
+		</div>
+	</div>
 	<Container>
+
 		<div class="wrap">
 			<main class="main">
-			<h2 class="title"><span>夢占い</span></h2>
-			<ul class="article">
-				{articleEntries.map(articlePostEntry => (
-				<li class="article__item">
-					<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
-						<div class="article__thumb">
-							<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
-						</div>
-						<span class="article__title">{articlePostEntry.data.title}</span>
-						<ul class="article__tag">
-							{articlePostEntry.data.tags.map(tag => (
-							<li class="article__tag-item">
-								<span>{getTagDataBySlug(tag).label}</span>
-							</li>
-							))}
-						</ul>
-					</a>
-				</li>
-				))}
-			</ul>
+				<section class="section">
+					<h2 class="title"><span>キーワードから探す</span></h2>
+					<TagCloud tags={sortedTags} />
+				</section>
+
+				<section class="section">
+					<h2 class="title"><span>新着記事</span></h2>
+					<ul class="article">
+						{articleEntries.map(articlePostEntry => (
+						<li class="article__item">
+							<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
+								<div class="article__thumb">
+									<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
+								</div>
+								<span class="article__title">{articlePostEntry.data.title}</span>
+								<ul class="article__tag">
+									{articlePostEntry.data.tags.map(tag => (
+									<li class="article__tag-item">
+										<span>{getTagDataBySlug(tag).label}</span>
+									</li>
+									))}
+								</ul>
+							</a>
+						</li>
+						))}
+					</ul>
+				</section>
 			</main>
 		</div>
 	</Container>
@@ -40,11 +58,68 @@ const articleEntries = await getCollection('article');
 	.wrap {
   display: flex;
   gap: 4.8rem;
-  padding: 16rem 0 12rem;
+  padding: 8rem 0 20rem;
 
 	@include mixin.sp {
 		padding: 12rem 0 8rem;
 	}
+}
+
+.mv {
+	position: relative;
+	width: 100%;
+	padding: 20rem 3rem 12rem;
+	background-image: url('/mv.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: rgba(0,0,0, .08);
+	}
+
+	&__content {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: white;
+		flex-grow: 1;
+		padding: 4rem 3rem;
+		z-index: 1;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 2.8rem;
+		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
+
+	}
+
+	&__text {
+		font-weight: bold;
+		font-size: 1.6rem;
+		max-width: 80rem;
+		width: 100%;
+		margin: 2.4rem auto 0;
+		line-height: 2;
+		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
+	}
+}
+
+.section {
+	padding-top: 12rem;
 }
 
 .main {
