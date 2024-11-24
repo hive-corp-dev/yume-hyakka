@@ -36,6 +36,12 @@ body {
     background-image: url("../../texture-02.jpg");
     opacity: 0.2;
     z-index: -1;
+
+    background-image: url("../../mv.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
   }
 }
 

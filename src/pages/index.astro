@@ -14,48 +14,49 @@ const sortedTags = sortTagsByKana(articleTags);
 
 <BaseLayout>
 	<Mv />
-	<Container>
-
-		<div class="wrap">
-			<main class="main">
-				<section class="section">
-					<h2 class="title"><span>キーワードから探す</span></h2>
-					<TagCloud tags={sortedTags} />
-				</section>
-
-				<section class="section">
-					<h2 class="title"><span>新着記事</span></h2>
-					<ul class="article">
-						{articleEntries.map(articlePostEntry => {
-							const tags = articlePostEntry.data.tags;
-
-							const selectedTags = getTagListBySlugs(tags);
-							const sortedTags = sortTagsByKana(selectedTags);
-							
-
-							return (
-						<li class="article__item">
-							<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
-								<div class="article__thumb">
-									<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
-								</div>
-								<span class="article__title">{articlePostEntry.data.title}</span>
-								<ul class="article__tag">
-									{sortedTags.map(tag => (
-									<li class="article__tag-item">
-										<span>{tag.label}</span>
-									</li>
-									))}
-								</ul>
-							</a>
-						</li>
-						)
-						})}
-					</ul>
-				</section>
-			</main>
-		</div>
-	</Container>
+	<div class="content">
+		<Container>
+			<div class="wrap">
+				<main class="main">
+					<section class="section">
+						<h2 class="title"><span>キーワードから探す</span></h2>
+						<TagCloud tags={sortedTags} />
+					</section>
+	
+					<section class="section">
+						<h2 class="title"><span>新着記事</span></h2>
+						<ul class="article">
+							{articleEntries.map(articlePostEntry => {
+								const tags = articlePostEntry.data.tags;
+	
+								const selectedTags = getTagListBySlugs(tags);
+								const sortedTags = sortTagsByKana(selectedTags);
+								
+	
+								return (
+							<li class="article__item">
+								<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
+									<div class="article__thumb">
+										<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
+									</div>
+									<span class="article__title">{articlePostEntry.data.title}</span>
+									<ul class="article__tag">
+										{sortedTags.map(tag => (
+										<li class="article__tag-item">
+											<span>{tag.label}</span>
+										</li>
+										))}
+									</ul>
+								</a>
+							</li>
+							)
+							})}
+						</ul>
+					</section>
+				</main>
+			</div>
+		</Container>
+	</div>
 </BaseLayout>
 
 <style lang="scss">
@@ -69,8 +70,29 @@ const sortedTags = sortTagsByKana(articleTags);
 	}
 }
 
+.content {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+	}
+}
+
 .section {
+	position: relative;
 	padding-top: 12rem;
+	z-index: 1;
 
 	@include mixin.sp {
 		padding-top: 8rem;
@@ -143,10 +165,27 @@ const sortedTags = sortTagsByKana(articleTags);
 	&__link {
 		display: flex;
 		flex-direction: column;
+
+		@include mixin.hover {
+			&:hover {
+				.article__thumb img {
+					transform: scale(1.06);
+				}
+			}
+		}
 	}
 
 	&__thumb {
+		position: relative;
 		display: flex;
+		aspect-ratio:  16 / 9;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			transition: all .6s;
+		}
 	}
 
 	&__title {

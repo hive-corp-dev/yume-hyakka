@@ -35,6 +35,11 @@ const isTopPage = Astro.url.pathname === '/';
   z-index: var.$z-header;
   background-color: white;
 
+  // 白
+  // background-color: transparent;
+  // border-bottom: .1rem solid rgba(white, .1);
+  // color: white;
+
   &::before {
     content: '';
     width: 100%;
@@ -46,6 +51,9 @@ const isTopPage = Astro.url.pathname === '/';
     top: 0;
     left: 0;
     z-index: -1;
+
+    // 白
+    // opacity: 0;
   }
 
   &__title {

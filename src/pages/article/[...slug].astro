@@ -24,28 +24,11 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
 ---
 
 <BaseLayout>
-<Container>
-  <div class="wrap">
-    <main class="main">
-      <ul class="tag">
-        {
-          sortedTags.map((tag)  => (
-            <li class="tag__item">
-              <span class="tag__link">
-                <span>{tag.label}</span>
-              </span>
-            </li>
-          ))
-        }
-      </ul>
-      <h1 class="title">{entry.data.title}</h1>
-      <div class="thumb">
-        <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} />
-      </div>
-      <ArticleContent entry={entry} components={{ TableOfContents }}  />
-      <div class="keyward">
-        <p class="keyward__title">この記事のキーワード</p>
-        <ul class="tag keyward__tag">
+<div class="body">
+  <Container>
+    <div class="wrap">
+      <main class="main">
+        <ul class="tag">
           {
             sortedTags.map((tag)  => (
               <li class="tag__item">
@@ -56,23 +39,63 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
             ))
           }
         </ul>
-      </div>
-
-      <SnsShare />
-    </main>
-    <ArticleSidebar />
-  </div>
-</Container>
+        <h1 class="title">{entry.data.title}</h1>
+        <div class="thumb">
+          <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} />
+        </div>
+        <ArticleContent entry={entry} components={{ TableOfContents }}  />
+        <div class="keyward">
+          <p class="keyward__title">この記事のキーワード</p>
+          <ul class="tag keyward__tag">
+            {
+              sortedTags.map((tag)  => (
+                <li class="tag__item">
+                  <span class="tag__link">
+                    <span>{tag.label}</span>
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+  
+        <SnsShare />
+      </main>
+      <ArticleSidebar />
+    </div>
+  </Container>
+</div>
 </BaseLayout>
 
 
 <style lang="scss">
 
+.body {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+  &::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+	}
+}
+
 .wrap {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 4.8rem;
   padding: 16rem 0 12rem;
+  z-index: 1;
 
   @include mixin.tab {
     gap: 2.4rem;
