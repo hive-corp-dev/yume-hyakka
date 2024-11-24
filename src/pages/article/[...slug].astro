@@ -72,12 +72,29 @@ const { Content } = await entry.render();
   display: flex;
   gap: 4.8rem;
   padding: 16rem 0 12rem;
+
+  @include mixin.tab {
+    gap: 2.4rem;
+  }
+
+  @include mixin.tab-s {
+    flex-direction: column;
+    gap: 8rem;
+  }
+
+  @include mixin.sp {
+    padding: 12rem 0 8rem;
+  }
 }
 
 .main {
   flex-grow: 1;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+
+  @include mixin.sp {
+    padding: 0;
+  }
 }
 
 .title {
@@ -87,11 +104,19 @@ const { Content } = await entry.render();
   padding-bottom: 1.2rem;
   margin-top: 3.2rem;
 
+  @include mixin.tab {
+    font-size: 2.8rem;
+  }
+
+  @include mixin.sp {
+    font-size: 2rem;
+  }
+
   &::before {
     content: '';
     width: 100%;
     height: .3rem;
-    background-image: linear-gradient(to right , mixin.$c-key-1, mixin.$c-key-2);
+    background-image: linear-gradient(to right , var.$c-key-1, var.$c-key-2);
     display: block;
     position: absolute;
     bottom: 0;
@@ -109,7 +134,7 @@ const { Content } = await entry.render();
     content: '';
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
+    background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
     opacity: .2;
     position: absolute;
     left: 0;
@@ -157,11 +182,16 @@ const { Content } = await entry.render();
 
 
 .content {
-  font-family: mixin.$font-ibm;
-  font-family: mixin.$font-base;
+  font-family: var.$font-ibm;
+  font-family: var.$font-base;
   font-weight: 400;
   font-weight: 500;
   line-height: 2.25;
+
+  @include mixin.sp {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
 }
 </style>
 
@@ -169,7 +199,7 @@ const { Content } = await entry.render();
   .content {
     // select h2 to h6
     h2, h3, h4, h5, h6 {
-      font-family: mixin.$font-serif;
+      font-family: var.$font-serif;
       font-weight: bold;
       line-height: 1.75;
     }
@@ -180,11 +210,15 @@ const { Content } = await entry.render();
       color: white;
       padding:0.4rem 1.2rem;
 
+      @include mixin.sp {
+        font-size: 2rem;
+      }
+
       &::before {
         content: '';
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
+        background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
         display: block;
         position: absolute;
         bottom: 0;
@@ -200,11 +234,16 @@ const { Content } = await entry.render();
       font-size: 2.4rem;
       padding-left: 2rem;
 
+      @include mixin.sp {
+        font-size: 1.8rem;
+        padding-left: 1.6rem;
+      }
+
       &::after {
         content: '';
         width: .4rem;
         height: 70%;
-        background-image: linear-gradient(to bottom ,mixin.$c-key-1, mixin.$c-key-2);
+        background-image: linear-gradient(to bottom ,var.$c-key-1, var.$c-key-2);
 
         display: block;
         position: absolute;
@@ -212,6 +251,10 @@ const { Content } = await entry.render();
         bottom: 0;
         left: 0;
         margin: auto 0;
+
+        @include mixin.sp {
+          height: 100%;
+        }
       }
     }
 
@@ -230,24 +273,40 @@ const { Content } = await entry.render();
     strong {
       font-weight: bold;
 
-      background-image: linear-gradient(to right top, rgba(mixin.$c-key-1, .8), rgba(mixin.$c-key-2, .8));
+      background-image: linear-gradient(to right top, rgba(var.$c-key-1, .8), rgba(var.$c-key-2, .8));
       background-size: 100% .8rem;
       background-repeat: no-repeat;
       background-position: left bottom;
+
+      @include mixin.sp {
+        background-size: 100% .4rem;
+      }
     }
 
     // margins
 
     & > * {
       margin-top: 2.4rem;
+
+      @include mixin.sp {
+        margin-top: 1.6rem;
+      }
     }
 
     h2 {
       margin-top: 6.4rem;
+
+      @include mixin.sp {
+        margin-top: 4.8rem;
+      }
     }
 
     h3 {
       margin-top: 4.8rem;
+
+      @include mixin.sp {
+        margin-top: 4rem;
+      }
     }
 
     h4 {

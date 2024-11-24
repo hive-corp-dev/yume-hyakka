@@ -1,13 +1,24 @@
-$red: #ff0000;
+$mq-tab: 1024px;
+$mq-tab-s: 900px;
+$mq-sp: 768px;
 
-$font-serif: "Zen Old Mincho", serif;
-$font-base: "Zen Kaku Gothic Antique", sans-serif;
-$font-ibm: "IBM Plex Sans JP", sans-serif;
+@mixin tab {
+  @media (max-width: ($mq-tab)) {
+    @content;
+  }
+}
 
-$z-header: 100;
+@mixin tab-s {
+  @media (max-width: ($mq-tab)) {
+    @content;
+  }
+}
 
-$c-key-1: #c699f1;
-$c-key-2: #ffa0b0;
+@mixin sp {
+  @media (max-width: ($mq-sp)) {
+    @content;
+  }
+}
 
 @mixin hover {
   @media (hover: hover) {

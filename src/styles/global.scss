@@ -20,7 +20,7 @@ body {
   -o-font-smoothing: antialiased;
   -o-text-size-adjust: 100%;
 
-  font-family: mixin.$font-serif;
+  font-family: var.$font-serif;
   font-size: 1.6rem;
   font-weight: 500;
   color: #3b3b3b;

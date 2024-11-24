@@ -24,7 +24,7 @@ import Container from "./Container.astro";
   left: 0;
   width: 100%;
   border-bottom: .1rem solid rgba(0,0,0,.1);
-  z-index: mixin.$z-header;
+  z-index: var.$z-header;
   background-color: white;
 
   &::before {
@@ -43,6 +43,10 @@ import Container from "./Container.astro";
   &__title {
     font-size: 2.4rem;
     font-weight: bold;
+
+    @include mixin.sp {
+      font-size: 2rem;
+    }
   }
 
   &__content {
@@ -52,11 +56,20 @@ import Container from "./Container.astro";
     align-items: center;
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
+
+    @include mixin.sp {
+      padding-top: 1.6rem;
+      padding-bottom: 1.6rem;
+    }
   }
 
   &__nav-list {
     display: flex;
     gap:2.4rem;
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
   }
 }
 </style>

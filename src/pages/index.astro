@@ -41,12 +41,21 @@ const articleEntries = await getCollection('article');
   display: flex;
   gap: 4.8rem;
   padding: 16rem 0 12rem;
+
+	@include mixin.sp {
+		padding: 12rem 0 8rem;
+	}
 }
 
 .main {
   flex-grow: 1;
   padding-left: 2.4rem;
   padding-right: 2.4rem;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 .title {
@@ -58,25 +67,15 @@ const articleEntries = await getCollection('article');
 	align-items: center;
 	gap: 1.6rem;
 
+	@include mixin.sp {
+		font-size: 2.4rem;
+	}
+
 	span {
-		background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
 	color: transparent;
 	background-clip: text;
 	}
-
-	// &::before , &::after {
-	// 	content: '';
-	// 	flex-grow: 1;
-	// 	height: .1rem;
-	// 	background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
-	// 	// background: #ccc;
-	// 	opacity: .5;
-	// }
-
-	// &::after {
-	// 	background-image: linear-gradient(to left ,mixin.$c-key-1, mixin.$c-key-2);
-	// 	// background: #ccc;
-	// }
 }
 
 .article {
@@ -84,6 +83,11 @@ const articleEntries = await getCollection('article');
 	grid-template-columns: repeat(2, 1fr);
 	gap: 6.4rem 4rem;
 	margin-top: 4.8rem;
+
+	@include mixin.sp {
+		gap: 1.6rem;
+		margin-top: 2.4rem;
+	}
 
 	&__item {}
 
@@ -100,6 +104,10 @@ const articleEntries = await getCollection('article');
 		font-size: 1.8rem;
 		font-weight: bold;
 		margin-top: .8rem;
+
+		@include mixin.sp {
+			font-size: 1.4rem;
+		}
 	}
 
 	&__tag {
@@ -110,17 +118,26 @@ const articleEntries = await getCollection('article');
 	}
 
 	&__tag-item {
-		display: block;
-      font-size: 1.4rem;
-      font-weight: 600;
-      border: .1rem solid rgba(0,0,0, .2);
-      padding: .2rem 1.2rem .3rem;
-      border-radius: .3rem;
+		display: flex;
+		font-size: 1.4rem;
+		font-weight: 600;
+		border: .1rem solid rgba(0,0,0, .2);
+		padding: .2rem 1.2rem .3rem;
+		border-radius: .3rem;
 
-      &::before {
-        content: '#';
-        margin-right: .2rem;
-      }
+		@include mixin.sp {
+			font-size: 1.1rem;
+			padding: .1rem .8rem .2rem;
+		}
+
+		&::before {
+			content: '#';
+			margin-right: .2rem;
+
+			@include mixin.sp {
+				margin-right: 0;
+			}
+		}
 	}
 }
 

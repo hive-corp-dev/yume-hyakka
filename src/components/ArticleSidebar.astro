@@ -61,9 +61,25 @@ import { articleTags } from "../data/article-tags"
     padding-top: 2.4rem;
     width: 28rem;
     flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 4rem;
+
+    @include mixin.tab {
+      width: 24rem;
+    }
+
+    @include mixin.tab-s {
+      width: 100%;
+      gap: 8rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    @include mixin.sp{ 
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .sidebar__block {
@@ -90,9 +106,17 @@ import { articleTags } from "../data/article-tags"
   .ranking {
     margin-top: 2.4rem;
     counter-reset: ranking;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap:2.4rem;
+
+    @include mixin.tab-s {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.sp {
+      gap: 1.6rem;
+    }
 
     &__item {
       position: relative;
@@ -136,13 +160,20 @@ import { articleTags } from "../data/article-tags"
       position: relative;
       display: flex;
       flex-direction: column;
-
     }
 
     &__title {
       font-size: 1.4rem;
       font-weight: 500;
       margin-top: .4rem;
+
+      @include mixin.tab-s {
+        font-size: 1.6rem;
+      }
+
+      @include mixin.sp {
+        font-size: 1.4rem;
+      }
     }
   }
 
