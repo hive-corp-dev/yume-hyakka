@@ -2,22 +2,18 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
-import {getTagDataBySlug} from '../utils/articleTags';
+import {getTagDataBySlug, getTagListBySlugs} from '../utils/articleTags';
 import { articleTags } from '../data/article-tags';
 import { sortTagsByKana } from '../utils/articleTags';
 import TagCloud from '../components/Home/TagCloud.astro';
+import Mv from '../components/Home/Mv.astro';
 
 const articleEntries = await getCollection('article');
 const sortedTags = sortTagsByKana(articleTags);
 ---
 
 <BaseLayout>
-	<div class="mv">
-		<div class="mv__content">
-			<p class="mv__title">夢が語るあなたの物語</p>
-			<p class="mv__text">夢は単なる幻想ではなく、私たちの心の奥に隠された深いメッセージを伝えています。『夢百科』では、夢占いの力を借りて、あなたが見る夢の象徴的な意味を解き明かし、人生の道しるべを見つけるお手伝いをします。</p>
-		</div>
-	</div>
+	<Mv />
 	<Container>
 
 		<div class="wrap">
@@ -30,7 +26,14 @@ const sortedTags = sortTagsByKana(articleTags);
 				<section class="section">
 					<h2 class="title"><span>新着記事</span></h2>
 					<ul class="article">
-						{articleEntries.map(articlePostEntry => (
+						{articleEntries.map(articlePostEntry => {
+							const tags = articlePostEntry.data.tags;
+
+							const selectedTags = getTagListBySlugs(tags);
+							const sortedTags = sortTagsByKana(selectedTags);
+							
+
+							return (
 						<li class="article__item">
 							<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
 								<div class="article__thumb">
@@ -38,15 +41,16 @@ const sortedTags = sortTagsByKana(articleTags);
 								</div>
 								<span class="article__title">{articlePostEntry.data.title}</span>
 								<ul class="article__tag">
-									{articlePostEntry.data.tags.map(tag => (
+									{sortedTags.map(tag => (
 									<li class="article__tag-item">
-										<span>{getTagDataBySlug(tag).label}</span>
+										<span>{tag.label}</span>
 									</li>
 									))}
 								</ul>
 							</a>
 						</li>
-						))}
+						)
+						})}
 					</ul>
 				</section>
 			</main>
@@ -61,65 +65,16 @@ const sortedTags = sortTagsByKana(articleTags);
   padding: 8rem 0 20rem;
 
 	@include mixin.sp {
-		padding: 12rem 0 8rem;
-	}
-}
-
-.mv {
-	position: relative;
-	width: 100%;
-	padding: 20rem 3rem 12rem;
-	background-image: url('/mv.png');
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	&::after {
-		content: '';
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-color: rgba(0,0,0, .08);
-	}
-
-	&__content {
-		position: relative;
-		height: 100%;
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		color: white;
-		flex-grow: 1;
-		padding: 4rem 3rem;
-		z-index: 1;
-	}
-
-	&__title {
-		font-weight: bold;
-		font-size: 2.8rem;
-		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
-
-	}
-
-	&__text {
-		font-weight: bold;
-		font-size: 1.6rem;
-		max-width: 80rem;
-		width: 100%;
-		margin: 2.4rem auto 0;
-		line-height: 2;
-		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
+		padding: 0rem 0 8rem;
 	}
 }
 
 .section {
 	padding-top: 12rem;
+
+	@include mixin.sp {
+		padding-top: 8rem;
+	}
 }
 
 .main {
@@ -134,6 +89,7 @@ const sortedTags = sortTagsByKana(articleTags);
 }
 
 .title {
+	position: relative;
 	font-size: 3.2rem;
 	font-weight: bold;
 	letter-spacing: .1em;
@@ -141,15 +97,33 @@ const sortedTags = sortTagsByKana(articleTags);
 	justify-content: center;
 	align-items: center;
 	gap: 1.6rem;
+	padding-bottom: 2rem;
 
 	@include mixin.sp {
-		font-size: 2.4rem;
+		font-size: 2.2rem;
+		padding-bottom: 1.6rem;
 	}
 
+	&::after {
+		content: '';
+		width: 4rem;
+		height: .2rem;
+	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+	@include mixin.sp {
+		width: 2.4rem;
+	}
+}
+
 	span {
-		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
-	color: transparent;
-	background-clip: text;
+	// 	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	// color: transparent;
+	// background-clip: text;
 	}
 }
 
@@ -190,6 +164,10 @@ const sortedTags = sortTagsByKana(articleTags);
 		flex-wrap: wrap;
 		gap: .8rem;
 		margin-top: .8rem;
+
+		@include mixin.sp {
+			gap: .4rem;
+		}
 	}
 
 	&__tag-item {
@@ -201,8 +179,8 @@ const sortedTags = sortTagsByKana(articleTags);
 		border-radius: .3rem;
 
 		@include mixin.sp {
-			font-size: 1.1rem;
-			padding: .1rem .8rem .2rem;
+			font-size: 1rem;
+			padding: .1rem .4rem .2rem;
 		}
 
 		&::before {

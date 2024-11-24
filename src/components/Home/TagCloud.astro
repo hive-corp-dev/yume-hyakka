@@ -19,7 +19,11 @@ const {tags} = Astro.props;
     display: flex;
     flex-wrap: wrap;
     gap: .8rem;
-    margin-top: 2.4rem;
+    margin-top: 4.8rem;
+
+    @include mixin.sp {
+      margin-top: 2.4rem;
+    }
   }
 
   .tag__item {
@@ -36,6 +40,11 @@ const {tags} = Astro.props;
       border: .1rem solid rgba(0,0,0, .2);
       padding: .4rem 1.2rem .6rem;
       border-radius: .3rem;
+
+      @include mixin.sp {
+        font-size: 1.4rem;
+        padding: .2rem 1rem .3rem;
+      }
 
       &::before {
         content: '#';

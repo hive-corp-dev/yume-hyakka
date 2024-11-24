@@ -21,9 +21,6 @@ const { entry } = Astro.props;
 
 const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
 const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
-
-console.log(sortedTags);
-
 ---
 
 <BaseLayout>
@@ -50,10 +47,10 @@ console.log(sortedTags);
         <p class="keyward__title">この記事のキーワード</p>
         <ul class="tag keyward__tag">
           {
-            entry.data.tags.map((tag)  => (
+            sortedTags.map((tag)  => (
               <li class="tag__item">
                 <span class="tag__link">
-                  <span>{getTagDataBySlug(tag).label}</span>
+                  <span>{tag.label}</span>
                 </span>
               </li>
             ))

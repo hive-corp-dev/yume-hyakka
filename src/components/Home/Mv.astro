@@ -1,0 +1,73 @@
+<div class="mv">
+  <div class="mv__content">
+    <p class="mv__title">夢が語るあなたの物語</p>
+    <p class="mv__text">夢は単なる幻想ではなく、私たちの心の奥に隠された深いメッセージを伝えています。『夢百科』では、夢占いの力を借りて、あなたが見る夢の象徴的な意味を解き明かし、人生の道しるべを見つけるお手伝いをします。</p>
+  </div>
+</div>
+
+<style lang="scss">
+  .mv {
+	position: relative;
+	width: 100%;
+	padding: 20rem 3rem 12rem;
+	background-image: url('/mv.png');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+  @include mixin.sp {
+    padding: 12rem 0 6.4rem;
+  }
+
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		// background-color: rgba(0,0,0, .08);
+	}
+
+	&__content {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: white;
+		flex-grow: 1;
+		padding: 4rem 3rem;
+		z-index: 1;
+	}
+
+	&__title {
+		font-weight: bold;
+		font-size: 2.8rem;
+		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
+
+    @include mixin.sp {
+      font-size: 2.4rem;
+    }
+
+	}
+
+	&__text {
+		font-weight: bold;
+		font-size: 1.6rem;
+		max-width: 80rem;
+		width: 100%;
+		margin: 2.4rem auto 0;
+		line-height: 2;
+		text-shadow: 0 0 .4rem rgba(0,0,0, .6);
+
+    @include mixin.sp {
+      font-size: 1.4rem;
+    }
+	}
+}
+</style>
