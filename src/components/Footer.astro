@@ -1,0 +1,85 @@
+---
+import Container from "./Container.astro"
+---
+
+<footer class="footer">
+  <Container>
+    <div class="footer__content">
+      <div class="footer__logo">夢百科</div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-list">
+          <li class="footer__nav-item">
+            <a href="/" class="footer__nav-link">ホーム</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="/article" class="footer__nav-link">夢占い</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </Container>
+  <div class="footer__copy">
+    <p>© 2024 夢百科 All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style lang="scss">
+  .footer {
+    position: relative;
+    background-color: #f8f8f8;
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
+      opacity: .05;
+      position: absolute;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      width: 100%;
+      height: .2rem;
+      background-image: linear-gradient(to right ,mixin.$c-key-1, mixin.$c-key-2);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      padding: 4rem 0;
+    }
+
+    &__logo {
+      font-size: 2.4rem;
+      font-weight: bold;
+    }
+
+    &__nav {}
+
+    &__nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.4rem;
+    }
+
+    &__nav-item {}
+
+    &__nav-link {}
+
+    &__copy {
+      text-align: center;
+      padding: 1.2rem;
+      font-size: 1.4rem;
+      // background-color: mixin.$c-key-1;
+      // color: #fff;
+    }
+  }
+</style>

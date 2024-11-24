@@ -1,0 +1,60 @@
+---
+---
+
+<nav class="toc-nav">
+  <div class="toc-title">
+    <div>目次</div>
+  </div>
+  <div class="toc"></div>
+</nav>
+ 
+<script>
+  import * as tocbot from 'tocbot'
+ 
+  tocbot.init({
+    tocSelector: '.toc', // 目次を追加するクラス名
+    contentSelector: '#article-body', // 目次を取得するコンテンツ
+    listClass: 'toc-list', // olのクラス名
+    linkClass: 'toc-link', // aタグのクラス名
+    headingSelector: 'h2, h3', // 目次として取得する見出しタグ
+    scrollSmoothOffset: document.querySelector('.js-header').offsetHeight * -1, // スクロール時のオフセット
+  })
+</script>
+
+<style is:global lang="scss">
+  .toc-nav {
+    position: relative;
+    padding: 2.4rem;
+    border: .1rem solid #eee;
+    background-color: rgba(255, 255, 255, 0.455);
+    line-height: 1.75;
+    margin-top: 4rem!important;
+  }
+
+
+  .toc-title {
+    font-size: 1.8rem;
+  }
+
+  .toc-link {
+    transition: color .3s;
+
+    &.node-name--H2 {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+
+    &.node-name--H3 {
+      font-size: 1.4rem;
+      padding-left: 1.2rem;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        color: mixin.$c-key-1;
+      }
+    }
+
+  } 
+</style>
