@@ -3,10 +3,12 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
 import ArticleSidebar from '../../components/ArticleSidebar.astro';
 import {articleTags} from '../../data/article-tags';
+import SnsShare from '../../components/Article/SnsShare.astro';
 import {getTagDataBySlug} from '../../utils/getTagDataBySlug';
 import TableOfContents from '../../components/TableOfContents.astro';
 
 import { getCollection } from 'astro:content';
+import ArticleContent from '../../components/Article/ArticleContent.astro';
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
   const articleEntries = await getCollection('article');
@@ -16,14 +18,9 @@ export async function getStaticPaths() {
 }
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
 const { entry } = Astro.props;
-const { Content } = await entry.render();
-
 ---
 
 <BaseLayout>
-  <!-- <div class="head">
-    <p class="head__title">夢占い</p>
-  </div> -->
 <Container>
   <div class="wrap">
     <main class="main">
@@ -42,10 +39,23 @@ const { Content } = await entry.render();
       <div class="thumb">
         <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} />
       </div>
-      
-      <div class="content" id="article-body">
-        <Content components={{ TableOfContents }} />
+      <ArticleContent entry={entry} components={{ TableOfContents }}  />
+      <div class="keyward">
+        <p class="keyward__title">この記事のキーワード</p>
+        <ul class="tag keyward__tag">
+          {
+            entry.data.tags.map((tag)  => (
+              <li class="tag__item">
+                <span class="tag__link">
+                  <span>{getTagDataBySlug(tag).label}</span>
+                </span>
+              </li>
+            ))
+          }
+        </ul>
       </div>
+
+      <SnsShare />
     </main>
     <ArticleSidebar />
   </div>
@@ -55,21 +65,9 @@ const { Content } = await entry.render();
 
 <style lang="scss">
 
-// .head {
-//   width: 100%;
-//   text-align: center;
-//   background-image: linear-gradient(to left , rgb(255, 160, 176), rgb(198, 153, 241));
-//   padding: 12rem 0;
-
-//   &__title {
-//     color: white;
-//     font-size: 4rem;
-//     font-weight: bold;
-//   }
-// }
-
 .wrap {
   display: flex;
+  align-items: flex-start;
   gap: 4.8rem;
   padding: 16rem 0 12rem;
 
@@ -129,6 +127,7 @@ const { Content } = await entry.render();
   position: relative;
   margin-top: 2.4rem;
   aspect-ratio: 16 / 9;
+  display: flex;
 
   &::after {
     content: '';
@@ -160,8 +159,6 @@ const { Content } = await entry.render();
 
   &__link {
     display: block;
-    // background-image: linear-gradient(to left , rgb(255, 160, 176), rgb(198, 153, 241));
-    // border-radius: .4rem;
     padding: .1rem;
 
     span {
@@ -180,145 +177,52 @@ const { Content } = await entry.render();
   }
 }
 
-
-.content {
-  font-family: var.$font-ibm;
-  font-family: var.$font-base;
-  font-weight: 400;
-  font-weight: 500;
-  line-height: 2.25;
+.keyward {
+  position: relative;
+  padding: 3.2rem 2.4rem;
+  background-color: rgba(#fff, .5);
+  margin-top: 8rem;
+  border: .1rem solid #eee;
 
   @include mixin.sp {
-    font-size: 1.5rem;
-    line-height: 2;
-  }
-}
-</style>
-
-<style lang="scss" is:global>
-  .content {
-    // select h2 to h6
-    h2, h3, h4, h5, h6 {
-      font-family: var.$font-serif;
-      font-weight: bold;
-      line-height: 1.75;
+      padding: 2.4rem;
     }
+}
 
-    h2 {
-      position: relative;
-      font-size: 2.8rem;
-      color: white;
-      padding:0.4rem 1.2rem;
+.keyward__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;justify-content: center;
+  align-items: center;
 
-      @include mixin.sp {
+  @include mixin.sp {
+        font-size: 1.8rem;
+      }
+
+  &::before {
+    // position: absolute;
+    content: '#';
+    font-family: 'Noto Sans JP Variable';
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-right: .5rem;
+
+    @include mixin.sp {
         font-size: 2rem;
       }
-
-      &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        // filter: blur(.5rem);
-        // opacity: .7;
-      }
-    }
-
-    h3 {
-      position: relative;
-      font-size: 2.4rem;
-      padding-left: 2rem;
-
-      @include mixin.sp {
-        font-size: 1.8rem;
-        padding-left: 1.6rem;
-      }
-
-      &::after {
-        content: '';
-        width: .4rem;
-        height: 70%;
-        background-image: linear-gradient(to bottom ,var.$c-key-1, var.$c-key-2);
-
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto 0;
-
-        @include mixin.sp {
-          height: 100%;
-        }
-      }
-    }
-
-    h4 {
-      font-size: 2.2rem;
-    }
-
-    h5 {
-      font-size: 2rem;
-    }
-
-    h6 {
-      font-size: 1.8rem;
-    }
-
-    strong {
-      font-weight: bold;
-
-      background-image: linear-gradient(to right top, rgba(var.$c-key-1, .8), rgba(var.$c-key-2, .8));
-      background-size: 100% .8rem;
-      background-repeat: no-repeat;
-      background-position: left bottom;
-
-      @include mixin.sp {
-        background-size: 100% .4rem;
-      }
-    }
-
-    // margins
-
-    & > * {
-      margin-top: 2.4rem;
-
-      @include mixin.sp {
-        margin-top: 1.6rem;
-      }
-    }
-
-    h2 {
-      margin-top: 6.4rem;
-
-      @include mixin.sp {
-        margin-top: 4.8rem;
-      }
-    }
-
-    h3 {
-      margin-top: 4.8rem;
-
-      @include mixin.sp {
-        margin-top: 4rem;
-      }
-    }
-
-    h4 {
-      margin-top: 3.2rem;
-    }
-
-    h5 {
-      margin-top: 2.4rem;
-    }
-
-    h6 {
-      margin-top: 1.6rem;
-    }
   }
+}
+
+.keyward__tag {
+  justify-content: center;
+  margin-top: 2.4rem;
+
+  @include mixin.sp {
+    margin-top: 1.6rem;
+  }
+}
 </style>

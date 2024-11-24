@@ -1,0 +1,143 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import {getTagDataBySlug} from '../../utils/getTagDataBySlug';
+
+const articleEntries = await getCollection('article');
+---
+
+<BaseLayout>
+	<Container>
+		<div class="wrap">
+			<main class="main">
+			<h2 class="title"><span>夢占い</span></h2>
+			<ul class="article">
+				{articleEntries.map(articlePostEntry => (
+				<li class="article__item">
+					<a class="article__link" href={`/article/${articlePostEntry.slug}`}>
+						<div class="article__thumb">
+							<img src={articlePostEntry.data.image} alt={articlePostEntry.data.title} />
+						</div>
+						<span class="article__title">{articlePostEntry.data.title}</span>
+						<ul class="article__tag">
+							{articlePostEntry.data.tags.map(tag => (
+							<li class="article__tag-item">
+								<span>{getTagDataBySlug(tag).label}</span>
+							</li>
+							))}
+						</ul>
+					</a>
+				</li>
+				))}
+			</ul>
+			</main>
+		</div>
+	</Container>
+</BaseLayout>
+
+<style lang="scss">
+	.wrap {
+  display: flex;
+  gap: 4.8rem;
+  padding: 16rem 0 12rem;
+
+	@include mixin.sp {
+		padding: 12rem 0 8rem;
+	}
+}
+
+.main {
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.title {
+	font-size: 3.2rem;
+	font-weight: bold;
+	letter-spacing: .1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+
+	@include mixin.sp {
+		font-size: 2.4rem;
+	}
+
+	span {
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	color: transparent;
+	background-clip: text;
+	}
+}
+
+.article {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6.4rem 4rem;
+	margin-top: 4.8rem;
+
+	@include mixin.sp {
+		gap: 1.6rem;
+		margin-top: 2.4rem;
+	}
+
+	&__item {}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__thumb {
+		display: flex;
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-top: .8rem;
+
+		@include mixin.sp {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__tag {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .8rem;
+		margin-top: .8rem;
+	}
+
+	&__tag-item {
+		display: flex;
+		font-size: 1.4rem;
+		font-weight: 600;
+		border: .1rem solid rgba(0,0,0, .2);
+		padding: .2rem 1.2rem .3rem;
+		border-radius: .3rem;
+
+		@include mixin.sp {
+			font-size: 1.1rem;
+			padding: .1rem .8rem .2rem;
+		}
+
+		&::before {
+			content: '#';
+			margin-right: .2rem;
+
+			@include mixin.sp {
+				margin-right: 0;
+			}
+		}
+	}
+}
+</style>

@@ -13,6 +13,7 @@
   "dependencies": {
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/react": "^3.6.3",
+    "@fontsource-variable/noto-sans-jp": "^5.1.0",
     "@fontsource/ibm-plex-sans-jp": "^5.1.0",
     "@fontsource/zen-kaku-gothic-antique": "^5.1.0",
     "@fontsource/zen-old-mincho": "^5.1.0",
@@ -21,6 +22,7 @@
     "astro": "^4.16.12",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
     "sass": "^1.81.0",
     "the-new-css-reset": "^1.11.3",
     "tocbot": "^4.32.2"

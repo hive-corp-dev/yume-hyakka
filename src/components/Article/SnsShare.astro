@@ -1,0 +1,129 @@
+---
+---
+
+<div class="sns">
+  <p class="sns__title"><img src="/common/icon-speech.svg" width="40" height="50" alt="" />SNSでシェア</p>
+  <ul class="sns__btns">
+    <li class="sns__btn">
+      <a href="" class="sns__link -fb">
+        <img src="/common/sns/icon-fb-circle.svg" alt="Twitter" width="40" height="40" />
+        <span>Facebook</span>
+      </a>
+    </li>
+    <li class="sns__btn">
+      <a href="" class="sns__link -x">
+        <img src="/common/sns/icon-x-white.svg" alt="Twitter" width="40" height="40" />
+        <span>X（旧Twitter）</span>
+      </a>
+    </li>
+    
+    <li class="sns__btn">
+      <a href="" class="sns__link -line">
+        <img src="/common/sns/icon-line.svg" alt="Twitter" width="40" height="40" />
+        <span>LINE</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<style lang="scss">
+  .sns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.8rem;
+    padding: 4rem 0 0;
+    border-top: .1rem solid #e7e7e7;
+
+    position: relative;
+    padding: 3.2rem;
+    background-color: rgba(#fff, .5);
+    margin-top: 4rem;
+    border: .1rem solid #eee;
+
+    @include mixin.sp {
+      padding: 2.4rem;
+      margin-top: 2.4rem;
+    }
+
+    &__title {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include mixin.sp {
+        font-size: 1.8rem;
+      }
+
+      img {
+        width: 2rem;
+        margin-right: 1.2rem;
+
+        @include mixin.sp {
+          width: 1.8rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &__btns {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 2.4rem;
+
+      @include mixin.sp {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+      }
+    }
+
+    &__btn {
+      display: flex;
+      width: 100%;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      gap: 1.6rem;
+      width: 100%;
+      padding: 1rem 1.6rem;
+      min-height: 4.8rem;
+      color: white;
+      font-family: var.$font-noto;
+      font-weight: 400;
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-radius: .5rem;
+      letter-spacing: .02em;
+
+      &.-x {
+        background-color: #000;
+
+        img {
+          width: 1.6rem;
+        }
+      }
+
+      &.-fb {
+        background-color: #1877f2;
+
+        img {
+          width: 2.4rem;
+        }
+      }
+
+      &.-line {
+        background-color: #06c755;
+
+        img {
+          width: 2.4rem;
+        }
+      }
+    }
+  }
+</style>

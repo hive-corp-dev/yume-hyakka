@@ -60,6 +60,10 @@ import Container from "./Container.astro"
     &__logo {
       font-size: 2.4rem;
       font-weight: bold;
+
+      @include mixin.sp {
+        font-size: 2rem;
+      }
     }
 
     &__nav {}
@@ -72,7 +76,11 @@ import Container from "./Container.astro"
 
     &__nav-item {}
 
-    &__nav-link {}
+    &__nav-link {
+      @include mixin.sp {
+        font-size: 1.4rem;
+      }
+    }
 
     &__copy {
       text-align: center;
@@ -80,6 +88,10 @@ import Container from "./Container.astro"
       font-size: 1.4rem;
       // background-color: var.$c-key-1;
       // color: #fff;
+
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
     }
   }
 </style>

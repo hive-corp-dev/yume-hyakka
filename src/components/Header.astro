@@ -1,11 +1,19 @@
 ---
 import Container from "./Container.astro";
+const isTopPage = Astro.url.pathname === '/';
 ---
 
 <header class="header js-header">
 <Container>
   <div class="header__content">
-    <h1 class="header__title">夢百科</h1>
+    {
+      isTopPage ? (
+      <h1 class="header__title">夢百科</h1>
+      )
+      : (
+        <a class="header__title" href="/">夢百科</a>
+      )
+    }
     <nav>
       <ul class="header__nav-list">
         <li><a href="/">ホーム</a></li>
@@ -41,6 +49,7 @@ import Container from "./Container.astro";
   }
 
   &__title {
+    display: flex;
     font-size: 2.4rem;
     font-weight: bold;
 
