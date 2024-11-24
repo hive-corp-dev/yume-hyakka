@@ -1,7 +1,7 @@
 <div class="mv">
   <div class="mv__content">
     <p class="mv__title">夢が語るあなたの物語</p>
-    <p class="mv__text">夢は単なる幻想ではなく、私たちの心の奥に隠された深いメッセージを伝えています。『夢百科』では、夢占いの力を借りて、あなたが見る夢の象徴的な意味を解き明かし、人生の道しるべを見つけるお手伝いをします。</p>
+    <p class="mv__text">夢は単なる幻想ではなく、<br />私たちの心の奥に隠された<br />深いメッセージを伝えています。<br />『夢百科』では、夢占いの力を借りて、<br />あなたが見る夢の象徴的な意味を解き明かし、<br />人生の道しるべを見つけるお手伝いをします。</p>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
 	align-items: center;
 
   @include mixin.sp {
-    padding: 12rem 0 6.4rem;
+    padding: 20rem 0 14rem;
   }
 
 	&::after {
@@ -43,6 +43,18 @@
 		flex-grow: 1;
 		padding: 4rem 3rem;
 		z-index: 1;
+
+    @include mixin.sp {
+      text-align: center;
+    }
+
+    br {
+      display: none;
+
+      @include mixin.sp {
+        display: block;
+      }
+    }
 	}
 
 	&__title {
@@ -67,6 +79,7 @@
 
     @include mixin.sp {
       font-size: 1.4rem;
+      line-height: 2.4;
     }
 	}
 }

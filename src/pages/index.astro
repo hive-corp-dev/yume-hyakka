@@ -160,6 +160,11 @@ const sortedTags = sortTagsByKana(articleTags);
 		margin-top: 2.4rem;
 	}
 
+	@include mixin.sp-s {
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+	}
+
 	&__item {}
 
 	&__link {
