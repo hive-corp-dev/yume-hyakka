@@ -1,0 +1,28 @@
+---
+import {SEO} from 'astro-seo';
+
+import {SITE_NAME, OG_IMAGE_URL} from '@data/metadata';
+
+const {title = SITE_NAME, description, ogImageUrl = OG_IMAGE_URL, ogType = 'website'} = Astro.props;
+---
+
+<SEO
+  title={title}
+  description={description}
+  openGraph={{
+    basic: {
+      title: title,
+      type: ogType,
+      image: ogImageUrl,
+    },
+    optional: {
+      description: description,
+    }
+  }}
+  extend={{
+    link: [{ rel: "icon", href: "/favicon.ico" }],
+  }}
+  twitter={{
+    card: "summary_large_image",
+  }}
+/>

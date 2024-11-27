@@ -5,7 +5,7 @@ import Breadcrumb from "src/components/Breadcrumb.astro"
 import TagCloud from "@components/Home/TagCloud.astro"
 import { getCollection } from 'astro:content';
 import { getTagsWithArticles } from 'src/utils/articleTags';
-
+import { KEYWORD_METADATA } from "@data/metadata";
 
 const articleEntries = await getCollection('article',({data}) => {
 	return data.isDraft === false;
@@ -21,7 +21,7 @@ const breadcrumbLinks = [
 ]
 ---
 
-<BaseLayout>
+<BaseLayout title={KEYWORD_METADATA.title} description={KEYWORD_METADATA.description}>
 	<div class="mv">
     <Container>
 			<h1 class="mv__title">

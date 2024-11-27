@@ -7,6 +7,7 @@ import SnsShare from '../../components/Article/SnsShare.astro';
 import {getTagDataBySlug, getTagsWithArticles} from '../../utils/articleTags';
 import TableOfContents from '../../components/TableOfContents.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
+import {ARTICLE_SINGLE_METADATA} from '@data/metadata';
 
 import { getCollection } from 'astro:content';
 import ArticleContent from '../../components/Article/ArticleContent.astro';
@@ -23,9 +24,6 @@ export async function getStaticPaths() {
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
 const { entry } = Astro.props;
 
-console.log(entry);
-
-
 const currentUrl = Astro.url;
 
 const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
@@ -36,7 +34,7 @@ const breadcrumbLinks = [
 ]
 ---
 
-<BaseLayout>
+<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={entry.data.image} description={entry.data.description}>
   <div class="mv">
     <p class="mv__title">夢占い</p>
   </div>
@@ -48,7 +46,6 @@ const breadcrumbLinks = [
         <TagCloud tags={selectedTags} type="article-header" />
         <h1 class="title">{entry.data.title}</h1>
         <div class="thumb">
-          <!-- <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} /> -->
           <Image src={entry.data.image} width={1600} height={900} alt={entry.data.title} />
         </div>
         <ArticleContent entry={entry} components={{ TableOfContents }}  />

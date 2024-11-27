@@ -5,6 +5,7 @@ import Container from '../../components/Container.astro';
 import {getTagDataBySlug} from '../../utils/articleTags';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import ArticleList from '@components/Article/ArticleList.astro';
+import { ARTICLE_METADATA } from '@data/metadata';
 
 const articleEntries = await getCollection('article');
 
@@ -14,7 +15,7 @@ const breadcrumbLinks = [
 ]
 ---
 
-<BaseLayout>
+<BaseLayout title={ARTICLE_METADATA.title} description={ARTICLE_METADATA.description}>
 	<div class="mv">
     <Container>
 			<h1 class="mv__title">
