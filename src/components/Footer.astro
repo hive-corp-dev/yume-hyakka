@@ -78,6 +78,10 @@ import Container from "./Container.astro"
       display: flex;
       flex-wrap: wrap;
       gap: 2.4rem;
+      
+      @include mixin.sp {
+        gap: 1.6rem;
+      }
     }
 
     &__nav-item {}

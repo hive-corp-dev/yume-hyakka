@@ -1,0 +1,136 @@
+---
+import { getCollection } from 'astro:content';
+import { rankingPostIds } from '@data/articleRanking';
+import {getArticlePathBySlug} from '@utils/article';
+
+const rankedArticles = await getCollection('article', ({data}) => {
+	return data.isDraft === false
+});
+
+const filteredRankedArticles = rankedArticles.filter(article => rankingPostIds.includes(article.id));
+
+---
+<ol class="ranking">
+  {
+    filteredRankedArticles.map((article) => {
+      return (
+      <li class="ranking__item">
+        <a href={getArticlePathBySlug(article.slug)} class="ranking__link">
+          <div class="ranking__thumb">
+            <img src={article.data.image} alt='' width={1600} height={900} />
+          </div>
+          <p class="ranking__title">{article.data.title}</p>
+        </a>
+      </li>
+      )
+    })
+  }
+</ol>
+
+<style lang="scss">
+  .ranking {
+    margin-top: 2.4rem;
+    counter-reset: ranking;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2.4rem;
+
+    @include mixin.tab-s {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mixin.sp {
+      gap: 1.6rem;
+    }
+
+    &__item {
+      position: relative;
+      counter-increment: ranking;
+
+      &::before {
+        content: counter(ranking);
+        width: 2.4rem;
+        height: 2.4rem;
+        background-color: #5e5e5e;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;justify-content: center;
+        z-index: 1;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color:white;
+
+        @include mixin.sp {
+          font-size: 1.2rem;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      &:nth-child(1) {
+        &::before {
+          background-color: rgb(255, 191, 0);
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background-color: silver;
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          background-color: #cd7f32;
+        }
+      }
+    }
+
+    &__link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      @include mixin.hover {
+        &:hover {
+          .ranking__thumb img {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+
+    &__thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        transition: all .6s;
+      }
+    }
+
+    &__title {
+      font-size: 1.4rem;
+      font-weight: 500;
+      margin-top: .4rem;
+
+      @include mixin.tab-s {
+        font-size: 1.6rem;
+      }
+
+      @include mixin.sp {
+        font-size: 1.4rem;
+      }
+    }
+  }
+</style>

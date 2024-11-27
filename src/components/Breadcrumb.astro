@@ -1,0 +1,99 @@
+---
+import Container from "./Container.astro"
+const { data } = Astro.props
+---
+
+<nav class="breadcrumb">
+  <Container>
+    <ol class="breadcrumb__list">
+      {
+        data.map((item) => {
+
+          if(item.href !== undefined) {
+            return (
+            <li class="breadcrumb__item">
+            <a href={item.href} class="breadcrumb__link">
+              <span>{item.label}</span>
+            </a>
+          </li> 
+            );
+          }
+
+          return (
+          <li class="breadcrumb__item">
+            <span class="breadcrumb__text">{item.label}</span>
+          </li> 
+          )
+        })
+      }
+    </ol>
+  </Container>
+</nav>
+
+<style lang="scss">
+  .breadcrumb {
+  position: relative;
+  padding: 1.6rem 2.4rem 0;
+  z-index: 1;
+
+  @include mixin.sp {
+    padding: 1.2rem 0 0;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem;
+      background-image: url('/common/icon-chevron-right.svg');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      margin: 0 .8rem;
+      transform: translateY(.1rem);
+    }
+
+    &:last-child {
+
+      &::after {
+        display: none;
+      }
+    }
+
+  }
+
+  &__link {
+    display: inline-block;
+
+    span {
+      background-image: linear-gradient(to right, var.$c-key-1, var.$c-key-2);
+      color: #333;
+      background-clip: text;
+      font-size: 1.4rem;
+      transition: all .3s;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        span {
+          color: transparent;
+        }
+      }
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    font-size: 1.4rem;
+  }
+}
+</style>

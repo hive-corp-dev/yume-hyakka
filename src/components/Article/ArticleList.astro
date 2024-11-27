@@ -1,0 +1,32 @@
+---
+import { getTagDataBySlug } from "@utils/articleTags";
+import ArticleCard from "./ArticleCard.astro";
+import { getSortedPosts } from "@utils/article";
+
+const { articles } = Astro.props;
+
+const sortedArticles = getSortedPosts(articles);
+---
+
+<ul class="article">
+  {sortedArticles.map(articlePostEntry => (
+  <ArticleCard article={articlePostEntry} />
+  ))}
+</ul>
+
+<style lang="scss">
+  .article {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6.4rem 4rem;
+
+	@include mixin.sp {
+		gap: 1.6rem;
+	}
+
+	@include mixin.sp-s {
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+	}
+}
+</style>

@@ -38,6 +38,10 @@ const { Content } = await entry.render();
       color: white;
       padding:0.4rem 1.2rem;
 
+      strong {
+        background-image: none;
+      }
+
       @include mixin.sp {
         font-size: 2rem;
       }
@@ -59,6 +63,10 @@ const { Content } = await entry.render();
       position: relative;
       font-size: 2.4rem;
       padding-left: 2rem;
+
+      strong {
+        background-image: none;
+      }
 
       @include mixin.sp {
         font-size: 1.8rem;
@@ -114,6 +122,10 @@ const { Content } = await entry.render();
       border: .1rem solid #eee;
       background-color: rgba(white, .5);
 
+       @include mixin.sp {
+        padding: 1.6rem;
+      }
+
       strong {
         background-image: none;
       }
@@ -131,11 +143,57 @@ const { Content } = await entry.render();
           content: '';
           width: .6rem;
           height: .6rem;
-          background-color: var.$c-key-1;
+          background-image: linear-gradient(to right top, var.$c-key-1, var.$c-key-2);
           border-radius: 50%;
           position: absolute;
           left: 0;
           top: 1.5rem;
+
+          @include mixin.sp {
+            top: 1.3rem;
+          }
+        }
+      }
+    }
+
+    ol:not([class]) {
+      padding: 2.4rem;
+      border: .1rem solid #eee;
+      background-color: rgba(white, .5);
+      counter-reset: number;
+
+       @include mixin.sp {
+        padding: 1.6rem;
+      }
+
+      strong {
+        background-image: none;
+      }
+
+      li {
+        position: relative;
+        padding-left: 2.8rem;
+        line-height: 2;
+        counter-increment: number;
+
+        &:not(:first-child) {
+          margin-top: 1.2rem;
+        }
+
+        &::before {
+          content: counter(number);
+          position: absolute;
+          left: 0;
+          top: 0.6rem;
+          width: 2rem;
+          height: 2rem;
+          background-image: linear-gradient(to right top, var.$c-key-1, var.$c-key-2);
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
         }
       }
     }

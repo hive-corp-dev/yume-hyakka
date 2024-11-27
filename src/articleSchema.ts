@@ -1,5 +1,5 @@
 import { z } from "astro:content";
-import { articleTags } from "./data/article-tags";
+import { articleTags } from "./data/articleTags";
 
 // タグのスラッグを動的に取得
 // const validTags = articleTags.map((tag) => tag.slug);

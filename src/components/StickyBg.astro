@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets"
+import bgImage from '../images/mv.png';
+---
+
+<div class="bg">
+  <Image src={bgImage} alt="" loading="eager" class="bg__img" />
+</div>
+
+<style lang="scss">
+  .bg {
+    width: 100%;
+    height: 100lvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+</style>

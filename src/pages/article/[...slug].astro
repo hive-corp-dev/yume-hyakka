@@ -1,14 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
-import ArticleSidebar from '../../components/ArticleSidebar.astro';
-import {articleTags} from '../../data/article-tags';
+import ArticleSidebar from '@components/Article/Sidebar/ArticleSidebar.astro';
+import {articleTags} from '../../data/articleTags';
 import SnsShare from '../../components/Article/SnsShare.astro';
-import {getTagDataBySlug} from '../../utils/articleTags';
+import {getTagDataBySlug, getTagsWithArticles} from '../../utils/articleTags';
 import TableOfContents from '../../components/TableOfContents.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
 
 import { getCollection } from 'astro:content';
 import ArticleContent from '../../components/Article/ArticleContent.astro';
+import TagCloud from '../../components/Home/TagCloud.astro';
+import KeywordBox from '@components/Article/KeywordBox.astro';
+import { Image } from 'astro:assets';
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
   const articleEntries = await getCollection('article');
@@ -19,47 +23,37 @@ export async function getStaticPaths() {
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
 const { entry } = Astro.props;
 
+console.log(entry);
+
+
+const currentUrl = Astro.url;
+
 const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
-const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
+
+const breadcrumbLinks = [
+  { href: '/', label: 'ホーム' },
+  { href: '/article', label: '夢占い' },
+]
 ---
 
 <BaseLayout>
+  <div class="mv">
+    <p class="mv__title">夢占い</p>
+  </div>
 <div class="body">
+  <Breadcrumb data={breadcrumbLinks} />
   <Container>
     <div class="wrap">
       <main class="main">
-        <ul class="tag">
-          {
-            sortedTags.map((tag)  => (
-              <li class="tag__item">
-                <span class="tag__link">
-                  <span>{tag.label}</span>
-                </span>
-              </li>
-            ))
-          }
-        </ul>
+        <TagCloud tags={selectedTags} type="article-header" />
         <h1 class="title">{entry.data.title}</h1>
         <div class="thumb">
-          <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} />
+          <!-- <img src={entry.data.image} alt={entry.data.title} width={1600} height={900} /> -->
+          <Image src={entry.data.image} width={1600} height={900} alt={entry.data.title} />
         </div>
         <ArticleContent entry={entry} components={{ TableOfContents }}  />
-        <div class="keyward">
-          <p class="keyward__title">この記事のキーワード</p>
-          <ul class="tag keyward__tag">
-            {
-              sortedTags.map((tag)  => (
-                <li class="tag__item">
-                  <span class="tag__link">
-                    <span>{tag.label}</span>
-                  </span>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-  
-        <SnsShare />
+        <KeywordBox tags={selectedTags} />
+        <SnsShare postUrl={currentUrl} title={entry.data.title} />
       </main>
       <ArticleSidebar />
     </div>
@@ -69,6 +63,28 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
 
 
 <style lang="scss">
+
+.mv{
+  padding: 20rem 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mixin.sp {
+    padding: 16rem 0 9rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1em;
+
+    @include mixin.sp {
+      font-size: 2.4rem;
+    }
+  }
+}
 
 .body {
 	position: relative;
@@ -86,6 +102,7 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 		opacity: 0.2;
+    pointer-events: none;
 	}
 }
 
@@ -94,7 +111,7 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
   display: flex;
   align-items: flex-start;
   gap: 4.8rem;
-  padding: 16rem 0 12rem;
+  padding: 14rem 0 12rem;
   z-index: 1;
 
   @include mixin.tab {
@@ -107,7 +124,7 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
   }
 
   @include mixin.sp {
-    padding: 12rem 0 8rem;
+    padding: 8rem 0;
   }
 }
 
@@ -181,8 +198,6 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
   flex-wrap: wrap;
   gap: .8rem;
 
-  &__item {}
-
   &__link {
     display: block;
     padding: .1rem;
@@ -200,55 +215,6 @@ const sortedTags = selectedTags.sort((a, b) => a.kana.localeCompare(b.kana));
         margin-right: .2rem;
       }
     }
-  }
-}
-
-.keyward {
-  position: relative;
-  padding: 3.2rem 2.4rem;
-  background-color: rgba(#fff, .5);
-  margin-top: 8rem;
-  border: .1rem solid #eee;
-
-  @include mixin.sp {
-      padding: 2.4rem;
-    }
-}
-
-.keyward__title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  display: flex;justify-content: center;
-  align-items: center;
-
-  @include mixin.sp {
-        font-size: 1.8rem;
-      }
-
-  &::before {
-    // position: absolute;
-    content: '#';
-    font-family: 'Noto Sans JP Variable';
-    font-size: 2.4rem;
-    font-weight: bold;
-    background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-right: .5rem;
-
-    @include mixin.sp {
-        font-size: 2rem;
-      }
-  }
-}
-
-.keyward__tag {
-  justify-content: center;
-  margin-top: 2.4rem;
-
-  @include mixin.sp {
-    margin-top: 1.6rem;
   }
 }
 </style>

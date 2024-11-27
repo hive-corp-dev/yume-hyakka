@@ -1,0 +1,41 @@
+---
+const {href} = Astro.props;
+---
+
+
+<a href={href} class="btn">
+  <slot />
+</a>
+
+<style lang="scss">
+
+  .btn {
+    width: 24rem;
+    height: 6rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: linear-gradient(to right, #4976a7, var.$c-key-1, var.$c-key-2);
+    background-size: 200% 100%;
+    background-position: left bottom;
+    border-radius: .8rem;
+    font-weight: bold;
+    transition: all .6s;
+
+    @include mixin.sp {
+      width: 20rem;
+      height: 4.8rem;
+      border-radius: .4rem;
+      font-size: 1.4rem;
+    }
+
+    @include mixin.hover {
+      &:hover {
+        border-radius: 3rem;
+        background-position: left 100% bottom;
+      }
+    }
+  }
+</style>

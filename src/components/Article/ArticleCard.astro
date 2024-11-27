@@ -1,0 +1,101 @@
+---
+import { getTagDataBySlug } from "@utils/articleTags";
+const {article} = Astro.props;
+import { Image } from "astro:assets";
+---
+
+<li class="article-card">
+  <a class="article-card__link" href={`/article/${article.slug}`}>
+    <div class="article-card__thumb">
+      <Image src={article.data.image} width={1600} height={900} alt={article.data.title} />
+    </div>
+    <span class="article-card__title">{article.data.title}</span>
+    <ul class="article-card__tag">
+      {article.data.tags.map(tag => (
+      <li class="article-card__tag-item">
+        <span>{getTagDataBySlug(tag).label}</span>
+      </li>
+      ))}
+    </ul>
+  </a>
+</li>
+
+<style lang="scss">
+ .article-card {
+
+&__link {
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.hover {
+    &:hover {
+      .article__thumb img {
+        transform: scale(1.06);
+      }
+    }
+  }
+}
+
+&__thumb {
+  position: relative;
+  display: flex;
+  aspect-ratio:  16 / 9;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: all .6s;
+  }
+}
+
+&__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: .8rem;
+
+  @include mixin.sp {
+    font-size: 1.4rem;
+  }
+}
+
+&__tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .8rem;
+
+  @include mixin.sp {
+    gap: .4rem;
+  }
+}
+
+&__tag-item {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: .1rem solid rgba(0,0,0, .2);
+  padding: .2rem 1.2rem .3rem;
+  border-radius: .3rem;
+
+  @include mixin.sp {
+    font-size: 1.1rem;
+    padding: .1rem .6rem .2rem;
+  }
+
+  @include mixin.sp-s {
+    font-size: 1.2rem;
+    padding: .1rem .4rem .2rem;
+  }
+
+  &::before {
+    content: '#';
+    margin-right: .2rem;
+
+    @include mixin.sp {
+      margin-right: 0;
+    }
+  }
+}
+ }
+</style>

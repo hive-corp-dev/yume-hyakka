@@ -1,0 +1,63 @@
+---
+import TagCloud from "@components/Home/TagCloud.astro"
+
+const {tags} = Astro.props;
+---
+
+<div class="keyword">
+  <p class="keyword__title">この記事のキーワード</p>
+  
+  <TagCloud tags={tags} type="article-footer" />
+</div>
+
+<style lang="scss">
+.keyword {
+  position: relative;
+  padding: 3.2rem 3.2rem 4rem;
+  background-color: rgba(#fff, 1);
+  margin-top: 8rem;
+  border: .1rem solid #eee;
+
+  @include mixin.sp {
+      padding: 2.4rem;
+    }
+}
+
+.keyword__title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  display: flex;justify-content: center;
+  align-items: center;
+
+  @include mixin.sp {
+        font-size: 1.8rem;
+      }
+
+  &::before {
+    // position: absolute;
+    content: '#';
+    font-family: 'Noto Sans JP Variable';
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-right: .5rem;
+
+    @include mixin.sp {
+        font-size: 2rem;
+      }
+  }
+}
+
+.keyword__tag {
+  justify-content: center;
+  margin-top: 2rem;
+
+  @include mixin.sp {
+    margin-top: 1.6rem;
+  }
+}
+
+</style>

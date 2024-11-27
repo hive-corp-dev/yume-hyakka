@@ -1,12 +1,15 @@
 ---
-const {tags} = Astro.props;
+import { sortTagsByKana } from "../../utils/articleTags";
+import { getTagUrl } from "../../utils/articleTags";
+const {tags, type} = Astro.props;
+const sortedTags = sortTagsByKana(tags);
 ---
 
-<ul class="tag">
+<ul class:list={["tag", type]}>
   {
-    tags.map((tag) => (
+    sortedTags.map((tag) => (
       <li class="tag__item">
-        <a href="" class="tag__link">
+        <a href={getTagUrl(tag.slug)} class="tag__link">
           <span>{tag.label}</span>
         </a>
       </li>
@@ -66,5 +69,54 @@ const {tags} = Astro.props;
       }
     }
   }
+
+
+.tag.sidebar {
+  margin-top: 2.4rem;
+
+  .tag {
+
+    &__link {
+      span {
+        padding: .2rem 1.2rem .3rem;
+        font-size: 1.4rem;
+      }
+      
+    }
+  }
+}
+
+.tag.article-header {
+  margin-top: 0;
+
+  .tag {
+    &__link {
+      span {
+        padding: .2rem 1.2rem .3rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.tag.article-footer {
+  margin-top: 2.4rem;
+  justify-content: center;
+
+  @include mixin.sp {
+    margin-top: 1.6rem;
+  }
+
+  .tag {
+    
+
+    &__link {
+      span {
+        padding: .2rem 1.2rem .3rem;
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
 
 </style>

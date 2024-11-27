@@ -79,4 +79,9 @@ export const articleTags = [
     label: "左",
     kana: "ひだり",
   },
+  {
+    slug: "sample",
+    label: "サンプル",
+    kana: "さんぷる",
+  },
 ];

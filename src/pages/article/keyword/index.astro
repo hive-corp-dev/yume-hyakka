@@ -1,0 +1,275 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro"
+import Container from "src/components/Container.astro"
+import Breadcrumb from "src/components/Breadcrumb.astro"
+import TagCloud from "@components/Home/TagCloud.astro"
+import { getCollection } from 'astro:content';
+import { getTagsWithArticles } from 'src/utils/articleTags';
+
+
+const articleEntries = await getCollection('article',({data}) => {
+	return data.isDraft === false;
+})
+
+// 記事が1記事以上あるタグを取得
+const tagsWithArticles = getTagsWithArticles(articleEntries);
+
+const breadcrumbLinks = [
+  { href: '/', label: 'ホーム' },
+  { href: '/article', label: '夢占い' },
+  { label: 'キーワード一覧' },
+]
+---
+
+<BaseLayout>
+	<div class="mv">
+    <Container>
+			<h1 class="mv__title">
+				<span>夢占い</span>
+				<span>キーワード一覧</span>
+			</h1>
+		</Container>
+  </div>
+	<div class="content">
+  <Breadcrumb data={breadcrumbLinks} />
+		<Container>
+			<div class="wrap">
+				<main class="main">
+					<section class="section">
+						<h2 class="title"><span>キーワードから探す</span></h2>
+						<TagCloud tags={tagsWithArticles} />
+					</section>
+				</main>
+			</div>
+		</Container>
+	</div>
+</BaseLayout>
+
+<style lang="scss">
+
+.mv{
+  padding: 20rem 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@include mixin.sp {
+    padding: 16rem 0 9rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		span {
+			&:nth-child(1) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				gap: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2.4rem;
+        }
+			}
+
+			&:nth-child(2) {
+				font-size: 2.4rem;
+				margin-top: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2rem;
+          margin-top: .8rem;
+        }
+			}
+		}
+  }
+}
+
+	.wrap {
+  display: flex;
+  gap: 4.8rem;
+  padding: 8rem 0 20rem;
+
+	@include mixin.sp {
+		padding: 0rem 0 8rem;
+	}
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+	}
+}
+
+.section {
+	position: relative;
+	padding-top: 12rem;
+	z-index: 1;
+
+	@include mixin.sp {
+		padding-top: 8rem;
+	}
+}
+
+.main {
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.title {
+	position: relative;
+	font-size: 3.2rem;
+	font-weight: bold;
+	letter-spacing: .1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+	padding-bottom: 2rem;
+
+	@include mixin.sp {
+		font-size: 2.2rem;
+		padding-bottom: 1.6rem;
+	}
+
+	&::after {
+		content: '';
+		width: 4rem;
+		height: .2rem;
+	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+
+	@include mixin.sp {
+		width: 2.4rem;
+	}
+}
+
+	span {
+	// 	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	// color: transparent;
+	// background-clip: text;
+	}
+}
+
+.article {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6.4rem 4rem;
+	margin-top: 4.8rem;
+
+	@include mixin.sp {
+		gap: 1.6rem;
+		margin-top: 2.4rem;
+	}
+
+	@include mixin.sp-s {
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+	}
+
+	&__item {}
+
+	&__link {
+		display: flex;
+		flex-direction: column;
+
+		@include mixin.hover {
+			&:hover {
+				.article__thumb img {
+					transform: scale(1.06);
+				}
+			}
+		}
+	}
+
+	&__thumb {
+		position: relative;
+		display: flex;
+		aspect-ratio:  16 / 9;
+		overflow: hidden;
+
+		img {
+			height: 100%;
+			object-fit: cover;
+			transition: all .6s;
+		}
+	}
+
+	&__title {
+		font-size: 1.8rem;
+		font-weight: bold;
+		margin-top: .8rem;
+
+		@include mixin.sp {
+			font-size: 1.4rem;
+		}
+	}
+
+	&__tag {
+		display: flex;
+		flex-wrap: wrap;
+		gap: .8rem;
+		margin-top: .8rem;
+
+		@include mixin.sp {
+			gap: .4rem;
+		}
+	}
+
+	&__tag-item {
+		display: flex;
+		font-size: 1.4rem;
+		font-weight: 600;
+		border: .1rem solid rgba(0,0,0, .2);
+		padding: .2rem 1.2rem .3rem;
+		border-radius: .3rem;
+
+		@include mixin.sp {
+			font-size: 1rem;
+			padding: .1rem .4rem .2rem;
+		}
+
+		&::before {
+			content: '#';
+			margin-right: .2rem;
+
+			@include mixin.sp {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+</style>

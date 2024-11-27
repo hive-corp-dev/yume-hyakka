@@ -5,33 +5,36 @@ import { articleSchema } from "../../articleSchema";
 const articleCollection = defineCollection({
   /* ... */
   type: "content",
-  schema: z.object({
-    isDraft: z.boolean(),
-    title: z.string(),
-    description: z.string(),
-    tags: z.array(
-      z.enum([
-        "snake",
-        "white-snake",
-        "house",
-        "maze",
-        "indecision",
-        "self-discovery",
-        "self-discovery",
-        "life-choices",
-        "problem-solving",
-        "love",
-        "emotion",
-        "subconscious",
-        "ex-partner",
-        "future",
-        "relationships",
-        "left",
-      ])
-    ),
-    publishedAt: z.date(),
-    image: z.string().optional(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      isDraft: z.boolean(),
+      title: z.string(),
+      description: z.string(),
+      tags: z.array(
+        z.enum([
+          "snake",
+          "white-snake",
+          "house",
+          "maze",
+          "indecision",
+          "self-discovery",
+          "self-discovery",
+          "life-choices",
+          "problem-solving",
+          "love",
+          "emotion",
+          "subconscious",
+          "ex-partner",
+          "future",
+          "relationships",
+          "left",
+          "sample",
+        ])
+      ),
+      publishedAt: z.date(),
+      // image: z.string().optional(),
+      image: image(),
+    }),
 });
 
 export const collections = {

@@ -21,6 +21,7 @@ import '@fontsource-variable/noto-sans-jp';
 
 import 'the-new-css-reset';
 import '../styles/global.scss';
+import StickyBg from "@components/StickyBg.astro";
 ---
 
 <html lang="ja">
@@ -32,6 +33,7 @@ import '../styles/global.scss';
 		<title>Astro</title>
 	</head>
 	<body>
+		<StickyBg />
     <Header />
     <slot />
 		<Footer />
