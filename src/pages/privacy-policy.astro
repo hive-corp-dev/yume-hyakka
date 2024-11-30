@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
-import { ARTICLE_METADATA } from '@data/metadata';
+import { PRIVACY_POLICY_METADATA } from '@data/metadata';
 
 const breadcrumbLinks = [
 	{ href: '/', label: 'ホーム' },
@@ -10,7 +10,7 @@ const breadcrumbLinks = [
 ]
 ---
 
-<BaseLayout title={ARTICLE_METADATA.title} description={ARTICLE_METADATA.description}>
+<BaseLayout title={PRIVACY_POLICY_METADATA.title} description={PRIVACY_POLICY_METADATA.description}>
 	<div class="mv">
     <Container>
 			<h1 class="mv__title">

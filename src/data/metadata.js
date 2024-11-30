@@ -23,3 +23,13 @@ export const KEYWORD_METADATA = {
 export const KEYWORD_SINGLE_METADATA = {
   title: `キーワード一覧 | ${SITE_NAME}`,
 };
+
+export const PRIVACY_POLICY_METADATA = {
+  title: `プライバシーポリシー | ${SITE_NAME}`,
+  description: "夢百科のプライバシーポリシーです。",
+};
+
+export const DISCLAIMER_METADATA = {
+  title: `免責事項 | ${SITE_NAME}`,
+  description: "夢百科の免責事項です。",
+};

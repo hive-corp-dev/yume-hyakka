@@ -37,7 +37,7 @@ const {keyword} = Astro.params;
 const {posts} = Astro.props;
 ---
 
-<BaseLayout title={`${getTagDataBySlug(keyword).label} | ${KEYWORD_SINGLE_METADATA.title}`}>
+<BaseLayout title={`${getTagDataBySlug(keyword).label} | ${KEYWORD_SINGLE_METADATA.title}`} description={`キーワード: ${getTagDataBySlug(keyword).label}に関する記事一覧です。`}>
   <div class="mv">
     <h1 class="mv__title">
       <span>夢占い</span>
