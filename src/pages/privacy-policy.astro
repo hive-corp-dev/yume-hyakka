@@ -1,0 +1,249 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { ARTICLE_METADATA } from '@data/metadata';
+
+const breadcrumbLinks = [
+	{ href: '/', label: 'ホーム' },
+	{ label: 'プライバシーポリシー' },
+]
+---
+
+<BaseLayout title={ARTICLE_METADATA.title} description={ARTICLE_METADATA.description}>
+	<div class="mv">
+    <Container>
+			<h1 class="mv__title">
+				<span>プライバシーポリシー</span>
+			</h1>
+		</Container>
+  </div>
+	<div class="content">
+		<Breadcrumb data={breadcrumbLinks} />
+		<Container>
+			<div class="wrap">
+				<main class="main">
+          <div class="privacy">
+            <p>当サイトは、個人情報の重要性を認識し、個人情報を保護することが社会的責務であると考え、個人情報に関する法令を遵守し、当サイトで取扱う個人情報の取得、利用、管理を適正に行います。</p>
+
+            <h2>1. 個人情報の利用目的</h2>
+
+            <p>当サイトでは、お問い合わせの際、名前やメールアドレス等の個人情報を入力いただく場合がございます。<br />取得した個人情報は、お問い合わせに対する回答や必要な情報を電子メールなどでご連絡する場合に利用させていただくものであり、これらの目的以外では利用いたしません。</p>
+              
+            <!-- <h2>広告について</h2>
+            <p>当サイトでは、第三者配信の広告サービス（Googleアドセンス、A8.net）を利用しており、ユーザーの興味に応じた商品やサービスの広告を表示するため、クッキー（Cookie）を使用しております。<br />クッキーを使用することで当サイトはお客様のコンピュータを識別できるようになりますが、お客様個人を特定できるものではありません。</p>
+            <p>Cookieを無効にする方法やGoogleアドセンスに関する詳細は「広告 – ポリシーと規約 – Google」をご確認ください。</p>
+            <p>また、当サイトは、Amazon.co.jpを宣伝しリンクすることによってサイトが紹介料を獲得できる手段を提供することを目的に設定されたアフィリエイトプログラムである、Amazonアソシエイト・プログラムの参加者です。</p> -->
+
+            <h2>2. アクセス解析ツールについて</h2>
+            <p>当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を利用しています。このGoogleアナリティクスはトラフィックデータの収集のためにクッキー（Cookie）を使用しております。トラフィックデータは匿名で収集されており、個人を特定するものではありません。</p>
+
+            <p>また、当サイトでは「Microsoft Clarity」を使用しています。このツールでは、訪問者の閲覧履歴や操作情報（クリック、スクロール等）を収集し、ウェブサイトの利用状況を分析する目的で使用しています。これらのデータも匿名で収集され、個人を特定するものではありません。収集された情報はMicrosoftのプライバシーポリシーに基づき管理されています。</p>
+            <p>Microsoftのプライバシーポリシーについては<a href="https://privacy.microsoft.com/ja-jp/" target="_blank" rel="noopener noreferrer">こちら</a>をご参照ください。  
+            </p>
+
+            <h2>3. 情報の利用について</h2>
+            <p>一部コンテンツで登録いただいた情報を、当サイトでのよりよいサービス提供のために利用することがございます。</p>
+            <p>当サイトでは、法律の提供を受ける場合、または法的な請求意外にはユーザー様ご本人の許可なく第三者への個人情報提供、開示はいたしません。</p>
+          </div>
+				</main>
+			</div>
+		</Container>
+	</div>
+</BaseLayout>
+
+<style lang="scss">
+.mv{
+  padding: 20rem 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@include mixin.sp {
+    padding: 16rem 0 9rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		span {
+			&:nth-child(1) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				gap: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2.4rem;
+        }
+
+			}
+
+			&:nth-child(2) {
+				font-size: 2.4rem;
+				margin-top: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2rem;
+          margin-top: .8rem;
+        }
+			}
+		}
+  }
+}
+
+	.wrap {
+		position: relative;
+		z-index: 1;
+  display: flex;
+  gap: 4.8rem;
+  padding: 12rem 0 12rem;
+
+	@include mixin.sp {
+		padding: 8rem 0;
+	}
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+		pointer-events: none;
+	}
+}
+
+.main {
+	position: relative;
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.title {
+	font-size: 3.2rem;
+	font-weight: bold;
+	letter-spacing: .1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+
+	@include mixin.sp {
+		font-size: 2.4rem;
+	}
+
+	span {
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	color: transparent;
+	background-clip: text;
+	}
+}
+
+.privacy {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.25;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  @include mixin.sp {
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-top: 6.4rem;
+    border-bottom: .1rem solid;
+
+    @include mixin.sp {
+      font-size: 1.8rem;
+    }
+  }
+
+  a {
+    color: var.$c-link;
+    text-decoration: underline;
+  }
+
+  ul {
+    strong {
+      background-image: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.8rem;
+      line-height: 2;
+
+      &:not(:first-child) {
+        margin-top:.4rem;
+      }
+
+      &::before {
+        content: '';
+        width: .6rem;
+        height: .6rem;
+        background-image: linear-gradient(to right top, var.$c-key-1, var.$c-key-2);
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 1.5rem;
+
+        @include mixin.sp {
+          top: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // margins
+
+  & > * {
+    margin-top: 2.4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mixin.sp {
+      margin-top: 1.6rem;
+    }
+  }
+
+  h2 {
+    margin-top: 6.4rem;
+
+    @include mixin.sp {
+      margin-top: 4.8rem;
+    }
+  }
+}
+</style>

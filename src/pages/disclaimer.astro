@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { ARTICLE_METADATA } from '@data/metadata';
+
+const breadcrumbLinks = [
+	{ href: '/', label: 'ホーム' },
+	{ label: '免責事項' },
+]
+---
+
+<BaseLayout title={ARTICLE_METADATA.title} description={ARTICLE_METADATA.description}>
+	<div class="mv">
+    <Container>
+			<h1 class="mv__title">
+				<span>免責事項</span>
+			</h1>
+		</Container>
+  </div>
+	<div class="content">
+		<Breadcrumb data={breadcrumbLinks} />
+		<Container>
+			<div class="wrap">
+				<main class="main">
+          <div class="privacy">
+            <h2>1. 情報の正確性について</h2>
+
+            <p>当サイトに掲載されている情報は、記事公開時点での情報に基づいています。正確性や最新性には細心の注意を払っておりますが、誤情報が含まれている場合や、情報が古くなっている場合があります。これらの情報の利用によって生じた損害について、一切の責任を負いかねます。</p>
+              
+            <h2>2. 損害責任の免除</h2>
+            <p>当サイトを利用することで生じた、いかなる損害についても責任を負いません。各種情報の最終的なご判断やご利用は、読者ご自身の責任でお願いいたします。</p>
+
+            <h2>3. 外部リンクについて</h2>
+            <p>当サイトでは、外部サイトへのリンクを含む場合がありますが、リンク先のサイトで提供される情報やサービスに関して一切の責任を負いません。リンク先の利用規約やプライバシーポリシーをご確認のうえご利用ください。</p>
+
+            <h2>4. 著作権について</h2>
+            <p>当サイトに掲載されている全てのコンテンツ（文章、画像、動画、デザイン等）の著作権は、運営者（以下、「当方」）に帰属します。著作権法で認められる範囲を超える無断転載・複製・加工・再配布を禁止します。</p>
+
+            <h2>5. 引用について</h2>
+            <p>本サイトの内容を引用する場合は、以下の条件を満たしてください：</p>
+            <ul>
+              <li>引用部分を明確にし、全体の一部であることを明示すること。</li>
+              <li>引用元として、本サイトのタイトルおよびURLを明記すること。</li>
+            </ul>
+            <p>引用の範囲を超えた利用については、著作権侵害とみなします。</p>
+
+            <h2>6. 法的範囲の限定</h2>
+            <p>本免責事項は、日本国内の法令に基づき解釈されます。万が一、本免責事項のいずれかが無効とされた場合でも、その他の部分は引き続き有効とします。</p>
+
+            <!-- <h2>4. アフィリエイトプログラムについて</h2>        
+            <p>当サイトでは、アフィリエイトプログラムを利用しています。リンクから購入された商品やサービスに関して、運営者は直接の責任を負いません。購入に際しての最終的な判断は、読者ご自身でお願いいたします。</p> -->
+          </div>
+				</main>
+			</div>
+		</Container>
+	</div>
+</BaseLayout>
+
+<style lang="scss">
+.mv{
+  padding: 20rem 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@include mixin.sp {
+    padding: 16rem 0 9rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		span {
+			&:nth-child(1) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				gap: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2.4rem;
+        }
+
+			}
+
+			&:nth-child(2) {
+				font-size: 2.4rem;
+				margin-top: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2rem;
+          margin-top: .8rem;
+        }
+			}
+		}
+  }
+}
+
+	.wrap {
+		position: relative;
+		z-index: 1;
+  display: flex;
+  gap: 4.8rem;
+  padding: 12rem 0 12rem;
+
+	@include mixin.sp {
+		padding: 8rem 0;
+	}
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+		pointer-events: none;
+	}
+}
+
+.main {
+	position: relative;
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.title {
+	font-size: 3.2rem;
+	font-weight: bold;
+	letter-spacing: .1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+
+	@include mixin.sp {
+		font-size: 2.4rem;
+	}
+
+	span {
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	color: transparent;
+	background-clip: text;
+	}
+}
+
+.privacy {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.25;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  @include mixin.sp {
+    font-size: 1.4rem;
+    line-height: 2;
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-top: 6.4rem;
+    border-bottom: .1rem solid;
+
+    @include mixin.sp {
+      font-size: 1.8rem;
+    }
+  }
+
+  a {
+    color: var.$c-link;
+    text-decoration: underline;
+  }
+
+  ul {
+    strong {
+      background-image: none;
+    }
+
+    li {
+      position: relative;
+      padding-left: 1.8rem;
+      line-height: 2;
+
+      &:not(:first-child) {
+        margin-top:.4rem;
+      }
+
+      &::before {
+        content: '';
+        width: .6rem;
+        height: .6rem;
+        background-image: linear-gradient(to right top, var.$c-key-1, var.$c-key-2);
+        border-radius: 50%;
+        position: absolute;
+        left: 0;
+        top: 1.5rem;
+
+        @include mixin.sp {
+          top: 1.3rem;
+        }
+      }
+    }
+  }
+
+  // margins
+
+  & > * {
+    margin-top: 2.4rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    @include mixin.sp {
+      margin-top: 1.6rem;
+    }
+  }
+
+  h2 {
+    margin-top: 6.4rem;
+
+    @include mixin.sp {
+      margin-top: 4.8rem;
+    }
+  }
+}
+</style>

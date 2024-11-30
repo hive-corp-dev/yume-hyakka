@@ -17,6 +17,19 @@ import Container from "./Container.astro"
         </ul>
       </nav>
     </div>
+
+    <div class="footer__sub">
+      <nav class="footer__sub-nav">
+        <ul class="footer__sub-nav-list">
+          <li class="footer__sub-nav-item">
+            <a href="/privacy-policy" class="footer__sub-nav-link">プライバシーポリシー</a>
+          </li>
+          <li class="footer__sub-nav-item">
+            <a href="/disclaimer" class="footer__sub-nav-link">免責事項</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </Container>
   <div class="footer__copy">
     <p>© 2024 夢百科 All Rights Reserved.</p>
@@ -32,6 +45,10 @@ import Container from "./Container.astro"
     background-size: cover;
     padding: 8rem 0 0;
     color: #fff;
+
+    @include mixin.sp {
+      padding-top: 4rem;
+    }
 
     &::before {
       content: '';
@@ -92,11 +109,37 @@ import Container from "./Container.astro"
       }
     }
 
+    &__sub {
+
+    }
+
+    &__sub-nav-list {
+      display: flex;
+      justify-content: flex-end;
+      gap: 3.2rem;
+
+      @include mixin.sp {
+        justify-content: center;
+        gap: 1.6rem;
+      }
+    }
+
+    &__sub-nav-item {}
+
+    &__sub-nav-link {
+      font-size: 1.3rem;
+      text-decoration: underline;
+
+      @include mixin.sp {
+        font-size: 1.1rem;
+      }
+    }
+
     &__copy {
       text-align: center;
       padding: 1.2rem;
       font-size: 1.4rem;
-      margin-top: 4rem;
+      margin-top: 1.6rem;
       // background-color: var.$c-key-1;
       // color: #fff;
 
