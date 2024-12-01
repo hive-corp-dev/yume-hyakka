@@ -7,19 +7,6 @@
   </div>
   <div class="toc"></div>
 </nav>
- 
-<script>
-  import * as tocbot from 'tocbot'
- 
-  tocbot.init({
-    tocSelector: '.toc', // 目次を追加するクラス名
-    contentSelector: '#article-body', // 目次を取得するコンテンツ
-    listClass: 'toc-list', // olのクラス名
-    linkClass: 'toc-link', // aタグのクラス名
-    headingSelector: 'h2, h3', // 目次として取得する見出しタグ
-    scrollSmoothOffset: document.querySelector('.js-header').offsetHeight * -1, // スクロール時のオフセット
-  })
-</script>
 
 <style is:global lang="scss">
   .toc-nav {
@@ -29,6 +16,10 @@
     background-color: rgba(255, 255, 255, 0.455);
     line-height: 1.75;
     margin-top: 4rem!important;
+
+    @include mixin.sp {
+      background-color: rgba(255, 255, 255, 1);
+    }
   }
 
 
@@ -36,23 +27,57 @@
     font-size: 1.8rem;
   }
 
+  .toc-list.is-collapsible {
+    margin-top: .6rem;
+
+    .toc-list-item {
+      &:not(:first-child) {
+        margin-top: .4rem;
+      }
+    }
+  }
+
   .toc-link {
+    position: relative;
+
+      &::before {
+        content: '';
+        background-image: linear-gradient(to bottom ,rgba(var.$c-key-1, 1), rgba(var.$c-key-2, 1));
+        background-size: 100% 100%;
+        background-position: left top;
+        background-repeat: no-repeat;
+        width: .2rem;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all .3s;
+      }
     transition: color .3s;
 
     &.node-name--H2 {
-      display: inline-block;
+      display: block;
       margin-top: 1rem;
       font-size: 1.5rem;
+      padding-left: 1rem;
     }
 
     &.node-name--H3 {
+      display: block;
       font-size: 1.4rem;
       padding-left: 1.2rem;
     }
 
     @include mixin.hover {
       &:hover {
-        color: var.$c-key-1;
+        // color: var.$c-key-1;
+        background-color: #f8f8f8;
+
+
+        &::before {
+          opacity: 1;
+        }
       }
     }
 

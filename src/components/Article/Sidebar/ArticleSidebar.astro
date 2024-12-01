@@ -3,6 +3,7 @@ import TagCloud from "@components/Home/TagCloud.astro";
 import { getTagsWithArticles } from "@utils/articleTags";
 import { getCollection } from 'astro:content';
 import ArticleRanking from "./Widgets/ArticleRanking.astro";
+import ArticleTocBlock from "./Widgets/ArticleTocBlock.astro";
 
 const articleEntries = await getCollection('article', ({data}) => {
 	return data.isDraft === false;
@@ -19,6 +20,7 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
     <p class="head">キーワード</p>
     <TagCloud tags={tagsWithArticles} type="sidebar" />
   </div>
+  <ArticleTocBlock />
 </aside>
 
 
@@ -27,9 +29,8 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
     padding-top: 2.4rem;
     width: 28rem;
     flex-shrink: 0;
-    display: grid;
-    grid-template-columns: 1fr;
     gap: 4rem;
+    display: flex;flex-direction: column;
 
     @include mixin.tab {
       width: 24rem;
@@ -63,13 +64,8 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
       height: .2rem;
       background-image: linear-gradient(to left , rgb(255, 160, 176), rgb(198, 153, 241));
       position: absolute;
-    bottom: 0;
-    left: 0;
+      bottom: 0;
+      left: 0;
     }
-   
   }
-
-  
-
-
 </style>

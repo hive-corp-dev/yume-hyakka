@@ -1,0 +1,149 @@
+---
+import ArticleToc from "../Widgets/ArticleToc.astro";
+
+---
+
+<div class="sidebar__block -toc js-sidebar-toc-block" data-toc-is-active={false}>
+  <button class="toc-btn js-show-toc">
+    <span class="toc-btn__text">
+      <span>閉</span>
+      <span>じ</span>
+      <span>る</span>
+    </span>
+    <span class="toc-btn__text">
+      <span>目</span>
+      <span>次</span>
+    </span>
+  </button>
+  <p class="head">目次</p>
+  <ArticleToc />
+</div>
+
+
+
+<style lang="scss">
+  .toc-btn {
+    display: none;
+
+    @include mixin.sp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;justify-content: center;
+      width: 2.4rem;
+      height: 5rem;
+      background-image: linear-gradient(to right bottom, var.$c-key-1, var.$c-key-2); 
+      position: fixed;
+      left: 0;
+      top: 0;
+      border-radius: .4rem 0 0 .4rem;
+    }
+
+    &__text {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        font-weight: bold;
+        color: white;
+      }
+
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: flex;
+      }
+    }
+  }
+
+  .sidebar__block.-toc {
+    position: sticky;
+    right: 0;
+    top: 12rem;
+    transform: translateX(0);
+
+    &.is-active {
+      transform: translateX(0);
+    }
+
+    @include mixin.sp {
+      position: fixed;
+      top: 9.2rem;
+      width: 100%;
+      padding: 0 0 0 2rem;
+      right: 0;
+      max-height: calc(100svh - 6.2rem - 6rem);
+      height: 100%;
+      transform: translateX(calc(100% - 2rem));
+      transition: all .6s;
+    }
+
+    .head {
+      position: relative;
+      font-weight: bold;
+      font-size: 1.8rem;
+      padding-bottom: 1.2rem;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: .2rem;
+        background-image: linear-gradient(to left , rgb(255, 160, 176), rgb(198, 153, 241));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      @include mixin.sp {
+        display: none;
+      }
+    }
+  }
+</style>
+
+<style is:global lang="scss">
+  html:has([data-toc-is-active="true"]) {
+    .toc-btn {
+      display: flex;
+
+      &__text {
+        &:first-child {
+          display: flex;
+        }
+
+        &:nth-child(2) {
+          display: none;
+      }
+    }
+    }
+
+    .sidebar__block.-toc {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<script>
+  const btn = document.querySelector('.js-show-toc');
+  const sidebarBlock = document.querySelector('.js-sidebar-toc-block');
+
+  btn.addEventListener('click', () => {
+    let isActive = sidebarBlock.dataset.tocIsActive === 'true';
+    sidebarBlock.dataset.tocIsActive = !isActive;
+  })
+
+  
+  sidebarBlock.addEventListener('click', (e) => {
+      if (event.target.classList.contains('toc-link')) {
+        sidebarBlock.dataset.tocIsActive = 'false';
+      }
+    })
+
+</script>

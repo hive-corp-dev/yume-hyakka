@@ -1,0 +1,138 @@
+---
+const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
+const paginationList = Array.from({length: `${length}`}, (_, i) => i + 1);
+
+import { FiChevronsLeft, FiChevronLeft, FiChevronsRight, FiChevronRight } from "react-icons/fi";
+---
+
+<nav class="pagination">
+  {
+    firstUrl === currentUrl ? (
+      <span class="pagination__link -arrow -disabled"><FiChevronsLeft /></span>
+    ) : (
+      <a class="pagination__link -arrow" href={firstUrl}><FiChevronsLeft /></a>
+    )
+  }
+
+  { prevUrl ? (
+    <a href={prevUrl} class="pagination__link -arrow -mr">
+        <FiChevronLeft />
+    </a>
+  ) : (
+    <span class="pagination__link -disabled -arrow -mr">
+        <FiChevronLeft />
+    </span>        
+  )}
+
+  {
+    paginationList.map((num) => (
+      currentPage === num ? (
+        <span class={`pagination__link ${currentPage === num ? "-disabled -active" : ""}`}>
+          {num}
+        </span>
+      ) : (
+        <a href={`${firstUrl}${num === 1 ? "" : '/' + num}`} class={`pagination__link ${currentPage === num ? "-disabled -active" : ""}`}>
+          {num}
+        </a>
+      )
+    ))
+  }
+
+  { !nextUrl ? (
+    <span class="pagination__link -disabled -arrow -ml">
+        <FiChevronRight />
+    </span>
+  ) : (
+    <a href={nextUrl} class="pagination__link -arrow -ml">
+        <FiChevronRight />
+    </a>
+  )}
+
+  { lastUrl == currentUrl ? (
+    <span class="pagination__link -disabled -arrow">
+        <FiChevronsRight />
+    </span>
+  ) : (
+    <a href={lastUrl} class="pagination__link -arrow">
+        <FiChevronsRight />
+    </a>
+  )}
+</nav>
+
+
+<style lang="scss">
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      width: 3.6rem;
+      height: 3.6rem;
+      font-size: 1.6rem;
+      background-image: linear-gradient(to right top, var.$c-key-1, var.$c-key-2);
+      background-clip: text;
+      transition: all .3s;
+
+      @include mixin.sp {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.3rem;
+      }
+
+      &.-active {
+        text-decoration: underline;
+      }
+
+      &.-arrow {
+        &:not(.-disabled) {
+          @include mixin.hover {
+            &:hover {
+              color: var.$c-key-1;
+            }
+          }
+        }
+      }
+
+      &.-ml {
+        margin-left: 1.6rem;
+
+        @include mixin.sp {
+          margin-left: .8rem;
+        }
+      }
+
+      &.-mr {
+        margin-right: 1.6rem;
+
+        @include mixin.sp{ 
+          margin-right: .8rem;
+        }
+      }
+      
+      @include mixin.hover {
+        &:not(.-disabled) {
+          &:hover {
+            color: transparent;
+          }
+        }
+      }
+
+      // 矢印のホバー時
+      &.-disabled {
+        @include mixin.hover {
+          &:hover {
+            cursor: text;
+          }
+        }
+      }
+    }
+  }
+
+</style>

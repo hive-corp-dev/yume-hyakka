@@ -2,24 +2,28 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
-import {getTagDataBySlug} from '../../utils/articleTags';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import ArticleList from '@components/Article/ArticleList.astro';
 import Pagination from '@components/Pagination.astro';
+import { ARTICLE_METADATA } from '@data/metadata';
 import { POSTS_PER_PAGE } from '@data/article';
 
-import { ARTICLE_METADATA } from '@data/metadata';
-import { getSortedPosts } from '@utils/article';
-
-const articleEntries = await getCollection('article', ({ data }) => {
+export async function getStaticPaths({ paginate }) {
+  const pages = await getCollection('article', ({ data }) => {
 		return data.isDraft === false;
 	});
+  // Generate pages from our array of astronauts, with 2 to a page for testing
+  return paginate(pages, { pageSize: POSTS_PER_PAGE });
+}
+
+// ページネーションされたデータは、すべて"page"プロパティとして渡されます
+const { page } = Astro.props;
+
+const articleEntries = await getCollection('article', ({ data }) => {
+	return data.isDraft === false;
+});
 
 const articleCount = articleEntries.length;
-
-const sortedArticles = getSortedPosts(articleEntries);
-
-const latestArticles = sortedArticles.slice(0, POSTS_PER_PAGE);
 
 const breadcrumbLinks = [
 	{ href: '/', label: 'ホーム' },
@@ -41,19 +45,23 @@ const breadcrumbLinks = [
 		<Container>
 			<div class="wrap">
 				<main class="main">
-					<ArticleList articles={latestArticles} />
+					<p class="current-page">{page.currentPage}/{page.lastPage}ページ目</p>
+					<div class="article-list">
+						<ArticleList articles={page.data} />
+					</div>
 					{
 						articleCount > POSTS_PER_PAGE && (
-							<div class="pagination">
-								<Pagination
-									length={sortedArticles.length / POSTS_PER_PAGE}
-									currentUrl="/article"
-									currentPage={1}
-									firstUrl="/article"
-									nextUrl={`/article/${2}`}
-									lastUrl={`/article/${Math.ceil(sortedArticles.length / POSTS_PER_PAGE)}`}
-									/>
-							</div>
+						<div class="pagination">
+						<Pagination 
+						length={page.lastPage} 
+						currentUrl={page.url.current} 
+						currentPage={page.currentPage} 
+						firstUrl={`/article`} 
+						prevUrl={page.url.prev} 
+						nextUrl={page.url.next} 
+						lastUrl={`/article/${page.lastPage}`}
+						/>
+					</div>
 						)
 					}
 				</main>
@@ -152,6 +160,15 @@ const breadcrumbLinks = [
 	@include mixin.sp {
 		padding-left: 0;
 		padding-right: 0;
+	}
+}
+
+.current-page {
+	margin-bottom: 2.4rem;
+	font-size: 1.4rem;
+
+	@include mixin.sp {
+		font-size: 1.2rem;
 	}
 }
 
