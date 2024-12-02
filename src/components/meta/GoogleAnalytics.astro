@@ -1,0 +1,22 @@
+---
+const gaId = process.env.GA_MEASUREMENT_ID;
+---
+
+{
+  gaId && (
+    <>
+<script
+  type="text/partytown"
+  async src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}></script>
+  <script type="text/partytown">
+    {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', ${gaId});
+    `}
+  </script>
+  </>
+  )
+}
