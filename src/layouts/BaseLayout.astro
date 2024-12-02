@@ -27,6 +27,8 @@ import '../styles/global.scss';
 import StickyBg from "@components/StickyBg.astro";
 
 const {title, description, ogImageUrl, ogType} = Astro.props;
+
+const isDev = Astro.url.hostname === "localhost";
 ---
 
 <html lang="ja">
@@ -37,7 +39,9 @@ const {title, description, ogImageUrl, ogType} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<Seo title={title} description={description} ogImageUrl={ogImageUrl} ogType={ogType} />
 		<GoogleAnalytics />
-		<Clarity />
+		{
+			!isDev && <Clarity />
+		}
 	</head>
 	<body>
 		<StickyBg />
