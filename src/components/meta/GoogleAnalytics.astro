@@ -1,5 +1,5 @@
 ---
-const gaId = process.env.GA_MEASUREMENT_ID;
+const gaId = import.meta.env.GA_MEASUREMENT_ID;
 ---
 
 {
@@ -14,7 +14,7 @@ const gaId = process.env.GA_MEASUREMENT_ID;
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
 
-    gtag('config', ${gaId});
+    gtag('config', "${gaId}");
     `}
   </script>
   </>
