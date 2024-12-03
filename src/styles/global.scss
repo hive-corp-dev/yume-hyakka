@@ -25,6 +25,12 @@ body {
   font-weight: 500;
   color: #3b3b3b;
   letter-spacing: 0.05em;
+
+  background-image: url("/mv.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 img {
