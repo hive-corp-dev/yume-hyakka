@@ -1,7 +1,10 @@
 ---
-import { getTagDataBySlug } from "@utils/articleTags";
+import { getTagListBySlugs, getTagDataBySlug, sortTagsByKana } from "@utils/articleTags";
 const {article} = Astro.props;
 import { Image } from "astro:assets";
+
+const tagsData = getTagListBySlugs(article.data.tags);
+const sortedTags = sortTagsByKana(tagsData);
 ---
 
 <li class="article-card">
@@ -11,9 +14,9 @@ import { Image } from "astro:assets";
     </div>
     <span class="article-card__title">{article.data.title}</span>
     <ul class="article-card__tag">
-      {article.data.tags.map(tag => (
+      {sortedTags.map(tag => (
       <li class="article-card__tag-item">
-        <span>{getTagDataBySlug(tag).label}</span>
+        <span>{tag.label}</span>
       </li>
       ))}
     </ul>
