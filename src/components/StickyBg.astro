@@ -4,7 +4,7 @@ import bgImage from '../images/mv.png';
 ---
 
 <div class="bg">
-  <Image src={bgImage} alt="" loading="eager" class="bg__img" />
+  <!-- <Image src={bgImage} alt="" loading="eager" class="bg__img" /> -->
 </div>
 
 <style lang="scss">
@@ -15,6 +15,11 @@ import bgImage from '../images/mv.png';
     top: 0;
     left: 0;
     z-index: -1;
+    background-image: url('/mv.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 
     &__img {
       position: absolute;
