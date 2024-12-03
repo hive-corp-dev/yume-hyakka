@@ -80,8 +80,83 @@ export const articleTags = [
     kana: "ひだり",
   },
   {
-    slug: "sample",
-    label: "サンプル",
-    kana: "さんぷる",
+    slug: "being-late",
+    label: "遅刻",
+    kana: "ちこく",
+  },
+  {
+    slug: "upset",
+    label: "焦り",
+    kana: "あせり",
+  },
+  {
+    slug: "hawk",
+    label: "鷹",
+    kana: "たか",
+  },
+  {
+    slug: "eagle",
+    label: "鷲",
+    kana: "わし",
+  },
+  {
+    slug: "black",
+    label: "黒",
+    kana: "くろ",
+  },
+  {
+    slug: "white",
+    label: "白",
+    kana: "しろ",
+  },
+  {
+    slug: "bull",
+    label: "牛",
+    kana: "うし",
+  },
+  {
+    slug: "holiness",
+    label: "神聖",
+    kana: "しんせい",
+  },
+  {
+    slug: "ocean",
+    label: "海",
+    kana: "うみ",
+  },
+  {
+    slug: "many-people",
+    label: "多くの人々",
+    kana: "おおくのひとびと",
+  },
+  {
+    slug: "accident",
+    label: "事故",
+    kana: "じこ",
+  },
+  {
+    slug: "anxiety",
+    label: "不安",
+    kana: "ふあん",
+  },
+  {
+    slug: "tension",
+    label: "緊張感",
+    kana: "きんちょうかん",
+  },
+  {
+    slug: "mental-stress",
+    label: "精神的ストレス",
+    kana: "せいしんてきすとれす",
+  },
+  {
+    slug: "elevator",
+    label: "エレベーター",
+    kana: "えれべーたー",
+  },
+  {
+    slug: "self-improvement",
+    label: "自己成長",
+    kana: "じこけいはつ",
   },
 ];

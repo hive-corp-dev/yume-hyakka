@@ -1,1 +1,1 @@
-export const rankingPostIds = ["love.mdx", "love-person-left.mdx", "maze.mdx", "test-post.mdx"];
+export const rankingPostIds = ["love.mdx", "white-cow.mdx", "being-late.mdx", "maze.mdx"];

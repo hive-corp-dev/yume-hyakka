@@ -7,12 +7,14 @@ const rankedArticles = await getCollection('article', ({data}) => {
 	return data.isDraft === false
 });
 
-const filteredRankedArticles = rankedArticles.filter(article => rankingPostIds.includes(article.id));
+const sortedRankedArticles = rankingPostIds.map(id => 
+  rankedArticles.find(article => article.id === id)
+).filter(article => article !== undefined);
 
 ---
 <ol class="ranking">
   {
-    filteredRankedArticles.map((article) => {
+    sortedRankedArticles.map((article) => {
       return (
       <li class="ranking__item">
         <a href={getArticlePathBySlug(article.slug)} class="ranking__link">
