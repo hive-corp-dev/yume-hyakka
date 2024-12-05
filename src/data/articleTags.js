@@ -30,11 +30,6 @@ export const articleTags = [
     kana: "じこたんきゅう",
   },
   {
-    slug: "self-discovery",
-    label: "自己探究",
-    kana: "じこたんきゅう",
-  },
-  {
     slug: "life-choices",
     label: "人生の選択",
     kana: "じんせいのせんたく",
