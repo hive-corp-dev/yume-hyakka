@@ -1,5 +1,10 @@
 export const articleTags = [
   {
+    slug: "affection",
+    label: "愛情",
+    kana: "あいじょう",
+  },
+  {
     slug: "snake",
     label: "蛇",
     kana: "へび",
@@ -115,7 +120,7 @@ export const articleTags = [
     kana: "しんせい",
   },
   {
-    slug: "ocean",
+    slug: "sea",
     label: "海",
     kana: "うみ",
   },
@@ -153,5 +158,65 @@ export const articleTags = [
     slug: "self-improvement",
     label: "自己成長",
     kana: "じこけいはつ",
+  },
+  {
+    slug: "chocolate",
+    label: "チョコレート",
+    kana: "ちょこれーと",
+  },
+  {
+    slug: "bear",
+    label: "熊",
+    kana: "くま",
+  },
+  {
+    slug: "courage",
+    label: "勇気",
+    kana: "ゆうき",
+  },
+  {
+    slug: "family-love",
+    label: "家族愛",
+    kana: "かぞくあい",
+  },
+  {
+    slug: "stack-of-cash",
+    label: "札束",
+    kana: "さつたば",
+  },
+  {
+    slug: "success",
+    label: "成功",
+    kana: "せいこう",
+  },
+  {
+    slug: "wealth",
+    label: "富",
+    kana: "とみ",
+  },
+  {
+    slug: "money",
+    label: "お金",
+    kana: "おかね",
+  },
+  {
+    slug: "sunflower",
+    label: "ひまわり",
+    kana: "ひまわり",
+  },
+  {
+    slug: "hope",
+    label: "希望",
+    kana: "きぼう",
+  },
+  {
+    slug: "growth",
+    label: "成長",
+    kana: "せいちょう",
+  },
+  {
+    slug: "self-actualization",
+    label: "自己実現",
+    kana: "じこじつげん",
   },
 ];

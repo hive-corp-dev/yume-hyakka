@@ -6,6 +6,9 @@ import { getSortedPosts } from "@utils/article";
 const { articles } = Astro.props;
 
 const sortedArticles = getSortedPosts(articles);
+
+console.log(sortedArticles.map(article => article.data.publishedAt));
+
 ---
 
 <ul class="article">
