@@ -126,9 +126,11 @@ const {posts} = Astro.props;
 }
 
   .wrap {
+  position: relative;
   display: flex;
   gap: 4.8rem;
   padding: 8rem 0 20rem;
+  z-index: 1;
 
   @include mixin.sp {
     padding: 0rem 0 8rem;
