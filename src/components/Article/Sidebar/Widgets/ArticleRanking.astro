@@ -19,7 +19,7 @@ const sortedRankedArticles = rankingPostIds.map(id =>
       <li class="ranking__item">
         <a href={getArticlePathBySlug(article.slug)} class="ranking__link">
           <div class="ranking__thumb">
-            <img src={article.data.image} alt='' width={1600} height={900} />
+            <img src={article.data.thumbnail} alt='' width={1600} height={900} />
           </div>
           <p class="ranking__title">{article.data.title}</p>
         </a>

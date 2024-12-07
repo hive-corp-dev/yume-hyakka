@@ -7,17 +7,23 @@ import ArticleList from '@components/Article/ArticleList.astro';
 import Pagination from '@components/Pagination.astro';
 import { ARTICLE_METADATA } from '@data/metadata';
 import { POSTS_PER_PAGE } from '@data/article';
+import { getSortedPosts } from '@utils/article';
 
 export async function getStaticPaths({ paginate }) {
   const pages = await getCollection('article', ({ data }) => {
 		return data.isDraft === false;
 	});
+
+	const sortedArticles = getSortedPosts(pages);
+
   // Generate pages from our array of astronauts, with 2 to a page for testing
-  return paginate(pages, { pageSize: POSTS_PER_PAGE });
+  return paginate(sortedArticles, { pageSize: POSTS_PER_PAGE });
 }
 
 // ページネーションされたデータは、すべて"page"プロパティとして渡されます
 const { page } = Astro.props;
+
+// const sortedArticles = getSortedPosts(page.data);
 
 const articleEntries = await getCollection('article', ({ data }) => {
 	return data.isDraft === false;

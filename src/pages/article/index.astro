@@ -46,7 +46,7 @@ const breadcrumbLinks = [
 						articleCount > POSTS_PER_PAGE && (
 							<div class="pagination">
 								<Pagination
-									length={sortedArticles.length / POSTS_PER_PAGE}
+									length={Math.ceil(sortedArticles.length / POSTS_PER_PAGE)}
 									currentUrl="/article"
 									currentPage={1}
 									firstUrl="/article"

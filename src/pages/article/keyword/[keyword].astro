@@ -59,7 +59,7 @@ const {posts} = Astro.props;
           <li class="article__item">
             <a class="article__link" href={`/article/${post.slug}`}>
               <div class="article__thumb">
-                <img src={post.data.image} alt={post.data.title} />
+                <img src={post.data.thumbnail} alt={post.data.title} />
               </div>
               <span class="article__title">{post.data.title}</span>
               <ul class="article__tag">

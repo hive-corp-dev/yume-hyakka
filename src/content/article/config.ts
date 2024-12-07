@@ -58,8 +58,9 @@ const articleCollection = defineCollection({
         ])
       ),
       publishedAt: z.date(),
-      // image: z.string().optional(),
-      image: image(),
+      thumbnail: image().refine((img) => img.width >= 1080, {
+        message: "カバー画像は幅1080ピクセル以上でなければなりません！",
+      }),
     }),
 });
 

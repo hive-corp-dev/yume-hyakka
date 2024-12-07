@@ -10,7 +10,7 @@ const sortedTags = sortTagsByKana(tagsData);
 <li class="article-card">
   <a class="article-card__link" href={`/article/${article.slug}`}>
     <div class="article-card__thumb">
-      <Image src={article.data.image} width={1600} height={900} alt={article.data.title} />
+      <Image src={article.data.thumbnail} width={1600} height={900} alt={article.data.title} />
     </div>
     <span class="article-card__title">{article.data.title}</span>
     <ul class="article-card__tag">

@@ -34,7 +34,7 @@ const breadcrumbLinks = [
 ]
 ---
 
-<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={entry.data.image} description={entry.data.description}>
+<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={entry.data.thumbnail} description={entry.data.description}>
   <div class="mv">
     <p class="mv__title">夢占い</p>
   </div>
@@ -46,7 +46,7 @@ const breadcrumbLinks = [
         <TagCloud tags={selectedTags} type="article-header" />
         <h1 class="title">{entry.data.title}</h1>
         <div class="thumb">
-          <Image src={entry.data.image} width={1600} height={900} alt={entry.data.title} />
+          <Image src={entry.data.thumbnail} width={1600} height={900} alt={entry.data.title} />
         </div>
         <ArticleContent entry={entry} components={{ TableOfContents }}  />
         <KeywordBox tags={selectedTags} />
