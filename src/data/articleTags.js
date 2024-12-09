@@ -219,4 +219,24 @@ export const articleTags = [
     label: "自己実現",
     kana: "じこじつげん",
   },
+  {
+    slug: "alcohol",
+    label: "お酒",
+    kana: "おさけ",
+  },
+  {
+    slug: "wine",
+    label: "ワイン",
+    kana: "わいん",
+  },
+  {
+    slug: "fruits",
+    label: "果物",
+    kana: "くだもの",
+  },
+  {
+    slug: "melon",
+    label: "メロン",
+    kana: "めろん",
+  },
 ];
