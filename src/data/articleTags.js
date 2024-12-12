@@ -239,4 +239,34 @@ export const articleTags = [
     label: "メロン",
     kana: "めろん",
   },
+  {
+    slug: "cat",
+    label: "猫",
+    kana: "ねこ",
+  },
+  {
+    slug: "black-cat",
+    label: "黒猫",
+    kana: "くろねこ",
+  },
+  {
+    slug: "kitten",
+    label: "子猫",
+    kana: "こねこ",
+  },
+  {
+    slug: "dog",
+    label: "犬",
+    kana: "いぬ",
+  },
+  {
+    slug: "brown",
+    label: "茶色",
+    kana: "ちゃいろ",
+  },
+  {
+    slug: "green",
+    label: "緑",
+    kana: "みどり",
+  },
 ];

@@ -55,6 +55,8 @@ const articleCollection = defineCollection({
           "hope",
           "growth",
           "self-actualization",
+          "cat",
+          "black-cat",
         ])
       ),
       publishedAt: z.date(),
