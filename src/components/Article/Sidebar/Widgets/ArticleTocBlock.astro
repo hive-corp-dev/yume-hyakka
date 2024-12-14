@@ -68,12 +68,13 @@ import ArticleToc from "../Widgets/ArticleToc.astro";
     right: 0;
     top: 12rem;
     transform: translateX(0);
+    z-index: var.$z-toc;
 
     &.is-active {
       transform: translateX(0);
     }
 
-    @include mixin.sp {
+    @include mixin.tab-s {
       position: fixed;
       top: 9.2rem;
       width: 100%;
