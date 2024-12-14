@@ -30,7 +30,9 @@ const isDev = Astro.url.hostname === "localhost";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<Seo title={title} description={description} ogImageUrl={ogImageUrl} ogType={ogType} />
-		<GoogleAnalytics />
+		{
+			!isDev && <GoogleAnalytics />
+		}
 		{
 			!isDev && <Clarity />
 		}
