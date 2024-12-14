@@ -2,9 +2,11 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Container from '../../../components/Container.astro';
+import ArticleList from '@components/Article/ArticleList.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import {tagPaths, getTagDataBySlug} from '../../../utils/articleTags';
 import { KEYWORD_SINGLE_METADATA } from '@data/metadata';
+import { getSortedPosts } from '@utils/article';
 
 export async function getStaticPaths() {
   const articleEntries = await getCollection('article', ({data}) => {
@@ -35,6 +37,9 @@ export async function getStaticPaths() {
 
 const {keyword} = Astro.params;
 const {posts} = Astro.props;
+
+const sortedArticles = getSortedPosts(posts);
+
 ---
 
 <BaseLayout title={`${getTagDataBySlug(keyword).label} | ${KEYWORD_SINGLE_METADATA.title}`} description={`キーワード: ${getTagDataBySlug(keyword).label}に関する記事一覧です。`}>
@@ -54,25 +59,7 @@ const {posts} = Astro.props;
     <Container>
       <div class="wrap">
         <main class="main">
-        <ul class="article">
-          {posts.map(post => (
-          <li class="article__item">
-            <a class="article__link" href={`/article/${post.slug}`}>
-              <div class="article__thumb">
-                <img src={post.data.thumbnail} alt={post.data.title} />
-              </div>
-              <span class="article__title">{post.data.title}</span>
-              <ul class="article__tag">
-                {post.data.tags.map(tag => (
-                <li class="article__tag-item">
-                  <span>{getTagDataBySlug(tag).label}</span>
-                </li>
-                ))}
-              </ul>
-            </a>
-          </li>
-          ))}
-        </ul>
+          <ArticleList articles={sortedArticles} />
         </main>
       </div>
     </Container>

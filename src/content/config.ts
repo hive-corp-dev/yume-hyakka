@@ -1,6 +1,5 @@
 // 1. `astro:content`からユーティリティをインポート
 import { z, defineCollection } from "astro:content";
-import { articleSchema } from "../../articleSchema";
 // 2. コレクションを定義
 const articleCollection = defineCollection({
   /* ... */
@@ -50,6 +49,8 @@ const articleCollection = defineCollection({
           "stack-of-cash",
           "money",
           "wealth",
+          "wine",
+          "alcohol",
           "success",
           "sunflower",
           "hope",
@@ -57,6 +58,13 @@ const articleCollection = defineCollection({
           "self-actualization",
           "cat",
           "black-cat",
+          "kitten",
+          "dog",
+          "brown",
+          "bear",
+          "fruits",
+          "melon",
+          "green",
         ])
       ),
       publishedAt: z.date(),

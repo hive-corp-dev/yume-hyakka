@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import { rankingPostIds } from '@data/articleRanking';
 import {getArticlePathBySlug} from '@utils/article';
+import { Image } from 'astro:assets';
 
 const rankedArticles = await getCollection('article', ({data}) => {
 	return data.isDraft === false
@@ -19,7 +20,7 @@ const sortedRankedArticles = rankingPostIds.map(id =>
       <li class="ranking__item">
         <a href={getArticlePathBySlug(article.slug)} class="ranking__link">
           <div class="ranking__thumb">
-            <img src={article.data.thumbnail} alt='' width={1600} height={900} />
+            <Image src={article.data.thumbnail} alt={article.data.title} width={1600} height={900} />
           </div>
           <p class="ranking__title">{article.data.title}</p>
         </a>
