@@ -269,4 +269,59 @@ export const articleTags = [
     label: "緑",
     kana: "みどり",
   },
+  {
+    slug: "cheese",
+    label: "チーズ",
+    kana: "ちーず",
+  },
+  {
+    slug: "swallow",
+    label: "ツバメ",
+    kana: "つばめ",
+  },
+  {
+    slug: "mochi",
+    label: "餅",
+    kana: "もち",
+  },
+  {
+    slug: "mail",
+    label: "メール",
+    kana: "めーる",
+  },
+  {
+    slug: "candle",
+    label: "ろうそく",
+    kana: "ろうそく",
+  },
+  {
+    slug: "healing",
+    label: "癒し",
+    kana: "いやし",
+  },
+  {
+    slug: "freedom",
+    label: "自由",
+    kana: "じゆう",
+  },
+  {
+    slug: "good-luck",
+    label: "幸運",
+    kana: "こううん",
+  },
+  {
+    slug: "communication",
+    label: "コミュニケーション",
+    kana: "こみゅにけーしょん",
+  },
+  {
+    slug: "sociability",
+    label: "社交性",
+    kana: "しゃこうせい",
+  },
+  {
+    slug: "relaxation",
+    label: "リラックス",
+    kana: "りらっくす",
+  },
 ];
