@@ -354,4 +354,19 @@ export const articleTags = [
     label: "生命力",
     kana: "せいめいりょく",
   },
+  {
+    slug: "rainbow",
+    label: "虹",
+    kana: "にじ",
+  },
+  {
+    slug: "diversity",
+    label: "多様性",
+    kana: "たようせい",
+  },
+  {
+    slug: "harmony",
+    label: "調和",
+    kana: "ちょうわ",
+  },
 ];
