@@ -76,6 +76,12 @@ const articleCollection = defineCollection({
           "communication",
           "sociability",
           "relaxation",
+          "tennis",
+          "sports",
+          "colleague",
+          "competitiveness",
+          "meat",
+          "vitality",
         ])
       ),
       publishedAt: z.date(),

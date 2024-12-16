@@ -324,4 +324,34 @@ export const articleTags = [
     label: "リラックス",
     kana: "りらっくす",
   },
+  {
+    slug: "tennis",
+    label: "テニス",
+    kana: "てにす",
+  },
+  {
+    slug: "sports",
+    label: "スポーツ",
+    kana: "すぽーつ",
+  },
+  {
+    slug: "colleague",
+    label: "同僚",
+    kana: "どうりょう",
+  },
+  {
+    slug: "competitiveness",
+    label: "競争心",
+    kana: "きょうそうしん",
+  },
+  {
+    slug: "meat",
+    label: "肉",
+    kana: "にく",
+  },
+  {
+    slug: "vitality",
+    label: "生命力",
+    kana: "せいめいりょく",
+  },
 ];
