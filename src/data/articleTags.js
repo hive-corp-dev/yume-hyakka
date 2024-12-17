@@ -150,6 +150,11 @@ export const articleTags = [
     kana: "せいしんてきすとれす",
   },
   {
+    slug: "stress",
+    label: "ストレス",
+    kana: "すとれす",
+  },
+  {
     slug: "elevator",
     label: "エレベーター",
     kana: "えれべーたー",
@@ -368,5 +373,35 @@ export const articleTags = [
     slug: "harmony",
     label: "調和",
     kana: "ちょうわ",
+  },
+  {
+    slug: "lemon",
+    label: "レモン",
+    kana: "れもん",
+  },
+  {
+    slug: "fresh-start",
+    label: "心機一転",
+    kana: "しんきいってん",
+  },
+  {
+    slug: "refresh",
+    label: "リフレッシュ",
+    kana: "りふれっしゅ",
+  },
+  {
+    slug: "locker",
+    label: "ロッカー",
+    kana: "ろっかー",
+  },
+  {
+    slug: "secret",
+    label: "秘密",
+    kana: "ひみつ",
+  },
+  {
+    slug: "new-environment",
+    label: "新しい環境",
+    kana: "あたらしいかんきょう",
   },
 ];
