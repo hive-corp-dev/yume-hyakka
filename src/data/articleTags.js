@@ -404,4 +404,54 @@ export const articleTags = [
     label: "新しい環境",
     kana: "あたらしいかんきょう",
   },
+  {
+    slug: "airplane",
+    label: "飛行機",
+    kana: "ひこうき",
+  },
+  {
+    slug: "adventure",
+    label: "冒険",
+    kana: "ぼうけん",
+  },
+  {
+    slug: "life-turning-point",
+    label: "人生の転機",
+    kana: "じんせいのてんき",
+  },
+  {
+    slug: "person-you-like",
+    label: "好きな人",
+    kana: "すきなひと",
+  },
+  {
+    slug: "right",
+    label: "右",
+    kana: "みぎ",
+  },
+  {
+    slug: "crocodile",
+    label: "ワニ",
+    kana: "わに",
+  },
+  {
+    slug: "prosperity",
+    label: "繁栄",
+    kana: "はんえい",
+  },
+  {
+    slug: "rain",
+    label: "雨",
+    kana: "あめ",
+  },
+  {
+    slug: "purification",
+    label: "浄化",
+    kana: "じょうか",
+  },
+  {
+    slug: "rabbit",
+    label: "うさぎ",
+    kana: "うさぎ",
+  },
 ];
