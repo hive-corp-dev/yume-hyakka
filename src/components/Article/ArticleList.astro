@@ -3,16 +3,35 @@ import { getTagDataBySlug } from "@utils/articleTags";
 import ArticleCard from "./ArticleCard.astro";
 import { getSortedPosts } from "@utils/article";
 
-const { articles } = Astro.props;
+const { articles, isSorted = true, isOrderedList = false } = Astro.props;
 
-const sortedArticles = getSortedPosts(articles);
+
+let sortedArticles;
+
+if(isSorted) {
+	sortedArticles = getSortedPosts(articles);
+} else {
+	sortedArticles = articles;
+}
 ---
 
-<ul class="article">
+
+
+{
+	isOrderedList ? (
+	<ol class="article">
   {sortedArticles.map(articlePostEntry => (
   <ArticleCard article={articlePostEntry} />
   ))}
+</ol>
+	) : (
+	<ul class="article">
+  	{sortedArticles.map(articlePostEntry => (
+ 	 <ArticleCard article={articlePostEntry} />
+  ))}
 </ul>
+	)
+}
 
 <style lang="scss">
   .article {
