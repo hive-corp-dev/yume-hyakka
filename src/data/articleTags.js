@@ -494,4 +494,54 @@ export const articleTags = [
     label: "願望",
     kana: "がんぼう",
   },
+  {
+    slug: "celebrity",
+    label: "芸能人",
+    kana: "げいのうじん",
+  },
+  {
+    slug: "toilet",
+    label: "トイレ",
+    kana: "といれ",
+  },
+  {
+    slug: "stress-relief",
+    label: "ストレス解消",
+    kana: "すとれすかいしょう",
+  },
+  {
+    slug: "crow",
+    label: "カラス",
+    kana: "からす",
+  },
+  {
+    slug: "wisdom",
+    label: "知恵",
+    kana: "ちえ",
+  },
+  {
+    slug: "thunder",
+    label: "雷",
+    kana: "かみなり",
+  },
+  {
+    slug: "inspiration",
+    label: "インスピレーション",
+    kana: "いんすぴれーしょん",
+  },
+  {
+    slug: "bee",
+    label: "蜂",
+    kana: "はち",
+  },
+  {
+    slug: "cooperation",
+    label: "協調性",
+    kana: "きょうちょうせい",
+  },
+  {
+    slug: "warning",
+    label: "警告",
+    kana: "けいこく",
+  },
 ];
