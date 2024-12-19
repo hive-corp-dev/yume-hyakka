@@ -36,6 +36,10 @@ const isDev = Astro.url.hostname === "localhost";
 		{
 			!isDev && <Clarity />
 		}
+		{
+			!isDev && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076760418024606"
+			crossorigin="anonymous"></script>
+		}
 	</head>
 	<body>
 		<StickyBg />
