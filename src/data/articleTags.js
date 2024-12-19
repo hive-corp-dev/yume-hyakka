@@ -454,4 +454,44 @@ export const articleTags = [
     label: "うさぎ",
     kana: "うさぎ",
   },
+  {
+    slug: "hot-spring",
+    label: "温泉",
+    kana: "おんせん",
+  },
+  {
+    slug: "horse",
+    label: "馬",
+    kana: "うま",
+  },
+  {
+    slug: "challenge",
+    label: "挑戦",
+    kana: "ちょうせん",
+  },
+  {
+    slug: "monkey",
+    label: "猿",
+    kana: "さる",
+  },
+  {
+    slug: "flying",
+    label: "空を飛ぶ",
+    kana: "そらをとぶ",
+  },
+  {
+    slug: "shooting-star",
+    label: "流れ星",
+    kana: "ながれぼし",
+  },
+  {
+    slug: "goal-achievement",
+    label: "目標達成",
+    kana: "もくひょうたっせい",
+  },
+  {
+    slug: "wish",
+    label: "願望",
+    kana: "がんぼう",
+  },
 ];
