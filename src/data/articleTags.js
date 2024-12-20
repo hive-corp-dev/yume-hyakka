@@ -544,4 +544,54 @@ export const articleTags = [
     label: "警告",
     kana: "けいこく",
   },
+  {
+    slug: "money-forture",
+    label: "金運",
+    kana: "きんうん",
+  },
+  {
+    slug: "centipede",
+    label: "ムカデ",
+    kana: "むかで",
+  },
+  {
+    slug: "fear",
+    label: "恐怖",
+    kana: "きょうふ",
+  },
+  {
+    slug: "dolphin",
+    label: "イルカ",
+    kana: "いるか",
+  },
+  {
+    slug: "goldfish",
+    label: "金魚",
+    kana: "きんぎょ",
+  },
+  {
+    slug: "mystery",
+    label: "神秘",
+    kana: "しんぴ",
+  },
+  {
+    slug: "car",
+    label: "車",
+    kana: "くるま",
+  },
+  {
+    slug: "sparrow",
+    label: "スズメ",
+    kana: "すずめ",
+  },
+  {
+    slug: "fatigue",
+    label: "疲労",
+    kana: "ひろう",
+  },
+  {
+    slug: "leech",
+    label: "ヒル",
+    kana: "ひる",
+  },
 ];
