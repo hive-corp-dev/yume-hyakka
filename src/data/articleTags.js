@@ -594,4 +594,29 @@ export const articleTags = [
     label: "ヒル",
     kana: "ひる",
   },
+  {
+    slug: "fish",
+    label: "魚",
+    kana: "さかな",
+  },
+  {
+    slug: "tiger",
+    label: "虎",
+    kana: "とら",
+  },
+  {
+    slug: "zombie",
+    label: "ゾンビ",
+    kana: "ぞんび",
+  },
+  {
+    slug: "water",
+    label: "水",
+    kana: "みず",
+  },
+  {
+    slug: "line",
+    label: "LINE",
+    kana: "らいん",
+  },
 ];

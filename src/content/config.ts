@@ -130,6 +130,11 @@ const articleCollection = defineCollection({
           "sparrow",
           "fatigue",
           "leech",
+          "fish",
+          "tiger",
+          "zombie",
+          "water",
+          "line",
         ])
       ),
       publishedAt: z.date(),
