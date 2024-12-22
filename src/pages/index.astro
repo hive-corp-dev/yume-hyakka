@@ -23,8 +23,6 @@ articleEntries.find(article => article.id === id)
 const sortedArticles = getSortedPosts(articleEntries);
 const trimmedArticles = sortedArticles.slice(0, POSTS_PER_PAGE_TOP);
 
-
-
 // 記事が1記事以上あるタグを取得
 const tagsWithArticles = getTagsWithArticles(articleEntries);
 ---
