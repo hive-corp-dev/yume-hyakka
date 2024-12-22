@@ -45,7 +45,7 @@ export const articleTags = [
     kana: "もんだいかいけつ",
   },
   {
-    slug: "love",
+    slug: "romantic-love",
     label: "恋愛",
     kana: "れんあい",
   },
@@ -618,5 +618,70 @@ export const articleTags = [
     slug: "line",
     label: "LINE",
     kana: "らいん",
+  },
+  {
+    slug: "flood",
+    label: "洪水",
+    kana: "こうずい",
+  },
+  {
+    slug: "bone",
+    label: "骨",
+    kana: "ほね",
+  },
+  {
+    slug: "truth",
+    label: "真実",
+    kana: "しんじつ",
+  },
+  {
+    slug: "life",
+    label: "人生",
+    kana: "じんせい",
+  },
+  {
+    slug: "health",
+    label: "健康",
+    kana: "けんこう",
+  },
+  {
+    slug: "cockroach",
+    label: "ゴキブリ",
+    kana: "ごきぶり",
+  },
+  {
+    slug: "tornado",
+    label: "竜巻",
+    kana: "たつまき",
+  },
+  {
+    slug: "unexpected-event",
+    label: "予期せぬ出来事",
+    kana: "よきせぬできごと",
+  },
+  {
+    slug: "red",
+    label: "赤",
+    kana: "あか",
+  },
+  {
+    slug: "clothes",
+    label: "服",
+    kana: "ふく",
+  },
+  {
+    slug: "passion",
+    label: "情熱",
+    kana: "じょうねつ",
+  },
+  {
+    slug: "love",
+    label: "愛",
+    kana: "あい",
+  },
+  {
+    slug: "temptation",
+    label: "誘惑",
+    kana: "ゆうわく",
   },
 ];
