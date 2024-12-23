@@ -8,7 +8,6 @@ import {getTagDataBySlug, getTagsWithArticles} from '../../utils/articleTags';
 import TableOfContents from '../../components/TableOfContents.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import {ARTICLE_SINGLE_METADATA} from '@data/metadata';
-import AdUnitToc from '@components/Article/Ads/AdUnitToc.astro';
 import AdUnit from '@components/Article/Ads/AdUnit.astro';
 
 import { getCollection } from 'astro:content';
@@ -50,7 +49,7 @@ const breadcrumbLinks = [
         <div class="thumb">
           <Image src={entry.data.thumbnail} width={1600} height={900} alt={entry.data.title} />
         </div>
-        <ArticleContent entry={entry} components={{ TableOfContents, AdUnitToc, AdUnit }}  />
+        <ArticleContent entry={entry} components={{ TableOfContents, AdUnit }}  />
         <KeywordBox tags={selectedTags} />
         <SnsShare postUrl={currentUrl} title={entry.data.title} />
       </main>
