@@ -684,4 +684,49 @@ export const articleTags = [
     label: "誘惑",
     kana: "ゆうわく",
   },
+  {
+    slug: "elderly-person",
+    label: "老人",
+    kana: "ろうじん",
+  },
+  {
+    slug: "cleaning",
+    label: "掃除",
+    kana: "そうじ",
+  },
+  {
+    slug: "lion",
+    label: "ライオン",
+    kana: "らいおん",
+  },
+  {
+    slug: "leadership",
+    label: "リーダーシップ",
+    kana: "りーだーしっぷ",
+  },
+  {
+    slug: "spider",
+    label: "蜘蛛",
+    kana: "くも",
+  },
+  {
+    slug: "bondage",
+    label: "束縛",
+    kana: "そくばく",
+  },
+  {
+    slug: "destiny",
+    label: "運命",
+    kana: "うんめい",
+  },
+  {
+    slug: "escapism",
+    label: "現実逃避",
+    kana: "げんじつとうひ",
+  },
+  {
+    slug: "lingering-emotions",
+    label: "未練",
+    kana: "みれん",
+  },
 ];
