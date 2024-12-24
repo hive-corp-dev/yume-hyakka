@@ -37,7 +37,7 @@ const breadcrumbLinks = [
 const url = Astro.url.origin;
 ---
 
-<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={`${url}/${entry.data.thumbnail.src}`} description={entry.data.description}>
+<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={`${url}${entry.data.thumbnail.src}`} description={entry.data.description}>
   <div class="mv">
     <p class="mv__title">夢占い</p>
   </div>
