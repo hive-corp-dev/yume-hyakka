@@ -729,4 +729,79 @@ export const articleTags = [
     label: "未練",
     kana: "みれん",
   },
+  {
+    slug: "sence-of-accomplishment",
+    label: "達成感",
+    kana: "たっせいかん",
+  },
+  {
+    slug: "new-start",
+    label: "新たなスタート",
+    kana: "あらたなすたーと",
+  },
+  {
+    slug: "graduation-ceremony",
+    label: "卒業式",
+    kana: "そつぎょうしき",
+  },
+  {
+    slug: "whale",
+    label: "クジラ",
+    kana: "くじら",
+  },
+  {
+    slug: "cake",
+    label: "ケーキ",
+    kana: "けーき",
+  },
+  {
+    slug: "happiness",
+    label: "幸福",
+    kana: "こうふく",
+  },
+  {
+    slug: "ufo",
+    label: "UFO",
+    kana: "ゆーえふおー",
+  },
+  {
+    slug: "curiosity",
+    label: "好奇心",
+    kana: "こうきしん",
+  },
+  {
+    slug: "ship",
+    label: "船",
+    kana: "ふね",
+  },
+  {
+    slug: "summer",
+    label: "夏",
+    kana: "なつ",
+  },
+  {
+    slug: "summer-festival",
+    label: "夏祭り",
+    kana: "なつまつり",
+  },
+  {
+    slug: "night",
+    label: "夜",
+    kana: "よる",
+  },
+  {
+    slug: "fireworks",
+    label: "花火",
+    kana: "はなび",
+  },
+  {
+    slug: "sense-of-responsibility",
+    label: "責任感",
+    kana: "せきにんかん",
+  },
+  {
+    slug: "prime-minister",
+    label: "総理大臣",
+    kana: "そうりだいじん",
+  },
 ];
