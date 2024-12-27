@@ -110,7 +110,7 @@ export const articleTags = [
     kana: "しろ",
   },
   {
-    slug: "bull",
+    slug: "cow",
     label: "牛",
     kana: "うし",
   },
@@ -545,7 +545,7 @@ export const articleTags = [
     kana: "けいこく",
   },
   {
-    slug: "money-forture",
+    slug: "money-fortune",
     label: "金運",
     kana: "きんうん",
   },
@@ -803,5 +803,65 @@ export const articleTags = [
     slug: "prime-minister",
     label: "総理大臣",
     kana: "そうりだいじん",
+  },
+  {
+    slug: "ant",
+    label: "アリ",
+    kana: "あり",
+  },
+  {
+    slug: "diligence",
+    label: "勤勉さ",
+    kana: "きんべんさ",
+  },
+  {
+    slug: "effort",
+    label: "努力",
+    kana: "どりょく",
+  },
+  {
+    slug: "mountain",
+    label: "山",
+    kana: "やま",
+  },
+  {
+    slug: "volcano",
+    label: "火山",
+    kana: "かざん",
+  },
+  {
+    slug: "eruption",
+    label: "噴火",
+    kana: "ふんか",
+  },
+  {
+    slug: "puppy",
+    label: "子犬",
+    kana: "こいぬ",
+  },
+  {
+    slug: "dragon",
+    label: "龍",
+    kana: "りゅう",
+  },
+  {
+    slug: "ambulance",
+    label: "救急車",
+    kana: "きゅうきゅうしゃ",
+  },
+  {
+    slug: "taxi",
+    label: "タクシー",
+    kana: "たくしー",
+  },
+  {
+    slug: "cherry-blossom",
+    label: "桜",
+    kana: "さくら",
+  },
+  {
+    slug: "ladybug",
+    label: "てんとう虫",
+    kana: "てんとうむし",
   },
 ];
