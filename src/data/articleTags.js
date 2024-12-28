@@ -864,4 +864,34 @@ export const articleTags = [
     label: "てんとう虫",
     kana: "てんとうむし",
   },
+  {
+    slug: "shark",
+    label: "サメ",
+    kana: "さめ",
+  },
+  {
+    slug: "idol",
+    label: "アイドル",
+    kana: "あいどる",
+  },
+  {
+    slug: "grave",
+    label: "墓",
+    kana: "はか",
+  },
+  {
+    slug: "ideal",
+    label: "理想",
+    kana: "りそう",
+  },
+  {
+    slug: "connection",
+    label: "縁",
+    kana: "えん",
+  },
+  {
+    slug: "ghost",
+    label: "幽霊",
+    kana: "ゆうれい",
+  },
 ];

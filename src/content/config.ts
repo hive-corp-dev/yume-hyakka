@@ -184,6 +184,12 @@ const articleCollection = defineCollection({
           "taxi",
           "cherry-blossom",
           "ladybug",
+          "shark",
+          "idol",
+          "grave",
+          "ideal",
+          "connection",
+          "ghost",
         ])
       ),
       publishedAt: z.date(),
