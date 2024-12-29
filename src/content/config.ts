@@ -190,6 +190,11 @@ const articleCollection = defineCollection({
           "ideal",
           "connection",
           "ghost",
+          "mount-fuji",
+          "eggplant",
+          "morning-sun",
+          "treasure-ship",
+          "torii-gate",
         ])
       ),
       publishedAt: z.date(),

@@ -894,4 +894,29 @@ export const articleTags = [
     label: "幽霊",
     kana: "ゆうれい",
   },
+  {
+    slug: "mount-fuji",
+    label: "富士山",
+    kana: "ふじさん",
+  },
+  {
+    slug: "eggplant",
+    label: "茄子",
+    kana: "なす",
+  },
+  {
+    slug: "morning-sun",
+    label: "朝日",
+    kana: "あさひ",
+  },
+  {
+    slug: "treasure-ship",
+    label: "宝船",
+    kana: "たからぶね",
+  },
+  {
+    slug: "torii-gate",
+    label: "鳥居",
+    kana: "とりい",
+  },
 ];
