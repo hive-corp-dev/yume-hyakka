@@ -11,6 +11,8 @@ import { TOP_METADATA } from '@data/metadata';
 import { getSortedPosts } from '@utils/article';
 import { POSTS_PER_PAGE_TOP, POSTS_PER_PAGE_TOP_RANKING } from '@data/article';
 import { rankingPostIds } from '@data/articleRanking';
+import ColumnList from '@components/Column/ColumnList.astro';
+import { getSortedColumns } from '@utils/column';
 
 const articleEntries = await getCollection('article',({data}) => {
 	return data.isDraft === false;
@@ -25,6 +27,12 @@ const trimmedArticles = sortedArticles.slice(0, POSTS_PER_PAGE_TOP);
 
 // 記事が1記事以上あるタグを取得
 const tagsWithArticles = getTagsWithArticles(articleEntries);
+
+const columnEntries = await getCollection('column',({data}) => {
+	return data.isDraft === false;
+})
+
+const sortedColumns = getSortedColumns(columnEntries);
 ---
 
 <BaseLayout title={TOP_METADATA.title} description={TOP_METADATA.description} >
@@ -34,7 +42,6 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
 			<div class="wrap">
 				<main class="main">
 					
-	
 					<section class="section">
 						<h2 class="title"><span>夢占いの新着記事</span></h2>
 						<div class="article-list">
@@ -54,28 +61,17 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
 						</div>
 					</section>
 
-					<!-- <section class="section">
+					<section class="section">
 						<h2 class="title"><span>コラム</span></h2>
 
-						<ul class="column">
-							<li class="column-item">
-								<img src="/column-01.png" alt="">
-								<p class="column-title">夢見をよくするコツ・縁起のよい初夢を見る方法</p>
-							</li>
-							<li class="column-item">
-								<img src="/column-02.png" alt="">
-								<p class="column-title">夢見をよくするコツ・縁起のよい初夢を見る方法</p>
-							</li>
-							<li class="column-item">
-								<img src="/column-03.png" alt="">
-								<p class="column-title">夢見をよくするコツ・縁起のよい初夢を見る方法</p>
-							</li>
-						</ul>
+						<div class="column-list">
+							<ColumnList columns={sortedColumns} isSorted={false} />
+						</div>
 						
 						<div class="btn-wrap">
-							<Btn href="/article">コラムの記事一覧</Btn>
+							<Btn href="/column">コラムの記事一覧</Btn>
 						</div>
-					</section> -->
+					</section>
 
 					<section class="section">
 						<h2 class="title"><span>キーワードから探す</span></h2>

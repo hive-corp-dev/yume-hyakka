@@ -195,6 +195,7 @@ const articleCollection = defineCollection({
           "morning-sun",
           "treasure-ship",
           "torii-gate",
+          "teeth",
         ])
       ),
       publishedAt: z.date(),
@@ -204,6 +205,23 @@ const articleCollection = defineCollection({
     }),
 });
 
+const columnCollection = defineCollection({
+  /* ... */
+  type: "content",
+  schema: ({ image }) =>
+    z.object({
+      isDraft: z.boolean(),
+      title: z.string(),
+      description: z.string(),
+      category: z.enum(["knowledge"]),
+      publishedAt: z.date(),
+      thumbnail: image().refine((img) => img.width >= 1080, {
+        message: "カバー画像は幅1080ピクセル以上でなければなりません！",
+      }),
+    }),
+});
+
 export const collections = {
   article: articleCollection,
+  column: columnCollection,
 };

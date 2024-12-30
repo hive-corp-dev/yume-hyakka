@@ -13,12 +13,8 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
 
 <aside class="sidebar">
   <div class="sidebar__block">
-    <p class="head">夢占いの人気記事ランキング</p>
+    <p class="head">人気記事ランキング</p>
     <ArticleRanking />
-  </div>
-  <div class="sidebar__block">
-    <p class="head">キーワード</p>
-    <TagCloud tags={tagsWithArticles} type="sidebar" />
   </div>
   <ArticleTocBlock />
 </aside>

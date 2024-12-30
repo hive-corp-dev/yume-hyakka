@@ -1,0 +1,50 @@
+---
+import ColumnCard from "./ColumnCard.astro";
+import {getSortedColumns} from "@utils/column";
+
+const { columns, isSorted = true, isOrderedList = false } = Astro.props;
+
+let sortedColumns;
+
+if(isSorted) {
+	sortedColumns = getSortedColumns(columns);
+} else {
+	sortedColumns = columns;
+}
+---
+
+{
+	isOrderedList ? (
+	<ol class="column">
+  {sortedColumns.map(columnPostEntry => (
+  <ColumnCard column={columnPostEntry} />
+  ))}
+</ol>
+	) : (
+	<ul class="column">
+  	{sortedColumns.map(columnPostEntry => (
+ 	 <ColumnCard column={columnPostEntry} />
+  ))}
+</ul>
+	)
+}
+
+<style lang="scss">
+  .column {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 6.4rem 4rem;
+
+	@include mixin.sp {
+		gap: 1.6rem;
+		
+	}
+
+	@include mixin.sp-s {
+		grid-template-columns: 1fr;
+		gap: 2.4rem;
+		display: flex;
+		flex-direction: column;
+	}
+}
+</style>

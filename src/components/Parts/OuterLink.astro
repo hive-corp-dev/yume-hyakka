@@ -1,0 +1,32 @@
+---
+const { href } = Astro.props;
+import { FiExternalLink } from "react-icons/fi";
+---
+
+<a href={href} target="_blank" rel="noopener noreferrer" class="link">
+  <slot /><FiExternalLink />
+</a>
+
+<style lang="scss" is:global>
+  .link {
+    color: var.$c-link-article;
+    text-decoration: underline;
+    transition: opacity .3s;
+
+      @include mixin.hover {
+        &:hover {
+          opacity: .8;
+        }
+      }
+
+    & > * {
+      display: inline;
+    }
+
+    svg {
+      margin-left: .2rem;
+      transform: translateY(.1rem);
+      display: inline;
+    }
+  }
+</style>

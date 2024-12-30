@@ -1,0 +1,165 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ColumnList from '@components/Column/ColumnList.astro';
+
+import { COLUMN_METADATA } from '@data/metadata';
+import { getSortedPosts } from '@utils/article';
+
+const columnEntries = await getCollection('column', ({ data }) => {
+		return data.isDraft === false;
+	});
+
+const sortedColumns = getSortedPosts(columnEntries);
+
+const breadcrumbLinks = [
+	{ href: '/', label: 'ホーム' },
+	{ label: 'コラム' },
+]
+---
+
+<BaseLayout title={COLUMN_METADATA.title} description={COLUMN_METADATA.description}>
+	<div class="mv">
+    <Container>
+			<h1 class="mv__title">
+				<span>コラム</span>
+				<span>記事一覧</span>
+			</h1>
+		</Container>
+  </div>
+	<div class="content">
+		<Breadcrumb data={breadcrumbLinks} />
+		<Container>
+			<div class="wrap">
+				<main class="main">
+					<ColumnList columns={sortedColumns} />
+				</main>
+			</div>
+		</Container>
+	</div>
+</BaseLayout>
+
+<style lang="scss">
+.mv{
+  padding: 20rem 0 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+	@include mixin.sp {
+    padding: 16rem 0 9rem;
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .1em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+
+		span {
+			&:nth-child(1) {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				gap: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2.4rem;
+        }
+
+			}
+
+			&:nth-child(2) {
+				font-size: 2.4rem;
+				margin-top: 1.6rem;
+
+				@include mixin.sp {
+          font-size: 2rem;
+          margin-top: .8rem;
+        }
+			}
+		}
+  }
+}
+
+	.wrap {
+		position: relative;
+		z-index: 1;
+  display: flex;
+  gap: 4.8rem;
+  padding: 12rem 0 12rem;
+
+	@include mixin.sp {
+		padding: 8rem 0;
+	}
+}
+
+.content {
+	position: relative;
+	width: 100%;
+	background: #fff;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url("../../texture-02.jpg");
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+		opacity: 0.2;
+		pointer-events: none;
+	}
+}
+
+.main {
+	position: relative;
+  flex-grow: 1;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
+	width: 100%;
+
+	@include mixin.sp {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.title {
+	font-size: 3.2rem;
+	font-weight: bold;
+	letter-spacing: .1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.6rem;
+
+	@include mixin.sp {
+		font-size: 2.4rem;
+	}
+
+	span {
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+	color: transparent;
+	background-clip: text;
+	}
+}
+
+.pagination {
+	margin-top: 8rem;
+
+	@include mixin.sp {
+		margin-top: 4rem;
+	}
+}
+</style>

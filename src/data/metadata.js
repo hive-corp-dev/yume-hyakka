@@ -24,6 +24,19 @@ export const KEYWORD_SINGLE_METADATA = {
   title: `キーワード一覧 | ${SITE_NAME}`,
 };
 
+export const COLUMN_METADATA = {
+  title: `コラム | ${SITE_NAME}`,
+  description: "コラムの記事一覧です。夢に関する知識や、睡眠に関する情報を紹介しています。",
+};
+
+export const COLUMN_SINGLE_METADATA = {
+  title: `コラム | ${SITE_NAME}`,
+};
+
+export const COLUMN_CATEGORY_SINGLE_METADATA = {
+  title: `カテゴリー | コラム | ${SITE_NAME}`,
+};
+
 export const PRIVACY_POLICY_METADATA = {
   title: `プライバシーポリシー | ${SITE_NAME}`,
   description: "夢百科のプライバシーポリシーです。",

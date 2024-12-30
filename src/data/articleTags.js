@@ -919,4 +919,9 @@ export const articleTags = [
     label: "鳥居",
     kana: "とりい",
   },
+  {
+    slug: "teeth",
+    label: "歯",
+    kana: "は",
+  },
 ];

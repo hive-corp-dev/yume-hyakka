@@ -1,24 +1,21 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Container from '../../components/Container.astro';
-import ArticleSidebar from '@components/Article/Sidebar/ArticleSidebar.astro';
-import {articleTags} from '../../data/articleTags';
+import ColumnSidebar from '@components/Article/Sidebar/ColumnSidebar.astro';
 import SnsShare from '../../components/Article/SnsShare.astro';
-import {getTagDataBySlug, getTagsWithArticles} from '../../utils/articleTags';
+import { getColumnCategoryDataBySlug, getColumnCategoryUrl } from '@utils/columnCategories';
 import TableOfContents from '../../components/TableOfContents.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
-import {ARTICLE_SINGLE_METADATA} from '@data/metadata';
+import {COLUMN_SINGLE_METADATA} from '@data/metadata';
 import AdUnit from '@components/Article/Ads/AdUnit.astro';
-
 import { getCollection } from 'astro:content';
 import ArticleContent from '../../components/Article/ArticleContent.astro';
-import TagCloud from '../../components/Home/TagCloud.astro';
-import KeywordBox from '@components/Article/KeywordBox.astro';
 import { Image } from 'astro:assets';
+import { IoFolderOutline } from "react-icons/io5";
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
-  const articleEntries = await getCollection('article');
-  return articleEntries.map(entry => ({
+  const columnEntries = await getCollection('column');
+  return columnEntries.map(entry => ({
     params: { slug: entry.slug }, props: { entry },
   }));
 }
@@ -27,35 +24,39 @@ const { entry } = Astro.props;
 
 const currentUrl = Astro.url;
 
-const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
-
 const breadcrumbLinks = [
   { href: '/', label: 'ホーム' },
-  { href: '/article', label: '夢占い' },
+  { href: '/column', label: 'コラム' },
 ]
 
 const url = Astro.url.origin;
 ---
 
-<BaseLayout title={`${entry.data.title} | ${ARTICLE_SINGLE_METADATA.title}`} ogImageUrl={`${url}${entry.data.thumbnail.src}`} description={entry.data.description}>
+<BaseLayout title={`${entry.data.title} | ${COLUMN_SINGLE_METADATA.title}`} ogImageUrl={`${url}${entry.data.thumbnail.src}`} description={entry.data.description}>
   <div class="mv">
-    <p class="mv__title">夢占い</p>
+    <p class="mv__title">コラム</p>
   </div>
 <div class="body">
   <Breadcrumb data={breadcrumbLinks} />
   <Container>
     <div class="wrap">
       <main class="main">
-        <TagCloud tags={selectedTags} type="article-header" />
+        <div class="category">
+          <a href={`${getColumnCategoryUrl(entry.data.category)}`} class="category__link">
+            <div class="category__link-content">
+              <IoFolderOutline />
+              <span>{getColumnCategoryDataBySlug(entry.data.category).name}</span>
+            </div>
+          </a>
+        </div>
         <h1 class="title">{entry.data.title}</h1>
         <div class="thumb">
           <Image src={entry.data.thumbnail} width={1600} height={900} alt={entry.data.title} />
         </div>
         <ArticleContent entry={entry} components={{ TableOfContents, AdUnit }}  />
-        <KeywordBox tags={selectedTags} />
         <SnsShare postUrl={currentUrl} title={entry.data.title} />
       </main>
-      <ArticleSidebar />
+      <ColumnSidebar />
     </div>
   </Container>
 </div>
@@ -135,6 +136,49 @@ const url = Astro.url.origin;
 
   @include mixin.sp {
     padding: 0;
+  }
+}
+
+.category {
+  display: flex;
+  justify-content: flex-start;
+
+  &__link {
+    display: block;
+    background-image: linear-gradient(to right bottom, var.$c-key-1, var.$c-key-2);
+    border-radius: .3rem;
+
+    @include mixin.hover {
+      &:hover {
+        .category__link-content {
+          background-color: transparent;
+          border-color: transparent;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__link-content {
+    display: inline-flex;
+    align-items: center;
+    border: .1rem solid rgba(0,0,0, .2);
+    padding: .2rem 1.2rem .3rem;
+    border-radius: .3rem;
+    gap: .4rem;
+    background-color: #fff;
+    transition: all .3s;
+
+    svg {
+      transform: translateY(.05rem);
+    }
+
+    span {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 600;
+
+    }
   }
 }
 

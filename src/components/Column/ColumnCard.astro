@@ -1,0 +1,94 @@
+---
+const {column} = Astro.props;
+import { getColumnCategoryDataBySlug } from "@utils/columnCategories";
+import { Image } from "astro:assets";
+import { IoFolderOutline } from "react-icons/io5";
+---
+
+<li class="column-card">
+  <a class="column-card__link" href={`/column/${column.slug}`}>
+    <div class="column-card__thumb">
+      <Image src={column.data.thumbnail} width={1600} height={900} alt={column.data.title} />
+    </div>
+    <div class="column-card__content">
+      <div class="column-card__category-wrap">
+        
+        <span class="column-card__category">
+          <IoFolderOutline />{getColumnCategoryDataBySlug(column.data.category).name}</span>
+      </div>
+      <span class="column-card__title">{column.data.title}</span>
+    </div>
+  </a>
+</li>
+
+<style lang="scss">
+ .column-card {
+
+&__link {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid rgba(0,0,0,0.1);
+
+  @include mixin.hover {
+    &:hover {
+      .column-card__thumb img {
+        transform: scale(1.06);
+      }
+    }
+  }
+}
+
+&__thumb {
+  position: relative;
+  display: flex;
+  aspect-ratio:  16 / 9;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: all .6s;
+  }
+}
+
+&__content {
+  padding: 1.6rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+&__category-wrap {
+  display: flex;
+  justify-content: flex-start;
+  
+}
+
+&__category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: .1rem solid rgba(0,0,0, .2);
+  padding: .1rem 1rem .2rem;
+  border-radius: .3rem;
+  gap: .4rem;
+
+  svg {
+    transform: translateY(.05rem);
+  }
+}
+
+&__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: .8rem;
+  font-feature-settings: 'palt';
+
+  @include mixin.sp {
+    font-size: 1.4rem;
+  }
+}
+}
+</style>

@@ -4,6 +4,7 @@ import react from "@astrojs/react";
 
 import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
+import remarkLinkCard from "remark-link-card";
 
 // https://astro.build/config
 export default defineConfig({
@@ -19,6 +20,18 @@ export default defineConfig({
         },
       },
     },
+  },
+
+  markdown: {
+    remarkPlugins: [
+      [
+        remarkLinkCard,
+        {
+          cache: true,
+          shortenUrl: false,
+        },
+      ],
+    ],
   },
 
   integrations: [

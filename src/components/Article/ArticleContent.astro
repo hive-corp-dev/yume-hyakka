@@ -1,10 +1,11 @@
 ---
 const { entry, components = {} } = Astro.props;
 const { Content } = await entry.render();
+import OuterLink from "@components/Parts/OuterLink.astro";
 ---
 
 <div class="content" id="article-body">
-  <Content components={components} />
+  <Content components={{...components, OuterLink}} />
 </div>
 
 <style lang="scss">
@@ -91,7 +92,22 @@ const { Content } = await entry.render();
     }
 
     h4 {
+      position: relative;
       font-size: 2.2rem;
+      padding-bottom: .4rem;
+      border-bottom: .1rem solid #eee;
+
+      // &::after {
+      //   content: '';
+      //   width: 100%;
+      //   height: .1rem;
+      //   // background-image: linear-gradient(to right top, rgba(198, 153, 241, 0.8), rgba(255, 160, 176, 0.8));
+      //   background-color: #ffffff;
+      //   background-image: linear-gradient(to right, rgba(#eae3d7, 1), rgba(#eae3d7, 0));
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      // }
 
       @include mixin.sp {
         font-size: 1.8rem;
@@ -210,8 +226,28 @@ const { Content } = await entry.render();
 
 
     a:not([class]) {
-      color: #5686f3;
+      color: var.$c-link-article;
       text-decoration: underline;
+      transition: opacity .3s;
+
+      @include mixin.hover {
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    blockquote {
+      font-family: var.$font-serif;
+      font-weight: 600;
+      padding: 2.4rem;
+      border: .1rem solid #eee;
+      background-color: rgba(white, .5);
+      font-weight: bold;
+
+       @include mixin.sp {
+        padding: 1.6rem;
+      }
     }
 
     // margins
@@ -233,7 +269,7 @@ const { Content } = await entry.render();
     }
 
     h3 {
-      margin-top: 4.8rem;
+      margin-top: 6.4rem;
 
       @include mixin.sp {
         margin-top: 4rem;
@@ -241,7 +277,7 @@ const { Content } = await entry.render();
     }
 
     h4 {
-      margin-top: 4.8rem;
+      margin-top: 5.6rem;
 
       @include mixin.sp {
         margin-top: 4rem;
@@ -256,4 +292,101 @@ const { Content } = await entry.render();
       margin-top: 1.6rem;
     }
   }
+
+  .rlc-container {
+  width: 100%;
+  max-width: 100%;
+  min-height: 11rem;
+  border: .1rem solid #dbdbdb;
+  background-color: transparent;
+  border-radius: .5rem;
+  display: flex;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color .3s;
+
+  @include mixin.sp {
+    flex-direction: column-reverse;
+  }
+
+  @include mixin.hover {
+    &:hover {
+      background-color: #fff;
+    }
+  }
+  
+  .rlc-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 1;
+    padding: 1.6rem;
+    width: 70%;
+
+    @include mixin.sp {
+      width: 100%;
+    }
+
+    .rlc-title {
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+
+    .rlc-description {
+      font-size: 1rem;
+      color: #737373;
+      margin-bottom: 0.5em;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    .rlc-url-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      .rlc-favicon {
+        margin-top: 0.15rem;
+        margin-bottom: 0;
+      }
+      .rlc-url {
+        font-size: 1rem;
+        color: #525252;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        -webkit-line-clamp: 1;
+      }
+      .rlc-favicon {
+        width: 1.6rem;
+      }
+    }
+  }
+  .rlc-image-container {
+    position: relative;
+    aspect-ratio: 1.91 / 1;
+    flex-shrink: 0;
+    width: 30%;
+
+    @include mixin.sp {
+      width: 100%;
+    }
+
+    .rlc-image {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
 </style>
