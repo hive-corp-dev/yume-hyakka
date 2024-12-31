@@ -199,9 +199,7 @@ const articleCollection = defineCollection({
         ])
       ),
       publishedAt: z.date(),
-      thumbnail: image().refine((img) => img.width >= 1080, {
-        message: "カバー画像は幅1080ピクセル以上でなければなりません！",
-      }),
+      thumbnail: image(),
     }),
 });
 
@@ -215,9 +213,7 @@ const columnCollection = defineCollection({
       description: z.string(),
       category: z.enum(["knowledge"]),
       publishedAt: z.date(),
-      thumbnail: image().refine((img) => img.width >= 1080, {
-        message: "カバー画像は幅1080ピクセル以上でなければなりません！",
-      }),
+      thumbnail: image(),
     }),
 });
 
