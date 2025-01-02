@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import Seo from "@components/Seo.astro";
 import GoogleAnalytics from "@components/meta/GoogleAnalytics.astro";
 import Clarity from "@components/meta/Clarity.astro";
+import { getImage } from "astro:assets";
 
 import '@fontsource/zen-old-mincho/400.css';
 import '@fontsource/zen-old-mincho/500.css';
@@ -17,6 +18,16 @@ import '@fontsource-variable/noto-sans-jp';
 import 'the-new-css-reset';
 import '../styles/global.scss';
 import StickyBg from "@components/StickyBg.astro";
+
+// img optimization
+import backgroundImg from '@images/bg-texture.jpg';
+import backgroundImgSp from '@images/bg-texture-sp.jpg';
+import headerBackground from '@images/bg-texture-header.jpg';
+
+const bgImg = await getImage({src: backgroundImg});
+const bgImgSp = await getImage({src: backgroundImgSp});
+const headerBg = await getImage({src: headerBackground});
+// end img optimization
 
 const {title, description, ogImageUrl, ogType} = Astro.props;
 
@@ -40,6 +51,7 @@ const isDev = Astro.url.hostname === "localhost";
 			!isDev && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076760418024606"
 			crossorigin="anonymous"></script>
 		}
+		<style define:vars={{bgImg: `url(${bgImg.src})`, bgImgSp: `url(${bgImgSp.src})`, headerBg: `url(${headerBg.src})`}}></style>
 	</head>
 	<body>
 		<StickyBg />

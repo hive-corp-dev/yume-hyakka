@@ -125,14 +125,14 @@ const breadcrumbLinks = [
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-image: url("../../bg-texture.jpg");
+		background-image: var(--bgImg);
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 		opacity: 0.2;
 		pointer-events: none;
 
     @include mixin.sp {
-			background-image: url("../../bg-texture-sp.jpg");
+			background-image: var(--bgImgSp);
 		}
 	}
 }

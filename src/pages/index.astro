@@ -13,6 +13,7 @@ import { POSTS_PER_PAGE_TOP, POSTS_PER_PAGE_TOP_RANKING } from '@data/article';
 import { rankingPostIds } from '@data/articleRanking';
 import ColumnList from '@components/Column/ColumnList.astro';
 import { getSortedColumns } from '@utils/column';
+import { getImage } from 'astro:assets';
 
 const articleEntries = await getCollection('article',({data}) => {
 	return data.isDraft === false;
@@ -107,13 +108,13 @@ const sortedColumns = getSortedColumns(columnEntries);
 		left: 0;
 		height: 100%;
 		width: 100%;
-		background-image: url("../../bg-texture.jpg");
+		background-image: var(--bgImg);
 		background-size: 100% auto;
 		background-repeat: repeat-y;
 		opacity: 0.2;
 
 		@include mixin.sp {
-			background-image: url("../../bg-texture-sp.jpg");
+			background-image: var(--bgImgSp);
 		}
 	}
 }
