@@ -196,6 +196,7 @@ const articleCollection = defineCollection({
           "treasure-ship",
           "torii-gate",
           "teeth",
+          "bath",
         ])
       ),
       publishedAt: z.date(),

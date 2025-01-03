@@ -924,4 +924,9 @@ export const articleTags = [
     label: "歯",
     kana: "は",
   },
+  {
+    slug: "bath",
+    label: "お風呂",
+    kana: "おふろ",
+  },
 ];
