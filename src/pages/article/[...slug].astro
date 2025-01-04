@@ -45,8 +45,8 @@ const url = Astro.url.origin;
   <Breadcrumb data={breadcrumbLinks} />
   <Container>
     <div class="wrap">
-      <main class="main">
-        <TagCloud tags={selectedTags} type="article-header" />
+      <main class="main" data-pagefind-body>
+        <TagCloud tags={selectedTags} type="article-header" data-pagefind-ignore />
         <h1 class="title">{entry.data.title}</h1>
         <div class="thumb">
           <Image src={entry.data.thumbnail} width={1600} height={900} alt={entry.data.title} />

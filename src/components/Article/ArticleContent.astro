@@ -4,7 +4,7 @@ const { Content } = await entry.render();
 import OuterLink from "@components/Parts/OuterLink.astro";
 ---
 
-<div class="content" id="article-body">
+<div class="content" id="article-body" data-pagefind-body>
   <Content components={{...components, OuterLink}} />
 </div>
 

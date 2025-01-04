@@ -1,0 +1,146 @@
+---
+---
+
+<div id="search" class="pagefind-default"></div>
+
+<script >
+  import { PagefindUI } from "@pagefind/default-ui";
+
+  const isDev = import.meta.env.DEV;
+  console.log(isDev);
+  
+  new PagefindUI({
+    element: "#search",
+    // element以外のオプションは任意で設定
+    pageSize: 8,
+    bundlePath: isDev ? "/dist/pagefind/" : '/pagefind/',
+    "excerptLength": 50,
+    processResult: function (result) {
+      if(isDev) {
+        result.meta.image = result.meta.image.includes('dist') ? result.meta.image : 'dist' + result.meta.image;
+        result.excerpt = result.excerpt + '...';
+        return result;
+      } else {
+        result.excerpt = result.excerpt + '...';
+        return result;
+      }
+    }
+  });
+</script>
+
+<style lang="scss" is:global>
+body {
+  --pagefind-ui-text: #3b3b3b;
+  --pagefind-ui-border-width: 0.1rem;
+  --pagefind-ui-border-radius: .6rem;
+  --pagefind-ui-image-border-radius: .6rem;
+  --pagefind-ui-image-box-ratio: 16 / 9;
+  --pagefind-ui-font: var.$font-serif;
+}
+
+.pagefind-default {
+  margin-top: 4rem;
+
+  @include mixin.sp {
+    margin-top: 2.4rem;
+  }
+
+  .pagefind-ui {
+
+    &__search-input {
+      border: .1rem solid rgba(0,0,0, .2)!important;
+
+      @include mixin.sp {
+        font-size: 1.6rem!important;
+        height: 4.8rem!important;
+      }
+    }
+
+    &__search-clear {
+      @include mixin.sp {
+        background-color: transparent!important;
+      }
+    }
+
+    &__results-area {
+      background-color: #fff;
+      border: .1rem solid rgba(0,0,0, .2);
+      padding: 2.4rem;
+      border-radius: .6rem;
+
+      @include mixin.sp {
+        padding: .8rem 1.6rem .8rem;
+      }
+    }
+
+    &__results {
+      // display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      // gap: 6.4rem 4rem;
+    }
+
+    &__result {
+      border-color: rgba(0,0,0, .2)!important;
+
+      @include mixin.sp {
+        padding: 1.6rem 0!important;
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+
+    &__result-thumb {
+    }
+
+    &__result-title {
+      font-weight: bold!important;
+
+      @include mixin.sp {
+        font-size: 1.4rem!important;
+        display: -webkit-box!important;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+
+    &__result-excerpt {
+      display: -webkit-box!important;
+      font-weight: 500!important;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      margin-top: .8rem!important;
+      line-height: 2;
+      font-family: var.$font-base;
+
+      @include mixin.sp {
+        line-height: 1.75;
+        font-size: 1.1rem!important;
+      }
+
+      mark {
+        // background-image: linear-gradient(to right bottom, var.$c-key-1, var.$c-key-2);
+        background: none;
+        background-image: linear-gradient(to right top, rgba(var.$c-key-1, .8), rgba(var.$c-key-2, .8));
+        background-size: 100% .2rem;
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        font-weight: bold;
+
+      @include mixin.sp {
+      }
+      }
+    }
+
+    &__button {
+      @include mixin.sp {
+        margin-top: 2.4rem!important;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+}
+</style>
