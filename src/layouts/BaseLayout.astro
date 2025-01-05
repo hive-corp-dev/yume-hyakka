@@ -32,7 +32,9 @@ const headerBg = await getImage({src: headerBackground});
 
 const {title, description, ogImageUrl, ogType} = Astro.props;
 
-const isDev = Astro.url.hostname === "localhost";
+const isDevMode = import.meta.env.ENVIRONMENT === 'development';
+console.log(isDevMode, "dev mode");
+
 ---
 
 <html lang="ja">
@@ -43,13 +45,13 @@ const isDev = Astro.url.hostname === "localhost";
 		<meta name="generator" content={Astro.generator} />
 		<Seo title={title} description={description} ogImageUrl={ogImageUrl} ogType={ogType} />
 		{
-			!isDev && <GoogleAnalytics />
+			!isDevMode && <GoogleAnalytics />
 		}
 		{
-			!isDev && <Clarity />
+			!isDevMode && <Clarity />
 		}
 		{
-			!isDev && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076760418024606"
+			!isDevMode && <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076760418024606"
 			crossorigin="anonymous"></script>
 		}
 		<style define:vars={{bgImg: `url(${bgImg.src})`, bgImgSp: `url(${bgImgSp.src})`, headerBg: `url(${headerBg.src})`}}></style>

@@ -42,3 +42,7 @@ scriptはどちらの分も`ArticleToc.astro`ファイルに記述。
 - TOPページに導入
 - カードコンポーネントのデザイン作る -->
   <!-- - 記事リンクカードを作る -->
+
+## pagefind参考
+
+https://necco.inc/note/38263
