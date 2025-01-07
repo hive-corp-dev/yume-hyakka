@@ -4,11 +4,15 @@ import { getTagsWithArticles } from "@utils/articleTags";
 import { getCollection } from 'astro:content';
 import ArticleRanking from "./Widgets/ArticleRanking.astro";
 import ArticleTocBlock from "./Widgets/ArticleTocBlock.astro";
+import { articleTagRankingIds } from "@data/articleTagRanking";
 
 const articleEntries = await getCollection('article', ({data}) => {
 	return data.isDraft === false;
 });
 const tagsWithArticles = getTagsWithArticles(articleEntries);
+
+const popularTags = tagsWithArticles.filter(tag => articleTagRankingIds.includes(tag.slug))
+.sort((a, b) => articleTagRankingIds.indexOf(a.slug) - articleTagRankingIds.indexOf(b.slug));
 ---
 
 <aside class="sidebar">
@@ -17,8 +21,8 @@ const tagsWithArticles = getTagsWithArticles(articleEntries);
     <ArticleRanking />
   </div>
   <div class="sidebar__block">
-    <p class="head">キーワード</p>
-    <TagCloud tags={tagsWithArticles} type="sidebar" />
+    <p class="head">人気キーワード</p>
+    <TagCloud tags={popularTags} type="sidebar" />
   </div>
   <ArticleTocBlock />
 </aside>

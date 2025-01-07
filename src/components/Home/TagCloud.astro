@@ -2,12 +2,13 @@
 import { sortTagsByKana } from "../../utils/articleTags";
 import { getTagUrl } from "../../utils/articleTags";
 const {tags, type} = Astro.props;
-const sortedTags = sortTagsByKana(tags);
+
+// const sortedTags = sortTagsByKana(tags);
 ---
 
 <ul class:list={["tag", type]}>
   {
-    sortedTags.map((tag) => (
+    tags.map((tag) => (
       <li class="tag__item">
         <a href={getTagUrl(tag.slug)} class="tag__link">
           <span>{tag.label}</span>

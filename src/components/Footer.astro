@@ -1,11 +1,19 @@
 ---
 import Container from "./Container.astro"
+const isTopPage = Astro.url.pathname === '/';
 ---
 
 <footer class="footer">
   <Container>
     <div class="footer__content">
-      <div class="footer__logo">夢百科</div>
+      {
+        isTopPage ? (
+        <div class="footer__logo">夢百科</div>
+        )
+        : (
+          <a class="footer__logo" href="/">夢百科</a>
+        )
+      }
       <nav class="footer__nav">
         <ul class="footer__nav-list">
           <li class="footer__nav-item">
@@ -81,6 +89,7 @@ import Container from "./Container.astro"
     }
 
     &__logo {
+      display: flex;
       font-size: 2.4rem;
       font-weight: bold;
 

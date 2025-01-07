@@ -1,0 +1,98 @@
+---
+import { articleTags } from "@data/articleTags";
+import {sortTagsByKana, filterByKanaInitials} from "@utils/articleTags";
+
+const {initialWords} = Astro.props;
+
+const tags = filterByKanaInitials(articleTags, initialWords);
+const sortedTags = sortTagsByKana(tags);
+---
+
+<ul class="list">
+  {
+    sortedTags.map((tag) => (
+      <li class="item">
+        <a
+          href={`/article/keyword/${tag.slug}`}
+          class="link"
+        >
+          <span class="link-text">{tag.label}</span>
+        </a>
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 2.4rem;
+
+  @include mixin.sp {
+    gap: .8rem;
+  }
+}
+
+.item {
+  min-width: calc(33% - 1.2rem);
+
+  @include mixin.sp {
+    min-width: calc(50% - .8rem);
+  }
+}
+
+.link {
+  position: relative;
+  display: block;
+  border: .1rem solid #ccc;
+  padding: .6rem 1.2rem .8rem;
+  border-radius: .3rem;
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, var.$c-key-1, var.$c-key-2);
+  transition: all .3s;
+
+  @include mixin.sp {
+    padding: .3rem .8rem .5rem;
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all .3s;
+  }
+
+  @include mixin.hover {
+    &:hover {
+      color: white;
+      border-color: white;
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.link-text {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  @include mixin.sp {
+    font-size: 1.3rem;
+  }
+
+  &::before {
+    content: '#';
+    margin-right: .2rem;
+  }
+}
+</style>
+

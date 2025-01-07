@@ -36,3 +36,8 @@ export const getTagsWithArticles = (articles) => {
 export const tagPaths = articleTags.map((tag) => ({
   params: { keyword: tag.slug },
 }));
+
+// キーワードの最初の文字でフィルタリング
+export const filterByKanaInitials = (tags, variants) => {
+  return tags.filter((tag) => variants.some((variant) => tag.kana.startsWith(variant)));
+};

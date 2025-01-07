@@ -6,6 +6,8 @@ import TagCloud from "@components/Home/TagCloud.astro"
 import { getCollection } from 'astro:content';
 import { getTagsWithArticles } from 'src/utils/articleTags';
 import { KEYWORD_METADATA } from "@data/metadata";
+import WordTagCloud from "@components/Keyword/WordTagCloud.astro";
+import { keywordsInitials } from "@data/keyword";
 
 const articleEntries = await getCollection('article',({data}) => {
 	return data.isDraft === false;
@@ -36,8 +38,107 @@ const breadcrumbLinks = [
 			<div class="wrap">
 				<main class="main">
 					<section class="section">
-						<h2 class="title"><span>キーワードから探す</span></h2>
-						<TagCloud tags={tagsWithArticles} />
+						<h2 class="title"><span>五十音順で探す</span></h2>
+						<div class="word">
+							<div class="word__search">
+								<div class="word__list-wrap">
+									<ul class="word__list">
+										<li class="word__col">
+											<ul class="word__row">
+												<li class="word__item">
+													<a class="word__link" href="#あ"><span>あ</span></a>
+													<a class="word__link" href="#い"><span>い</span></a>
+													<a class="word__link" href="#う"><span>う</span></a>
+													<a class="word__link" href="#え"><span>え</span></a>
+													<a class="word__link" href="#お"><span>お</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#か"><span>か</span></a>
+													<a class="word__link" href="#き"><span>き</span></a>
+													<a class="word__link" href="#く"><span>く</span></a>
+													<a class="word__link" href="#け"><span>け</span></a>
+													<a class="word__link" href="#こ"><span>こ</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#さ"><span>さ</span></a>
+													<a class="word__link" href="#し"><span>し</span></a>
+													<a class="word__link" href="#す"><span>す</span></a>
+													<a class="word__link" href="#せ"><span>せ</span></a>
+													<a class="word__link" href="#そ"><span>そ</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#た"><span>た</span></a>
+													<a class="word__link" href="#ち"><span>ち</span></a>
+													<a class="word__link" href="#つ"><span>つ</span></a>
+													<a class="word__link" href="#て"><span>て</span></a>
+													<a class="word__link" href="#と"><span>と</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#な"><span>な</span></a>
+													<a class="word__link" href="#に"><span>に</span></a>
+													<span class="word__link -inactive"><span>ぬ</span></span>
+													<a class="word__link" href="#ね"><span>ね</span></a>
+													<span class="word__link -inactive"><span>の</span></span>
+												</li>
+											</ul>
+										</li>
+										<li class="word__col">
+											<ul class="word__row">
+												<li class="word__item">
+													<a class="word__link" href="#は"><span>は</span></a>
+													<a class="word__link" href="#ひ"><span>ひ</span></a>
+													<a class="word__link" href="#ふ"><span>ふ</span></a>
+													<a class="word__link" href="#へ"><span>へ</span></a>
+													<a class="word__link" href="#ほ"><span>ほ</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#ま"><span>ま</span></a>
+													<a class="word__link" href="#み"><span>み</span></a>
+													<a class="word__link" href="#む"><span>む</span></a>
+													<a class="word__link" href="#め"><span>め</span></a>
+													<a class="word__link" href="#も"><span>も</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#や"><span>や</span></a>
+													<span class="blank"></span>
+													<a class="word__link" href="#ゆ"><span>ゆ</span></a>
+													<span class="blank"></span>
+													<a class="word__link" href="#よ"><span>よ</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#ら"><span>ら</span></a>
+													<a class="word__link" href="#り"><span>り</span></a>
+													<span class="word__link -inactive"><span>る</span></span>
+													<a class="word__link" href="#れ"><span>れ</span></a>
+													<a class="word__link" href="#ろ"><span>ろ</span></a>
+												</li>
+												<li class="word__item">
+													<a class="word__link" href="#わ"><span>わ</span></a>
+													<span class="blank"></span>
+													<span class="word__link -inactive"><span>を</span></span>
+													<span class="blank"></span>
+													<span class="word__link -inactive"><span>ん</span></span>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="word__body">
+								{
+									keywordsInitials.map((initial) => {
+										const {base, variants} = initial;
+
+										return (
+											<section class="word__sec" id={base}>
+												<h3 class="word__title">「{base}」から始まる夢占いキーワード</h3>
+												<WordTagCloud initialWords={variants} />
+											</section>
+										)
+									})
+								}
+							</div>
+						</div>
 					</section>
 				</main>
 			</div>
@@ -94,7 +195,7 @@ const breadcrumbLinks = [
   }
 }
 
-	.wrap {
+.wrap {
   display: flex;
   gap: 4.8rem;
   padding: 8rem 0 20rem;
@@ -129,7 +230,7 @@ const breadcrumbLinks = [
 
 .section {
 	position: relative;
-	padding-top: 12rem;
+	padding-top: 8rem;
 	z-index: 1;
 
 	@include mixin.sp {
@@ -139,14 +240,7 @@ const breadcrumbLinks = [
 
 .main {
   flex-grow: 1;
-  padding-left: 2.4rem;
-  padding-right: 2.4rem;
 	width: 100%;
-
-	@include mixin.sp {
-		padding-left: 0;
-		padding-right: 0;
-	}
 }
 
 .title {
@@ -169,22 +263,16 @@ const breadcrumbLinks = [
 		content: '';
 		width: 4rem;
 		height: .2rem;
-	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: 0 auto;
+		background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
 
-	@include mixin.sp {
-		width: 2.4rem;
-	}
-}
-
-	span {
-	// 	background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
-	// color: transparent;
-	// background-clip: text;
+		@include mixin.sp {
+			width: 2.4rem;
+		}
 	}
 }
 
@@ -204,7 +292,9 @@ const breadcrumbLinks = [
 		gap: 2.4rem;
 	}
 
-	&__item {}
+	&__item {
+		
+	}
 
 	&__link {
 		display: flex;
@@ -277,4 +367,197 @@ const breadcrumbLinks = [
 	}
 }
 
+.word {
+	display: flex;
+	gap: 4rem;
+	margin-top: 6.4rem;
+
+  @include mixin.sp {
+    flex-direction: column;
+    margin-top: 2.4rem;
+  }
+
+	&__sec {
+		padding: 8rem 0 3.2rem;
+
+    @include mixin.sp {
+      padding: 6.4rem 0 2.4rem;
+    }
+
+		&:first-child {
+			padding-top: 0;
+		}
+	}
+
+	&__search {
+		position: relative;
+		width: 50rem;
+		flex-shrink: 0;
+
+		@include mixin.tab {
+			width: 30rem;
+		}
+
+    @include mixin.sp {
+      width: 100%;
+    }
+	}
+
+	&__list-wrap {
+		position: sticky;
+		top: 12rem;
+		left: 0;
+
+    @include mixin.sp {
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+	}
+
+	&__list {
+		display: flex;
+		gap: .2rem;
+
+		@include mixin.tab {
+			flex-direction: column;
+		}
+
+    @include mixin.sp {
+      flex-direction: row;
+    }
+	}
+
+	&__col {
+		display: flex;
+		width: 50%;
+
+		@include mixin.tab {
+			width: 100%;
+		}
+
+    @include mixin.sp {
+      width: 50%;
+    }
+	}
+
+	&__row {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		gap: .2rem;
+	}
+
+	&__item {
+		display: flex;
+		gap: .2rem;
+
+		.blank {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			aspect-ratio: 1 / 1;
+			line-height: 1;
+			overflow: hidden;
+			transition: all .3s;
+			width: 20%;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+		font-size: 1.6rem;
+		padding: .8rem;
+		border-radius: 0;
+		background-image: linear-gradient(to right bottom, var.$c-key-1, var.$c-key-2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		aspect-ratio: 1 / 1;
+		line-height: 1;
+		overflow: hidden;
+		transition: all .3s;
+		width: 20%;
+
+		span {
+			position: relative;
+			font-weight: bold;
+			z-index: 1;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: #f3f3f3;
+			transition: all .3s;
+		}
+
+		&.-inactive {
+			background-image: none;
+
+			span {
+				opacity: .7;
+			}
+
+			&::before {
+				background-color: transparent;
+			}
+		}
+
+		@include mixin.hover {
+			&:not(.-inactive):hover {
+				color: white;
+				border-color: white;
+
+				&::before {
+					background-color: transparent;
+				}
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: bold;
+
+    @include mixin.sp {
+      font-size: 1.8rem;
+    }
+	}
+
+	&__body {
+		flex-grow: 1;
+	}
+}
 </style>
+
+<script>
+	const headerHeight = document.querySelector('.js-header').offsetHeight;
+	const links =	document.querySelectorAll('a[href^="#"]');
+
+	links.forEach(link => {
+		link.addEventListener('click', (e) => {
+			e.preventDefault();
+
+			const targetId = link.getAttribute('href').replace('#', '');
+			const target = document.getElementById(targetId);
+
+			if (!target) return;
+
+			const targetPosition = target.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+			window.scrollTo({
+				top: targetPosition,
+				behavior: 'smooth',
+			});
+		});
+	});
+</script>

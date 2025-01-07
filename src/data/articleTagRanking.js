@@ -1,0 +1,17 @@
+export const articleTagRankingIds = [
+  "snake",
+  "money-fortune",
+  "romantic-love",
+  "ex-partner",
+  "dog",
+  "good-luck",
+  "colleague",
+  "cat",
+  "celebrity",
+  "dragon",
+  "idol",
+  "life-turning-point",
+  "success",
+  "treasure-ship",
+  "mount-fuji",
+];
