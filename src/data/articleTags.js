@@ -929,4 +929,19 @@ export const articleTags = [
     label: "お風呂",
     kana: "おふろ",
   },
+  {
+    slug: "hornet",
+    label: "スズメバチ",
+    kana: "すずめばち",
+  },
+  {
+    slug: "owl",
+    label: "フクロウ",
+    kana: "ふくろう",
+  },
+  {
+    slug: "teacher",
+    label: "先生",
+    kana: "せんせい",
+  },
 ];

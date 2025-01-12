@@ -197,6 +197,9 @@ const articleCollection = defineCollection({
           "torii-gate",
           "teeth",
           "bath",
+          "hornet",
+          "owl",
+          "teacher",
         ])
       ),
       publishedAt: z.date(),
