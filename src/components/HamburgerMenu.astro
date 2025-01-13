@@ -1,0 +1,88 @@
+---
+---
+
+<nav class="menu">
+  <div class="menu__content">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="/" class="menu__item-link">ホーム</a>
+      </li>
+      <li class="menu__item">
+        <a href="/article" class="menu__item-link">夢占い</a>
+      </li>
+      <li class="menu__item">
+        <a href="/column" class="menu__item-link">コラム</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<style lang="scss" is:global>
+  [data-menu-open] {
+    overflow: hidden;
+  }
+</style>
+
+<style lang="scss">
+  .menu {
+    position: fixed;
+    top: 6.1rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 6.1rem);
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    z-index: var.$z-menu;
+    transition: all .3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image: var(--bgImg);
+      background-size: 100% auto;
+      background-repeat: repeat-y;
+      opacity: 0.2;
+      pointer-events: none;
+
+      @include mixin.sp {
+        background-image: var(--bgImgSp);
+      }
+    }
+
+    &__content {
+      position: relative;
+      height: 100%;
+      overflow-y: auto;
+      padding: 12rem 2.4rem;
+    }
+
+    &__list {
+      border-top: .1rem solid #eee;
+
+    }
+
+    &__item {
+      border-bottom: .1rem solid #eee;
+    }
+
+    &__item-link {
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.6rem 0;
+    }
+  }
+
+  html:has([data-menu-open]) {
+    .menu {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+</style>

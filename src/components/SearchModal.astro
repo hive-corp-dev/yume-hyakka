@@ -1,0 +1,201 @@
+---
+import { IoSearch } from "react-icons/io5";
+---
+
+<div class="search-wrap">
+  <button class="search-btn js-search-btn"><IoSearch />検索</button>
+  <dialog class="modal-search js-modal-search">
+    <div class="modal-search-content">
+      <button class="modal-search-close-btn js-modal-close-btn" aria-label="閉じる"></button>
+      <div id="modal-search" class="pagefind-default -modal"></div>
+    </div>
+  </dialog>
+</div>
+
+<script>
+  import { PagefindUI } from "@pagefind/default-ui";
+
+  const searchBtn = document.querySelector('.js-search-btn');
+  const dialog = document.querySelector('.js-modal-search');
+  const closeBtn = document.querySelector('.js-modal-close-btn');
+
+  searchBtn.addEventListener('click', () => {
+    dialog.showModal();
+    document.body.setAttribute('data-search-modal-open', '');
+  });
+
+  const closeModal = (e) => {
+    if (e.target === dialog) {
+      dialog.close();
+      document.body.removeAttribute('data-search-modal-open');
+    }
+  };
+
+  dialog.addEventListener('click', closeModal);
+
+  closeBtn.addEventListener('click', () => {
+    dialog.close();
+    document.body.removeAttribute('data-search-modal-open');
+  });
+
+  // pagefind start
+  const isDev = import.meta.env.DEV;
+  
+  new PagefindUI({
+    element: "#modal-search",
+    // element以外のオプションは任意で設定
+    pageSize: 8,
+    bundlePath: isDev ? "/dist/pagefind/" : '/pagefind/',
+    "excerptLength": 50,
+    processResult: function (result) {
+      if(isDev) {
+        result.meta.image = result.meta.image.includes('dist') ? result.meta.image : 'dist' + result.meta.image;
+        result.excerpt = result.excerpt + '...';
+        return result;
+      } else {
+        result.excerpt = result.excerpt + '...';
+        return result;
+      }
+    }
+  });
+  // pagefind end
+</script>
+
+<style lang="scss" is:global>
+
+[data-search-modal-open] {
+  overflow: hidden;
+}
+
+.search-wrap {
+  @include mixin.sp {
+    display: flex;
+  }
+}
+
+.search-btn {
+  width: 20rem;
+  border: .1rem solid #ccc;
+  background-color: #fff;
+  padding: .4rem 1rem;
+  border-radius: .3rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  cursor: pointer;
+
+  @include mixin.sp {
+    width: auto;
+    padding: 0;
+    font-size: 0;
+    border: none;
+    padding: 0;
+    gap: 0;
+
+    svg {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+}
+
+.modal-search {
+  border: none;
+  border-radius: .6rem;
+  overflow: hidden;
+  margin: 4rem auto auto;
+  max-width: 80rem;
+  width: 90%;
+  height: max-content;
+  min-height: 20rem;
+  max-height: calc(100% - 8rem);
+  padding: 0;
+
+  &::backdrop {
+    backdrop-filter: blur(.4rem);
+    background-color: rgba(#3b3b3b, .2);
+  }
+
+  &[open] {
+    display: flex;
+
+    &::backdrop {
+      opacity: 1;
+    }
+  }
+}
+
+.modal-search-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 4rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  @include mixin.sp {
+    padding: 2.4rem;
+  }
+}
+
+.modal-search-close-btn {
+  display: none;
+
+  @include mixin.sp {
+    display: flex;
+    width: 1.8rem;
+    height: 4.8rem;
+    position: absolute;
+    right: 2.4rem;
+    top: 2.4rem;
+    z-index: 1;
+
+    &::before, &::after {
+      content: '';
+      width: 2rem;
+      height: .2rem;
+      background-color: #3b3b3b;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+    
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.pagefind-default.-modal {
+  margin: 0;
+
+  .pagefind-ui__search-input {
+    @include mixin.sp {
+      width: calc(100% - 3.2rem);
+    }
+  }
+
+  .pagefind-ui__search-clear {
+    @include mixin.sp {
+      right: 3.2rem;
+      top: 0;
+    }
+  }
+
+  .pagefind-ui__results-area {
+    @include mixin.sp {
+      border: none;
+      padding: 0;
+    }
+  }
+}
+</style>

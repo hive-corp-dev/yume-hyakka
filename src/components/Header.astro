@@ -1,5 +1,6 @@
 ---
 import Container from "./Container.astro";
+import SearchModal from "./SearchModal.astro";
 const isTopPage = Astro.url.pathname === '/';
 ---
 
@@ -14,18 +15,42 @@ const isTopPage = Astro.url.pathname === '/';
         <a class="header__title" href="/">夢百科</a>
       )
     }
-    <nav>
-      <ul class="header__nav-list">
-        <li><a href="/">ホーム</a></li>
-        <li><a href="/article">夢占い</a></li>
-        <li><a href="/column">コラム</a></li>
-      </ul>
-    </nav>
+    <div class="header__nav-wrap">
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="/">ホーム</a></li>
+          <li><a href="/article">夢占い</a></li>
+          <li><a href="/column">コラム</a></li>
+        </ul>
+      </nav>
+      <SearchModal />
+      <button class="header__menu-btn js-hamburger-menu-btn">
+        <span></span>
+      </button>
+    </div>
   </div>
 </Container>
 </header>
 
+<script>
+  const hamburgerMenuBtn = document.querySelector('.js-hamburger-menu-btn');
+
+  hamburgerMenuBtn.addEventListener('click', () => {
+    const body = document.body;
+
+    console.log(body.getAttribute('data-menu-open'));
+    
+
+    if (body.getAttribute('data-menu-open') === '') {
+      body.removeAttribute('data-menu-open');
+    } else {
+      body.setAttribute('data-menu-open', '');
+    }
+  });
+</script>
+
 <style lang="scss">
+  
 
 .header {
   position: fixed;
@@ -35,11 +60,6 @@ const isTopPage = Astro.url.pathname === '/';
   border-bottom: .1rem solid rgba(0,0,0,.1);
   z-index: var.$z-header;
   background-color: white;
-
-  // 白
-  // background-color: transparent;
-  // border-bottom: .1rem solid rgba(white, .1);
-  // color: white;
 
   &::before {
     content: '';
@@ -81,6 +101,22 @@ const isTopPage = Astro.url.pathname === '/';
     }
   }
 
+  &__nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+
+    @include mixin.sp {
+      gap: 1.6rem;
+    }
+  }
+
+  &__nav {
+    @include mixin.sp {
+      display: none;
+    }
+  }
+
   &__nav-list {
     display: flex;
     gap:2.4rem;
@@ -101,6 +137,60 @@ const isTopPage = Astro.url.pathname === '/';
         }
       }
       }
+    }
+  }
+
+  &__menu-btn {
+    position: relative;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: none;
+
+    @include mixin.sp {
+      display: block;
+    }
+
+    &::before, &::after, span {
+      content: '';
+      width: 2rem;
+      height: .15rem;
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background-color: #3b3b3b;
+      transition: all .3s;
+    }
+
+    &::before {
+      transform: translateY(-.6rem);
+    }
+
+    &::after {
+      transform: translateY(.6rem);
+
+    }
+
+    span {
+    }
+  }
+}
+
+html:has([data-menu-open]) {
+  .header__menu-btn {
+    &::before {
+      transform: translateY(0) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(0) rotate(-45deg);
+    }
+
+    span {
+      opacity: 0;
     }
   }
 }

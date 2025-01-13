@@ -24,6 +24,7 @@ import StickyBg from "@components/StickyBg.astro";
 import backgroundImg from '@images/bg-texture.jpg';
 import backgroundImgSp from '@images/bg-texture-sp.jpg';
 import headerBackground from '@images/bg-texture-header.jpg';
+import HamburgerMenu from "@components/HamburgerMenu.astro";
 
 const bgImg = await getImage({src: backgroundImg});
 const bgImgSp = await getImage({src: backgroundImgSp});
@@ -59,6 +60,7 @@ console.log(isDevMode, "dev mode");
 	<body>
 		<StickyBg />
     <Header />
+		<HamburgerMenu />
     <slot />
 		<Footer />
 	</body>
