@@ -37,10 +37,6 @@ const isTopPage = Astro.url.pathname === '/';
 
   hamburgerMenuBtn.addEventListener('click', () => {
     const body = document.body;
-
-    console.log(body.getAttribute('data-menu-open'));
-    
-
     if (body.getAttribute('data-menu-open') === '') {
       body.removeAttribute('data-menu-open');
     } else {

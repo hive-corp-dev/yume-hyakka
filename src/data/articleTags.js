@@ -944,4 +944,39 @@ export const articleTags = [
     label: "先生",
     kana: "せんせい",
   },
+  {
+    slug: "casino",
+    label: "カジノ",
+    kana: "かじの",
+  },
+  {
+    slug: "roulette",
+    label: "ルーレット",
+    kana: "るーれっと",
+  },
+  {
+    slug: "jewelry",
+    label: "宝石",
+    kana: "ほうせき",
+  },
+  {
+    slug: "ruby",
+    label: "ルビー",
+    kana: "るびー",
+  },
+  {
+    slug: "drink",
+    label: "飲み物",
+    kana: "のみもの",
+  },
+  {
+    slug: "steal",
+    label: "盗む",
+    kana: "ぬすむ",
+  },
+  {
+    slug: "guilt",
+    label: "罪悪感",
+    kana: "ざいあくかん",
+  },
 ];

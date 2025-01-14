@@ -25,9 +25,9 @@ export const keywordsInitials = [
 
   { base: "な", variants: ["な"] },
   { base: "に", variants: ["に"] },
-  // { base: "ぬ", variants: ["ぬ"] },
+  { base: "ぬ", variants: ["ぬ"] },
   { base: "ね", variants: ["ね"] },
-  // { base: "の", variants: ["の"] },
+  { base: "の", variants: ["の"] },
 
   { base: "は", variants: ["は", "ば", "ぱ"] },
   { base: "ひ", variants: ["ひ", "び", "ぴ"] },
@@ -47,7 +47,7 @@ export const keywordsInitials = [
 
   { base: "ら", variants: ["ら"] },
   { base: "り", variants: ["り"] },
-  // { base: "る", variants: ["る"] },
+  { base: "る", variants: ["る"] },
   { base: "れ", variants: ["れ"] },
   { base: "ろ", variants: ["ろ"] },
 

@@ -200,6 +200,13 @@ const articleCollection = defineCollection({
           "hornet",
           "owl",
           "teacher",
+          "casino",
+          "roulette",
+          "jewelry",
+          "ruby",
+          "drink",
+          "steal",
+          "guilt",
         ])
       ),
       publishedAt: z.date(),
