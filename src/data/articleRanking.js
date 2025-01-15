@@ -1,10 +1,10 @@
 export const rankingPostIds = [
   "love-person-left.mdx",
-  "sunflower.mdx",
-  "love.mdx",
-  "white-cow.mdx",
   "snake-in-a-house.mdx",
-  "former-colleague.mdx",
+  "treasure-ship.mdx",
+  "being-late.mdx",
+  "dragon.mdx",
+  "white-cow.mdx",
+  "stack-of-cash.mdx",
   "dog-brown.mdx",
-  "wine.mdx",
 ];
