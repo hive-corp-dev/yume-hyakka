@@ -979,4 +979,39 @@ export const articleTags = [
     label: "罪悪感",
     kana: "ざいあくかん",
   },
+  {
+    slug: "moving-out",
+    label: "引越し",
+    kana: "ひっこし",
+  },
+  {
+    slug: "fight",
+    label: "喧嘩",
+    kana: "けんか",
+  },
+  {
+    slug: "anger",
+    label: "怒り",
+    kana: "いかり",
+  },
+  {
+    slug: "hotel",
+    label: "ホテル",
+    kana: "ほてる",
+  },
+  {
+    slug: "loneliness",
+    label: "孤独",
+    kana: "こどく",
+  },
+  {
+    slug: "spiderweb",
+    label: "蜘蛛の巣",
+    kana: "くものす",
+  },
+  {
+    slug: "creativity",
+    label: "創造性",
+    kana: "そうぞうせい",
+  },
 ];

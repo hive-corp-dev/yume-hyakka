@@ -207,6 +207,13 @@ const articleCollection = defineCollection({
           "drink",
           "steal",
           "guilt",
+          "moving-out",
+          "fight",
+          "anger",
+          "hotel",
+          "loneliness",
+          "spiderweb",
+          "creativity",
         ])
       ),
       publishedAt: z.date(),
