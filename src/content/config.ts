@@ -214,6 +214,8 @@ const articleCollection = defineCollection({
           "loneliness",
           "spiderweb",
           "creativity",
+          "shoes",
+          "bat",
         ])
       ),
       publishedAt: z.date(),

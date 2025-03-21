@@ -1014,4 +1014,14 @@ export const articleTags = [
     label: "創造性",
     kana: "そうぞうせい",
   },
+  {
+    slug: "shoes",
+    label: "靴",
+    kana: "くつ",
+  },
+  {
+    slug: "bat",
+    label: "コウモリ",
+    kana: "こうもり",
+  },
 ];
