@@ -2,10 +2,11 @@
 const { entry, components = {} } = Astro.props;
 const { Content } = await entry.render();
 import OuterLink from "@components/Parts/OuterLink.astro";
+import AmazonCard from "@components/Column/AmazonCard.astro";
 ---
 
 <div class="content" id="article-body" data-pagefind-body>
-  <Content components={{...components, OuterLink}} />
+  <Content components={{...components, OuterLink, AmazonCard}} />
 </div>
 
 <style lang="scss">
@@ -285,7 +286,7 @@ import OuterLink from "@components/Parts/OuterLink.astro";
     }
 
     h5 {
-      margin-top: 2.4rem;
+      margin-top: 4rem;
     }
 
     h6 {
