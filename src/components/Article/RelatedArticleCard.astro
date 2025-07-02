@@ -1,0 +1,170 @@
+---
+import { getTagListBySlugs, getTagDataBySlug, sortTagsByKana } from "@utils/articleTags";
+const {article, commonTags = [], score = 0} = Astro.props;
+import { Image } from "astro:assets";
+
+const tagsData = getTagListBySlugs(article.data.tags);
+const sortedTags = sortTagsByKana(tagsData);
+---
+
+<div class="article-card">
+  <a class="article-card__link" href={`/article/${article.slug}`}>
+    <div class="article-card__thumb">
+      <Image src={article.data.thumbnail} width={1600} height={900} alt={article.data.title} />
+      {score > 0 && (
+        <div class="score-overlay">
+          <span class="score-label">関連度</span>
+          <span class="score-number">{score}</span>
+        </div>
+      )}
+    </div>
+    <span class="article-card__title">{article.data.title}</span>
+    <ul class="article-card__tag">
+      {sortedTags.map(tag => {
+        const isCommonTag = commonTags.includes(tag.slug);
+        return (
+          <li class={`article-card__tag-item ${isCommonTag ? 'is-common' : ''}`}>
+            <span>{tag.label}</span>
+          </li>
+        );
+      })}
+    </ul>
+  </a>
+</div>
+
+<style lang="scss">
+ .article-card {
+
+&__link {
+  display: flex;
+  flex-direction: column;
+
+  @include mixin.hover {
+    &:hover {
+      .article-card__thumb img {
+        transform: scale(1.06);
+      }
+    }
+  }
+}
+
+&__thumb {
+  position: relative;
+  display: flex;
+  aspect-ratio:  16 / 9;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: all .6s;
+  }
+
+  .score-overlay {
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    padding: 0.3rem 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    backdrop-filter: blur(4px);
+
+    @include mixin.sp {
+      top: 0.6rem;
+      right: 0.6rem;
+      padding: 0.25rem 0.6rem;
+    }
+
+    .score-label {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #888;
+
+      @include mixin.sp {
+        font-size: 0.9rem;
+      }
+    }
+
+    .score-number {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var.$c-key-1;
+
+      @include mixin.sp {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+&__title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: .8rem;
+
+  @include mixin.sp {
+    font-size: 1.4rem;
+  }
+}
+
+&__tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: .8rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+
+  @include mixin.sp {
+    gap: .4rem;
+  }
+}
+
+&__tag-item {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: .1rem solid rgba(0,0,0, .2);
+  padding: .2rem 1.2rem .3rem;
+  border-radius: .3rem;
+  transition: all 0.3s ease;
+
+  @include mixin.sp {
+    font-size: 1.1rem;
+    padding: .1rem .6rem .2rem;
+  }
+
+  @include mixin.sp-s {
+    font-size: 1.2rem;
+    padding: .1rem .4rem .2rem;
+  }
+
+  &::before {
+    content: '#';
+    margin-right: .2rem;
+
+    @include mixin.sp {
+      margin-right: 0;
+    }
+  }
+
+  &.is-common {
+    background: linear-gradient(135deg, var.$c-key-1, var.$c-key-2);
+    color: white;
+    border: none;
+    font-weight: 700;
+    transform: scale(1.05);
+
+    &::before {
+      content: '#';
+      margin-right: .2rem;
+    }
+  }
+}
+ }
+</style>

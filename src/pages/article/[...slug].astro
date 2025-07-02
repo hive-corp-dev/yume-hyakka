@@ -14,6 +14,8 @@ import { getCollection } from 'astro:content';
 import ArticleContent from '../../components/Article/ArticleContent.astro';
 import TagCloud from '../../components/Home/TagCloud.astro';
 import KeywordBox from '@components/Article/KeywordBox.astro';
+import RelatedArticles from '@components/Article/RelatedArticles.astro';
+import { getRelatedArticles } from '@utils/article';
 import { Image } from 'astro:assets';
 // 1. コレクションエントリーごとに新しいパスを生成
 export async function getStaticPaths() {
@@ -28,6 +30,10 @@ const { entry } = Astro.props;
 const currentUrl = Astro.url;
 
 const selectedTags = entry.data.tags.map((tag) => getTagDataBySlug(tag));
+
+// 全記事を取得して関連記事を計算
+const allArticles = await getCollection('article');
+const relatedArticles = getRelatedArticles(entry, allArticles, 6);
 
 const breadcrumbLinks = [
   { href: '/', label: 'ホーム' },
@@ -59,6 +65,7 @@ const url = Astro.url.origin;
     </div>
   </Container>
 </div>
+<RelatedArticles relatedArticles={relatedArticles} />
 </BaseLayout>
 
 <style lang="scss">

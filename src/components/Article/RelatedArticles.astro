@@ -1,0 +1,106 @@
+---
+import RelatedArticleCard from './RelatedArticleCard.astro';
+import Container from '../Container.astro';
+
+interface Props {
+  relatedArticles?: Array<{
+    article: any;
+    score: number;
+    commonTags: string[];
+  }>;
+  title?: string;
+}
+
+const { relatedArticles, title = "関連記事" } = Astro.props as Props;
+
+if (!relatedArticles || relatedArticles.length === 0) {
+  return null;
+}
+---
+
+<section class="related-articles">
+  <Container>
+    <h2 class="title">
+      <span>{title}</span>
+    </h2>
+    <ul class="article-grid">
+      {relatedArticles.map(({ article, score, commonTags }) => (
+        <li class="article-item">
+          <div class="card-wrapper">
+            <RelatedArticleCard article={article} commonTags={commonTags} score={score} />
+          </div>
+        </li>
+      ))}
+    </ul>
+  </Container>
+</section>
+
+<style lang="scss">
+.related-articles {
+  padding: 8rem 0;
+  background: #f9f9f9;
+  
+  @include mixin.sp {
+    padding: 4rem 0;
+  }
+}
+
+.title {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: .1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding-bottom: 2rem;
+  margin-bottom: 4rem;
+
+  @include mixin.sp {
+    font-size: 2rem;
+    padding-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  &::after {
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background-image: linear-gradient(to right ,var.$c-key-1, var.$c-key-2);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include mixin.sp {
+      width: 2.4rem;
+    }
+  }
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 3.2rem 2.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  @include mixin.sp {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+}
+
+.article-item {
+  position: relative;
+}
+
+.card-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+</style>
