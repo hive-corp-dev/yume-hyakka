@@ -1024,4 +1024,79 @@ export const articleTags = [
     label: "コウモリ",
     kana: "こうもり",
   },
+  {
+    slug: "swimming",
+    label: "水泳",
+    kana: "すいえい",
+  },
+  {
+    slug: "exercise",
+    label: "運動",
+    kana: "うんどう",
+  },
+  {
+    slug: "blue",
+    label: "青",
+    kana: "あお",
+  },
+  {
+    slug: "food",
+    label: "食べ物",
+    kana: "たべもの",
+  },
+  {
+    slug: "cold",
+    label: "冷たい",
+    kana: "つめたい",
+  },
+  {
+    slug: "refreshing",
+    label: "爽やか",
+    kana: "さわやか",
+  },
+  {
+    slug: "sweet",
+    label: "甘い",
+    kana: "あまい",
+  },
+  {
+    slug: "cooling",
+    label: "冷却",
+    kana: "れいきゃく",
+  },
+  {
+    slug: "comfort",
+    label: "快適",
+    kana: "かいてき",
+  },
+  {
+    slug: "modern",
+    label: "現代的",
+    kana: "げんだいてき",
+  },
+  {
+    slug: "relief",
+    label: "安らぎ",
+    kana: "やすらぎ",
+  },
+  {
+    slug: "technology",
+    label: "技術",
+    kana: "ぎじゅつ",
+  },
+  {
+    slug: "goal-achievement",
+    label: "目標達成",
+    kana: "もくひょうたっせい",
+  },
+  {
+    slug: "strength",
+    label: "強さ",
+    kana: "つよさ",
+  },
+  {
+    slug: "nature",
+    label: "自然",
+    kana: "しぜん",
+  },
 ];

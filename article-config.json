@@ -1,0 +1,225 @@
+{
+  "articleStructure": {
+    "wordCount": {
+      "min": 2000,
+      "max": 3000,
+      "optimal": 2500
+    },
+    "sections": {
+      "introduction": {
+        "characterCount": "100-150",
+        "purpose": "興味を引き、記事内容を予告"
+      },
+      "basicMeaning": {
+        "subsections": 3,
+        "characterCount": "400-600",
+        "purpose": "基本的な象徴意味を解説"
+      },
+      "detailedInterpretation": {
+        "types": ["色別", "状況別", "心理状態別"],
+        "subsections": "3-5",
+        "characterCount": "800-1200",
+        "purpose": "詳細な分析と解釈"
+      },
+      "conclusion": {
+        "characterCount": "300-400",
+        "purpose": "まとめと実践的アドバイス"
+      }
+    },
+    "adPlacement": [
+      "導入後",
+      "基本的な意味後", 
+      "詳細解釈後"
+    ]
+  },
+  
+  "tagCategories": {
+    "animals": [
+      "cat", "dog", "snake", "dragon", "bear", "bird", "fish", 
+      "tiger", "lion", "rabbit", "horse", "cow", "pig", "mouse"
+    ],
+    "nature": [
+      "rain", "rainbow", "mountain", "sea", "forest", "flower",
+      "tree", "sun", "moon", "star", "cloud", "snow", "fire"
+    ],
+    "emotions": [
+      "anxiety", "happiness", "fear", "love", "anger", "sadness",
+      "excitement", "peace", "stress", "hope", "jealousy"
+    ],
+    "actions": [
+      "flying", "falling", "running", "swimming", "singing", 
+      "dancing", "climbing", "fighting", "hiding", "chasing"
+    ],
+    "objects": [
+      "money", "food", "clothes", "car", "house", "book", "key",
+      "mirror", "phone", "jewelry", "weapon", "tool"
+    ],
+    "places": [
+      "school", "hospital", "church", "cemetery", "bridge",
+      "elevator", "stairs", "room", "kitchen", "bathroom"
+    ],
+    "colors": [
+      "white", "black", "red", "blue", "green", "yellow",
+      "purple", "pink", "gold", "silver", "brown", "gray"
+    ],
+    "symbols": [
+      "good-luck", "success", "growth", "change", "healing",
+      "protection", "wisdom", "courage", "freedom", "mystery"
+    ]
+  },
+
+  "contentGuidelines": {
+    "tone": {
+      "friendly": true,
+      "professional": true,
+      "positive": true,
+      "empathetic": true
+    },
+    "language": {
+      "avoid": [
+        "断定的すぎる表現",
+        "不安を煽る表現", 
+        "医学的診断",
+        "過度にスピリチュアル"
+      ],
+      "prefer": [
+        "可能性を示唆",
+        "選択肢を提示",
+        "ポジティブな解釈",
+        "実用的なアドバイス"
+      ]
+    },
+    "writingStyle": {
+      "bulletPoints": {
+        "usage": "箇条書きは補助的に使用",
+        "avoid": "タイトルと箇条書きだけでセクションを終わらせない",
+        "structure": "箇条書きの前後に説明文を必ず追加"
+      },
+      "textVolume": {
+        "requirement": "各セクションに十分な文章量を確保",
+        "minParagraphs": "1セクションあたり最低2-3段落",
+        "explanation": "箇条書きの各項目について詳細説明を追加"
+      }
+    },
+    "structure": {
+      "headings": "H2, H3を適切に使用",
+      "lists": "箇条書きで読みやすく",
+      "emphasis": "<strong>タグで重要ポイントを強調",
+      "flow": "論理的で自然な文章展開"
+    }
+  },
+
+  "seoRequirements": {
+    "title": {
+      "formats": [
+        "【夢占い】{TOPIC}の夢の意味を徹底解説！{サブタイトル}",
+        "{TOPIC}の夢が示す意味とは？{サブテーマ}を夢占いで解説",
+        "夢占いで解説！{TOPIC}の夢が伝える{メッセージタイプ}",
+        "【夢占い】{TOPIC}が夢に現れる意味｜{状況}を詳しく解説",
+        "{TOPIC}の夢占い完全ガイド：{詳細内容}を解説",
+        "夢占いで読み解く{TOPIC}の心理状態と未来への暗示",
+        "【夢占い】{TOPIC}の夢の{数字}つの意味｜{詳細解説}",
+        "{TOPIC}が夢に現れるスピリチュアルな意味と{アクション}",
+        "夢占い：{TOPIC}が象徴する{抽象概念}と{具体的効果}",
+        "{TOPIC}の夢の本当の意味は？{視点}から徹底解説"
+      ],
+      "characterLimit": 60,
+      "optimalLength": "30-39",
+      "includeKeyword": true,
+      "usage": {
+        "rotation": "記事ごとに異なるパターンを使用",
+        "selection": "TOPICの性質に応じて最適なパターンを選択"
+      }
+    },
+    "description": {
+      "characterLimit": 160,
+      "includeKeyword": true,
+      "actionWords": ["解説", "考察", "探る", "分析"]
+    },
+    "headings": {
+      "includeKeyword": "メインキーワードを含める",
+      "hierarchical": "論理的な階層構造",
+      "descriptive": "内容が分かりやすい"
+    }
+  },
+
+  "qualityChecklist": {
+    "technical": [
+      "フロントマターが正確",
+      "ファイル名が命名規則に準拠", 
+      "画像ファイルが存在",
+      "タグが既存リストに含まれる（新規タグはconfig.tsに追記済み）",
+      "公開日時が適切"
+    ],
+    "newTagProcess": {
+      "description": "新しいタグを使用する場合の手順",
+      "steps": [
+        "1. 新規タグが記事内容に適切か確認",
+        "2. 既存のtagCategoriesに当てはまるか検討",
+        "3. src/content/config.tsのallowedTagsに追加",
+        "4. 記事にタグを設定して公開"
+      ],
+      "note": "新規タグは必ずconfig.tsに事前追加してから記事で使用すること"
+    },
+    "content": [
+      "誤字脱字がない",
+      "見出し構造が適切",
+      "AdUnit配置が3箇所",
+      "内容が論理的",
+      "SEO要素が最適化"
+    ],
+    "quality": [
+      "独自性がある",
+      "読者にとって有益",
+      "適切な文字数",
+      "ポジティブなトーン",
+      "実用的なアドバイス含む"
+    ]
+  },
+
+  "fileNaming": {
+    "rules": [
+      "英語の小文字のみ",
+      "ハイフン区切り",
+      "30文字以内",
+      "分かりやすい名前",
+      "'-dream'サフィックスは不要（例: cat ○、cat-dream ×）"
+    ],
+    "examples": {
+      "good": ["white-cat", "swimming", "money-falling", "mountain"],
+      "bad": ["WhiteCat", "white_cat", "cat-dream", "mountain-dream", "very-long-file-name-example"]
+    }
+  },
+
+  "imageRequirements": {
+    "thumbnail": {
+      "size": "1600x900px",
+      "format": "PNG推奨",
+      "path": "./images/{slug}/thumb.png",
+      "quality": "高品質、関連性のある画像"
+    },
+    "generation": {
+      "tool": "Midjourney",
+      "version": "v7",
+      "aspectRatio": "16:9",
+      "workflow": [
+        "1. article-ideas.json の imagePrompt を使用してMidjourneyで画像生成",
+        "2. 1600x900px にリサイズ", 
+        "3. src/content/article/images/{slug}/thumb.png に保存",
+        "4. 記事の thumbnail パスを ./images/{slug}/thumb.png に更新"
+      ]
+    },
+    "promptGuidelines": {
+      "baseStyle": "A realistic photograph of..., 夢占い・スピリチュアル、ポジティブで穏やかな雰囲気",
+      "visualStyle": "high quality photo, realistic photography",
+      "commonSuffix": "--ar 16:9 --v 7 --style raw",
+      "mood": "希望的で安らぎのある表現",
+      "lighting": "natural lighting, soft light, golden hour",
+      "colors": "調和のとれた色彩, warm tones",
+      "composition": "balanced composition, professional framing",
+      "avoidElements": ["illustration", "cartoon", "anime", "暗い・不安を煽る表現", "過度にリアルな描写", "恐怖を感じさせる要素"],
+      "promptStructure": "A realistic photograph of [主要被写体], [環境・背景], [照明・雰囲気], [品質指定], --ar 16:9 --v 7 --style raw"
+    }
+  }
+
+}

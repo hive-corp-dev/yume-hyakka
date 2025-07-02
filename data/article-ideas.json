@@ -1,0 +1,142 @@
+{
+  "2025_snake_year": [
+    {
+      "title": "蛇に噛まれる夢の本当の意味は？警告と変化の暗示を徹底解説",
+      "slug": "snake-bite",
+      "mainKeyword": "蛇に噛まれる 夢占い",
+      "tags": ["snake", "fear", "change", "healing", "warning"],
+      "priority": "medium",
+      "description": "蛇に噛まれる夢の意味を詳しく解説。場所や状況別の意味と対処法も紹介。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of a beautiful snake in peaceful garden setting, golden and green natural tones, serene spiritual atmosphere, natural lighting, non-threatening graceful appearance, high quality photography --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "夢占いで解説！蛇の脱皮の夢が伝える成長と再生のメッセージ",
+      "slug": "snake-shedding",
+      "mainKeyword": "蛇 脱皮 夢占い",
+      "tags": ["snake", "growth", "change", "renewal", "transformation"],
+      "priority": "medium",
+      "description": "蛇の脱皮の夢は成長と変化の象徴。新しいスタートへの準備を意味する夢を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of snake naturally shedding skin in beautiful garden, golden hour natural lighting, peaceful flower background, transformation symbolism, warm earth tones, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】白い蛇の夢の意味を徹底解説！金運上昇と神聖なメッセージ",
+      "slug": "white-snake",
+      "mainKeyword": "白い蛇 夢占い",
+      "tags": ["snake", "white-snake", "white", "good-luck", "money-fortune", "holiness", "prosperity"],
+      "priority": "high",
+      "description": "白い蛇の夢は最高の吉夢。金運や恋愛運の上昇、神聖なメッセージの意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful white snake in serene natural setting, ethereal lighting, golden sunbeams, peaceful garden background, mystical spiritual atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "summer_2025": [
+    {
+      "title": "【夢占い】海の夢が示す深層心理と人生の転機を解説",
+      "slug": "sea-ocean",
+      "mainKeyword": "海 夢占い",
+      "tags": ["sea", "water", "blue", "mystery", "subconscious", "freedom"],
+      "priority": "high",
+      "description": "海の夢は潜在意識と感情の象徴。波の状態や海での行動別に夢占いの意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of calm blue ocean with gentle waves, golden hour lighting, peaceful seascape, horizon line, serene atmosphere, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "夢占いで読み解く花火の夢！夏の思い出と心の高揚感",
+      "slug": "fireworks",
+      "mainKeyword": "花火 夢占い",
+      "tags": ["fireworks", "summer", "happiness", "celebration", "night", "excitement"],
+      "priority": "medium",
+      "description": "花火の夢は感情の爆発と特別な瞬間を表す。美しい花火や打ち上げ花火の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful fireworks exploding in night sky, colorful bursts of light, summer festival atmosphere, people silhouettes watching, magical moment, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】プールの夢の意味とは？リラックスと新しい挑戦",
+      "slug": "swimming-pool",
+      "mainKeyword": "プール 夢占い",
+      "tags": ["swimming-pool", "water", "swimming", "relaxation", "summer", "blue", "comfort"],
+      "priority": "medium",
+      "description": "プールの夢は心の状態と人生の段階を反映。きれいなプールや泳ぐ夢の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of pristine swimming pool with crystal clear blue water, tropical resort setting, palm trees reflection, sunny day, peaceful atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "animals_2025": [
+    {
+      "title": "【夢占い】猫の夢が示す女性性と直感力の覚醒",
+      "slug": "cat",
+      "mainKeyword": "猫 夢占い",
+      "tags": ["cat", "intuition", "feminine", "mystery", "independence", "healing"],
+      "priority": "high",
+      "description": "猫の夢は直感力と女性性の象徴。白猫、黒猫、子猫など種類別の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful cat sitting peacefully in garden, soft natural lighting, serene expression, graceful posture, spiritual atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "夢占いで解説！犬の夢が伝える忠誠心と友情のメッセージ",
+      "slug": "dog",
+      "mainKeyword": "犬 夢占い",
+      "tags": ["dog", "loyalty", "friendship", "protection", "happiness", "companionship"],
+      "priority": "high",
+      "description": "犬の夢は忠誠心と友情を象徴。かわいい子犬や大型犬など状況別の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of friendly dog in beautiful natural setting, warm lighting, joyful expression, peaceful outdoor scene, companionship feeling, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】鳥が飛ぶ夢の意味！自由への憧れと精神的成長",
+      "slug": "flying-bird",
+      "mainKeyword": "鳥 夢占い",
+      "tags": ["bird", "flying", "freedom", "growth", "spirituality", "hope"],
+      "priority": "medium",
+      "description": "鳥の夢は自由と精神的な向上を表す。大空を飛ぶ鳥や鳥の種類別の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bird flying gracefully in blue sky, wings spread wide, natural lighting, freedom symbolism, peaceful sky background, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "food_dreams": [
+    {
+      "title": "【夢占い】ケーキの夢が示す甘い誘惑と人生の祝福",
+      "slug": "cake",
+      "mainKeyword": "ケーキ 夢占い",
+      "tags": ["cake", "sweet", "happiness", "celebration", "temptation", "indulgence"],
+      "priority": "medium",
+      "description": "ケーキの夢は喜びと誘惑を象徴。誕生日ケーキや美味しいケーキの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful decorated cake on elegant table, soft lighting, festive atmosphere, delicious appearance, celebration mood, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "夢占いで読み解く果物の夢！豊かさと健康への願望",
+      "slug": "fruit",
+      "mainKeyword": "果物 夢占い",
+      "tags": ["fruits", "health", "abundance", "freshness", "natural", "vitality"],
+      "priority": "medium",
+      "description": "果物の夢は豊かさと健康を表す。りんご、オレンジなど種類別の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh colorful fruits arranged beautifully, natural lighting, vibrant colors, healthy abundance, market or kitchen setting, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "nature_elements": [
+    {
+      "title": "【夢占い】雨の夢の意味を徹底解説！浄化と感情の解放",
+      "slug": "rain",
+      "mainKeyword": "雨 夢占い",
+      "tags": ["rain", "purification", "emotion", "cleansing", "renewal", "nature"],
+      "priority": "high",
+      "description": "雨の夢は心の浄化と感情の解放を象徴。激しい雨や優しい雨の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of gentle rain falling in peaceful garden, soft natural lighting, rain drops on leaves, serene atmosphere, purification symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "夢占いで解説！山の夢が示す目標達成と人生の挑戦",
+      "slug": "mountain",
+      "mainKeyword": "山 夢占い",
+      "tags": ["mountain", "challenge", "goal-achievement", "growth", "nature", "strength"],
+      "priority": "medium",
+      "description": "山の夢は目標と挑戦を象徴。山登りや美しい山景色の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of majestic mountain peak with clear blue sky, natural lighting, inspiring landscape, achievement symbolism, peaceful nature scene, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ]
+}
