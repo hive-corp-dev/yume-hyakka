@@ -19,16 +19,6 @@
       "description": "蛇の脱皮の夢は成長と変化の象徴。新しいスタートへの準備を意味する夢を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of snake naturally shedding skin in beautiful garden, golden hour natural lighting, peaceful flower background, transformation symbolism, warm earth tones, high quality photo --ar 16:9 --v 7 --style raw"
-    },
-    {
-      "title": "【夢占い】白い蛇の夢の意味を徹底解説！金運上昇と神聖なメッセージ",
-      "slug": "white-snake",
-      "mainKeyword": "白い蛇 夢占い",
-      "tags": ["snake", "white-snake", "white", "good-luck", "money-fortune", "holiness", "prosperity"],
-      "priority": "high",
-      "description": "白い蛇の夢は最高の吉夢。金運や恋愛運の上昇、神聖なメッセージの意味を詳しく解説。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of beautiful white snake in serene natural setting, ethereal lighting, golden sunbeams, peaceful garden background, mystical spiritual atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
   "summer_2025": [
@@ -137,6 +127,158 @@
       "description": "山の夢は目標と挑戦を象徴。山登りや美しい山景色の意味を詳しく解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of majestic mountain peak with clear blue sky, natural lighting, inspiring landscape, achievement symbolism, peaceful nature scene, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "mwwp_priority": [
+    {
+      "title": "【夢占い】金色の蛇の夢の意味を徹底解説！金運と繁栄の象徴",
+      "slug": "golden-snake",
+      "mainKeyword": "金色の蛇 夢占い",
+      "tags": ["golden-snake", "snake", "gold", "wealth", "prosperity", "fortune"],
+      "priority": "high",
+      "description": "金色の蛇の夢は金運と繁栄を象徴。巳年特有の縁起の良い夢の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful golden snake with shimmering scales in elegant natural setting, warm golden lighting, luxurious atmosphere, prosperity symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】大きな蛇の夢が示す圧倒的な力と挑戦",
+      "slug": "large-snake",
+      "mainKeyword": "大きな蛇 夢占い",
+      "tags": ["large-snake", "snake", "power", "overwhelming", "challenge", "strength"],
+      "priority": "medium",
+      "description": "大きな蛇の夢は圧倒的な力と挑戦を象徴。巨大な蛇が現れる意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of large impressive snake in natural habitat, dramatic lighting, powerful presence, majestic appearance, nature documentary style, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】海で泳ぐ夢の意味！夏の自由と感情の解放",
+      "slug": "swimming-in-sea",
+      "mainKeyword": "海で泳ぐ 夢占い",
+      "tags": ["swimming", "sea", "summer", "freedom", "emotion", "liberation"],
+      "priority": "high",
+      "description": "海で泳ぐ夢は自由と感情の解放を象徴。夏の海での体験と心の状態を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of person swimming in beautiful blue ocean, summer atmosphere, clear water, freedom symbolism, joyful moment, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】かき氷の夢が示す夏の癒しと甘い思い出",
+      "slug": "shaved-ice",
+      "mainKeyword": "かき氷 夢占い",
+      "tags": ["shaved-ice", "summer", "cooling", "nostalgia", "childhood", "sweetness"],
+      "priority": "medium",
+      "description": "かき氷の夢は夏の癒しと甘い思い出を象徴。涼しさと懐かしさの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of colorful shaved ice dessert on summer day, refreshing appearance, nostalgic atmosphere, festival vibes, cooling symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】蝉の夢の意味！夏の情熱と生命力の象徴",
+      "slug": "cicada",
+      "mainKeyword": "蝉 夢占い",
+      "tags": ["cicada", "summer", "noise", "life-cycle", "persistence", "vitality"],
+      "priority": "medium",
+      "description": "蝉の夢は夏の情熱と生命力を象徴。鳴き声や羽化の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of cicada on tree branch in summer, natural lighting, detailed insect photography, summer atmosphere, life cycle symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】亀の夢が示す長寿と安定の智恵",
+      "slug": "turtle",
+      "mainKeyword": "亀 夢占い",
+      "tags": ["turtle", "longevity", "wisdom", "patience", "stability", "fortune"],
+      "priority": "high",
+      "description": "亀の夢は長寿と安定を象徴。縁起の良い亀の夢の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of peaceful turtle in natural pond setting, serene atmosphere, wisdom symbolism, longevity representation, calm water reflection, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】鶴の夢の意味！長寿と幸運の象徴",
+      "slug": "crane",
+      "mainKeyword": "鶴 夢占い",
+      "tags": ["crane", "longevity", "good-luck", "elegance", "peace", "fortune"],
+      "priority": "high",
+      "description": "鶴の夢は長寿と幸運を象徴。縁起の良い鶴の夢の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of elegant crane in peaceful natural setting, graceful posture, serene atmosphere, longevity symbolism, traditional Japanese beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】蝶々の夢が示す変化と美しい転生",
+      "slug": "butterfly",
+      "mainKeyword": "蝶々 夢占い",
+      "tags": ["butterfly", "transformation", "beauty", "rebirth", "soul", "change"],
+      "priority": "high",
+      "description": "蝶々の夢は変化と美しい転生を象徴。蝶の舞う夢の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful butterfly in flower garden, vibrant colors, transformation symbolism, delicate wings, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】鳳凰の夢の意味！復活と永遠の生命力",
+      "slug": "phoenix",
+      "mainKeyword": "鳳凰 夢占い",
+      "tags": ["phoenix", "rebirth", "resurrection", "fire", "immortality", "power"],
+      "priority": "high",
+      "description": "鳳凰の夢は復活と永遠の生命力を象徴。神話の鳥が現れる意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic artistic photograph of phoenix bird with magnificent feathers, ethereal fire elements, rebirth symbolism, mystical atmosphere, divine presence, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】スイカの夢が示す夏の豊かさと分かち合い",
+      "slug": "watermelon",
+      "mainKeyword": "スイカ 夢占い",
+      "tags": ["watermelon", "summer", "abundance", "sharing", "refreshing", "prosperity"],
+      "priority": "medium",
+      "description": "スイカの夢は夏の豊かさと分かち合いを象徴。甘いスイカの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of whole watermelon and beautifully arranged watermelon slices on a plate, hot summer day setting, juicy red flesh, refreshing atmosphere, abundance and sharing symbolism, seasonal summer fruit, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】台風の夢が示す人生の嵐と変化の力",
+      "slug": "typhoon",
+      "mainKeyword": "台風 夢占い",
+      "tags": ["typhoon", "storm", "chaos", "change", "power", "nature"],
+      "priority": "medium",
+      "description": "台風の夢は人生の嵐と変化の力を象徴。激しい自然現象の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of approaching typhoon with dramatic clouds, powerful natural force, storm symbolism, weather phenomenon, atmospheric tension, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】入道雲の夢の意味！夏の成長と力強い拡張",
+      "slug": "cumulonimbus",
+      "mainKeyword": "入道雲 夢占い",
+      "tags": ["cumulonimbus", "summer", "power", "growth", "expansion", "nature"],
+      "priority": "medium",
+      "description": "入道雲の夢は夏の成長と力強い拡張を象徴。巨大な雲の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of massive cumulonimbus cloud formation, dramatic summer sky, powerful natural phenomenon, growth symbolism, impressive scale, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】星座の夢が示す運命の導きと神秘の力",
+      "slug": "constellation",
+      "mainKeyword": "星座 夢占い",
+      "tags": ["constellation", "guidance", "destiny", "mystery", "navigation", "spiritual"],
+      "priority": "medium",
+      "description": "星座の夢は運命の導きと神秘の力を象徴。星の配置が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of constellation patterns in night sky, starry background, celestial guidance, mystical atmosphere, astronomical beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】神社の夢が示すスピリチュアルな導きと浄化",
+      "slug": "shrine",
+      "mainKeyword": "神社 夢占い",
+      "tags": ["shrine", "spirituality", "prayer", "protection", "tradition", "purification"],
+      "priority": "medium",
+      "description": "神社の夢はスピリチュアルな導きと浄化を象徴。神聖な場所の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of peaceful Japanese shrine with traditional architecture, spiritual atmosphere, sacred space, cultural heritage, divine protection, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】白い龍の夢の意味！神聖な力と霊的な導き",
+      "slug": "white-dragon",
+      "mainKeyword": "白い龍 夢占い",
+      "tags": ["dragon", "white", "spiritual", "divine", "power", "guidance", "holiness"],
+      "priority": "high",
+      "description": "白い龍の夢は神聖な力と霊的な導きを象徴。スピリチュアルな龍の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic artistic photograph of majestic white dragon without wings, serpentine body with pure white scales, divine god-like appearance floating in bright gentle light, ethereal heavenly atmosphere, soft golden and white divine illumination, peaceful spiritual energy, celestial clouds, benevolent presence, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ]
 }

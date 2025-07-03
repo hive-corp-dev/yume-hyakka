@@ -1099,4 +1099,44 @@ export const articleTags = [
     label: "自然",
     kana: "しぜん",
   },
+  {
+    slug: "watermelon",
+    label: "スイカ",
+    kana: "すいか",
+  },
+  {
+    slug: "abundance",
+    label: "豊かさ",
+    kana: "ゆたかさ",
+  },
+  {
+    slug: "sharing",
+    label: "分かち合い",
+    kana: "わかちあい",
+  },
+  {
+    slug: "ice-cream",
+    label: "アイスクリーム",
+    kana: "あいすくりーむ",
+  },
+  {
+    slug: "spiritual",
+    label: "スピリチュアル",
+    kana: "すぴりちゅある",
+  },
+  {
+    slug: "divine",
+    label: "神的",
+    kana: "しんてき",
+  },
+  {
+    slug: "guidance",
+    label: "導き",
+    kana: "みちびき",
+  },
+  {
+    slug: "power",
+    label: "力",
+    kana: "ちから",
+  },
 ];
