@@ -1139,4 +1139,54 @@ export const articleTags = [
     label: "力",
     kana: "ちから",
   },
+  {
+    slug: "gold",
+    label: "金色",
+    kana: "ごーるど",
+  },
+  {
+    slug: "cicada",
+    label: "蝉",
+    kana: "せみ",
+  },
+  {
+    slug: "life-cycle",
+    label: "生命サイクル",
+    kana: "せいめいさいくる",
+  },
+  {
+    slug: "shrine",
+    label: "神社",
+    kana: "じんじゃ",
+  },
+  {
+    slug: "spirituality",
+    label: "スピリチュアル",
+    kana: "すぴりちゅある",
+  },
+  {
+    slug: "prayer",
+    label: "祈り",
+    kana: "いのり",
+  },
+  {
+    slug: "protection",
+    label: "保護",
+    kana: "ほご",
+  },
+  {
+    slug: "tradition",
+    label: "伝統",
+    kana: "でんとう",
+  },
+  {
+    slug: "constellation",
+    label: "星座",
+    kana: "せいざ",
+  },
+  {
+    slug: "navigation",
+    label: "航海",
+    kana: "こうかい",
+  },
 ];
