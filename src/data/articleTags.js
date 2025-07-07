@@ -705,6 +705,11 @@ export const articleTags = [
     kana: "りーだーしっぷ",
   },
   {
+    slug: "liberation",
+    label: "解放",
+    kana: "かいほう",
+  },
+  {
     slug: "spider",
     label: "蜘蛛",
     kana: "くも",
@@ -753,6 +758,11 @@ export const articleTags = [
     slug: "cake",
     label: "ケーキ",
     kana: "けーき",
+  },
+  {
+    slug: "celebration",
+    label: "祝祭",
+    kana: "しゅくさい",
   },
   {
     slug: "happiness",
@@ -818,6 +828,11 @@ export const articleTags = [
     slug: "effort",
     label: "努力",
     kana: "どりょく",
+  },
+  {
+    slug: "excitement",
+    label: "興奮",
+    kana: "こうふん",
   },
   {
     slug: "mountain",
@@ -1188,5 +1203,200 @@ export const articleTags = [
     slug: "navigation",
     label: "航海",
     kana: "こうかい",
+  },
+  {
+    slug: "large-snake",
+    label: "大蛇",
+    kana: "だいじゃ",
+  },
+  {
+    slug: "overwhelming",
+    label: "圧倒",
+    kana: "あっとう",
+  },
+  {
+    slug: "crane",
+    label: "鶴",
+    kana: "つる",
+  },
+  {
+    slug: "longevity",
+    label: "長寿",
+    kana: "ちょうじゅ",
+  },
+  {
+    slug: "elegance",
+    label: "優雅",
+    kana: "ゆうが",
+  },
+  {
+    slug: "peace",
+    label: "平和",
+    kana: "へいわ",
+  },
+  {
+    slug: "fortune",
+    label: "幸運",
+    kana: "こううん",
+  },
+  {
+    slug: "turtle",
+    label: "亀",
+    kana: "かめ",
+  },
+  {
+    slug: "patience",
+    label: "忍耐",
+    kana: "にんたい",
+  },
+  {
+    slug: "stability",
+    label: "安定",
+    kana: "あんてい",
+  },
+  {
+    slug: "phoenix",
+    label: "鳳凰",
+    kana: "ほうおう",
+  },
+  {
+    slug: "rebirth",
+    label: "再生",
+    kana: "さいせい",
+  },
+  {
+    slug: "resurrection",
+    label: "復活",
+    kana: "ふっかつ",
+  },
+  {
+    slug: "immortality",
+    label: "不死",
+    kana: "ふし",
+  },
+  {
+    slug: "beauty",
+    label: "美しさ",
+    kana: "うつくしさ",
+  },
+  {
+    slug: "butterfly",
+    label: "蝶",
+    kana: "ちょう",
+  },
+  {
+    slug: "change",
+    label: "変化",
+    kana: "へんか",
+  },
+  {
+    slug: "soul",
+    label: "魂",
+    kana: "たましい",
+  },
+  {
+    slug: "transformation",
+    label: "変容",
+    kana: "へんよう",
+  },
+  {
+    slug: "fire",
+    label: "火",
+    kana: "ひ",
+  },
+  {
+    slug: "chaos",
+    label: "混沌",
+    kana: "こんとん",
+  },
+  {
+    slug: "storm",
+    label: "嵐",
+    kana: "あらし",
+  },
+  {
+    slug: "typhoon",
+    label: "台風",
+    kana: "たいふう",
+  },
+  {
+    slug: "cumulonimbus",
+    label: "入道雲",
+    kana: "にゅうどうぐも",
+  },
+  {
+    slug: "expansion",
+    label: "拡大",
+    kana: "かくだい",
+  },
+  {
+    slug: "nourishment",
+    label: "栄養",
+    kana: "えいよう",
+  },
+  {
+    slug: "rice",
+    label: "米",
+    kana: "こめ",
+  },
+  {
+    slug: "bon-dance",
+    label: "盆踊り",
+    kana: "ぼんおどり",
+  },
+  {
+    slug: "community",
+    label: "地域社会",
+    kana: "ちいきしゃかい",
+  },
+  {
+    slug: "culture",
+    label: "文化",
+    kana: "ぶんか",
+  },
+  {
+    slug: "skill",
+    label: "技術",
+    kana: "ぎじゅつ",
+  },
+  {
+    slug: "festival",
+    label: "祭り",
+    kana: "まつり",
+  },
+  {
+    slug: "flower",
+    label: "花",
+    kana: "はな",
+  },
+  {
+    slug: "morning-glory",
+    label: "朝顔",
+    kana: "あさがお",
+  },
+  {
+    slug: "morning",
+    label: "朝",
+    kana: "あさ",
+  },
+  {
+    slug: "childhood",
+    label: "子供時代",
+    kana: "こどもじだい",
+  },
+  {
+    slug: "memory",
+    label: "記憶",
+    kana: "きおく",
+  },
+  {
+    slug: "red-spider-lily",
+    label: "彼岸花",
+    kana: "ひがんばな",
+  },
+  {
+    slug: "transience",
+    label: "儚さ",
+    kana: "はかなさ",
   },
 ];

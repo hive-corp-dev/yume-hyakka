@@ -34,12 +34,15 @@ if(isSorted) {
 <style lang="scss">
   .article {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 6.4rem 4rem;
+
+	@include mixin.tab {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
 	@include mixin.sp {
 		gap: 1.6rem;
-		
 	}
 
 	@include mixin.sp-s {

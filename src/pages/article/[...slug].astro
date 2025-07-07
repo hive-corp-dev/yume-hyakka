@@ -145,6 +145,10 @@ const url = Astro.url.origin;
 	width: 100%;
   max-width: 81.2rem;
 
+  @include mixin.tab {
+    max-width: 100%;
+  }
+
   @include mixin.sp {
     padding: 0;
   }

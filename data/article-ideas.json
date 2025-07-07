@@ -1,41 +1,361 @@
 {
-  "2025_snake_year": [
-    {
-      "title": "蛇に噛まれる夢の本当の意味は？警告と変化の暗示を徹底解説",
-      "slug": "snake-bite",
-      "mainKeyword": "蛇に噛まれる 夢占い",
-      "tags": ["snake", "fear", "change", "healing", "warning"],
-      "priority": "medium",
-      "description": "蛇に噛まれる夢の意味を詳しく解説。場所や状況別の意味と対処法も紹介。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of a beautiful snake in peaceful garden setting, golden and green natural tones, serene spiritual atmosphere, natural lighting, non-threatening graceful appearance, high quality photography --ar 16:9 --v 7 --style raw"
-    },
-    {
-      "title": "夢占いで解説！蛇の脱皮の夢が伝える成長と再生のメッセージ",
-      "slug": "snake-shedding",
-      "mainKeyword": "蛇 脱皮 夢占い",
-      "tags": ["snake", "growth", "change", "renewal", "transformation"],
-      "priority": "medium",
-      "description": "蛇の脱皮の夢は成長と変化の象徴。新しいスタートへの準備を意味する夢を解説。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of snake naturally shedding skin in beautiful garden, golden hour natural lighting, peaceful flower background, transformation symbolism, warm earth tones, high quality photo --ar 16:9 --v 7 --style raw"
-    }
-  ],
   "summer_2025": [
     {
-      "title": "夢占いで読み解く花火の夢！夏の思い出と心の高揚感",
+      "title": "【夢占い】海水浴の夢の意味！夏の解放と自由への憧れ",
+      "slug": "swimming-in-sea",
+      "mainKeyword": "海水浴 夢占い",
+      "tags": ["swimming", "sea", "summer", "freedom", "liberation", "relaxation"],
+      "priority": "high",
+      "description": "海水浴の夢は夏の解放と自由への憧れを象徴。海で泳ぐ夢の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of people swimming in clear blue ocean, summer vacation atmosphere, freedom symbolism, refreshing water, beach lifestyle, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】花火の夢が示す華やかな瞬間と感動",
       "slug": "fireworks",
       "mainKeyword": "花火 夢占い",
-      "tags": ["fireworks", "summer", "happiness", "celebration", "night", "excitement"],
-      "priority": "medium",
-      "description": "花火の夢は感情の爆発と特別な瞬間を表す。美しい花火や打ち上げ花火の意味を解説。",
+      "tags": ["fireworks", "celebration", "summer", "beauty", "emotion", "moments"],
+      "priority": "high",
+      "description": "花火の夢は華やかな瞬間と感動を象徴。夏の風物詩の意味を解説。",
       "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of beautiful fireworks exploding in night sky, colorful bursts of light, summer festival atmosphere, people silhouettes watching, magical moment, high quality photo --ar 16:9 --v 7 --style raw"
+      "imagePrompt": "A realistic photograph of spectacular fireworks display in night sky, colorful explosions, celebration atmosphere, summer festival, emotional moment, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】夏祭りの夢の意味！賑やかな交流と楽しみ",
+      "slug": "summer-festival",
+      "mainKeyword": "夏祭り 夢占い",
+      "tags": ["summer-festival", "celebration", "community", "joy", "tradition", "culture"],
+      "priority": "high",
+      "description": "夏祭りの夢は賑やかな交流と楽しみを象徴。お祭りの活気ある意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of vibrant summer festival with lanterns, food stalls, yukata-wearing people, celebration atmosphere, traditional Japanese culture, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】浴衣の夢が示す伝統的な美しさと夏の風情",
+      "slug": "yukata",
+      "mainKeyword": "浴衣 夢占い",
+      "tags": ["yukata", "tradition", "beauty", "summer", "culture", "elegance"],
+      "priority": "medium",
+      "description": "浴衣の夢は伝統的な美しさと夏の風情を象徴。和装の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of elegant person in colorful yukata at summer festival, traditional Japanese clothing, cultural beauty, summer atmosphere, graceful appearance, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】プールの夢の意味！清涼感と楽しい時間",
+      "slug": "swimming-pool",
+      "mainKeyword": "プール 夢占い",
+      "tags": ["swimming-pool", "refreshment", "fun", "summer", "recreation", "coolness"],
+      "priority": "medium",
+      "description": "プールの夢は清涼感と楽しい時間を象徴。水の中での活動の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of crystal clear swimming pool with blue water, summer refreshment, recreational activity, cooling symbolism, leisure time, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】かき氷の夢が示す涼しさと夏の楽しみ",
+      "slug": "shaved-ice",
+      "mainKeyword": "かき氷 夢占い",
+      "tags": ["shaved-ice", "coolness", "summer", "refreshment", "treat", "relief"],
+      "priority": "medium",
+      "description": "かき氷の夢は涼しさと夏の楽しみを象徴。冷たいお菓子の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of colorful shaved ice dessert with syrup, summer treat, refreshing coolness, traditional Japanese kakigori, cooling symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】向日葵の夢の意味！太陽への憧れと希望",
+      "slug": "sunflower",
+      "mainKeyword": "向日葵 夢占い",
+      "tags": ["sunflower", "hope", "sunshine", "growth", "positivity", "summer"],
+      "priority": "high",
+      "description": "向日葵の夢は太陽への憧れと希望を象徴。大きな花の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bright sunflower field in summer, golden petals, hope symbolism, sunny disposition, growth representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】スイカの夢が示す夏の恵みと甘い満足",
+      "slug": "watermelon",
+      "mainKeyword": "スイカ 夢占い",
+      "tags": ["watermelon", "summer", "sweetness", "abundance", "refreshment", "satisfaction"],
+      "priority": "medium",
+      "description": "スイカの夢は夏の恵みと甘い満足を象徴。夏の果物の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh watermelon slices, juicy red flesh, summer fruit, refreshing symbolism, sweet satisfaction, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】蝉の夢の意味！夏の象徴と生命の儚さ",
+      "slug": "cicada",
+      "mainKeyword": "蝉 夢占い",
+      "tags": ["cicada", "summer", "transience", "life-cycle", "nature", "sound"],
+      "priority": "medium",
+      "description": "蝉の夢は夏の象徴と生命の儚さを象徴。昆虫の鳴き声の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of cicada on tree bark, summer insect, nature symbolism, life cycle representation, seasonal sound, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】風鈴の夢の意味！涼しげな音色と夏の風情",
+      "slug": "wind-chime",
+      "mainKeyword": "風鈴 夢占い",
+      "tags": ["wind-chime", "summer", "coolness", "sound", "tradition", "peace"],
+      "priority": "medium",
+      "description": "風鈴の夢は涼しげな音色と夏の風情を象徴。癒しの音の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of traditional Japanese wind chime hanging in summer breeze, gentle sound symbolism, cooling atmosphere, peaceful setting, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】扇風機の夢が示す涼しさと快適さ",
+      "slug": "electric-fan",
+      "mainKeyword": "扇風機 夢占い",
+      "tags": ["electric-fan", "coolness", "comfort", "summer", "relief", "breeze"],
+      "priority": "low",
+      "description": "扇風機の夢は涼しさと快適さを象徴。暑さからの解放の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of electric fan creating cooling breeze, summer comfort, relief symbolism, air circulation, refreshing atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】アイスクリームの夢の意味！甘い涼しさと楽しみ",
+      "slug": "ice-cream",
+      "mainKeyword": "アイスクリーム 夢占い",
+      "tags": ["ice-cream", "sweetness", "coolness", "summer", "treat", "joy"],
+      "priority": "medium",
+      "description": "アイスクリームの夢は甘い涼しさと楽しみを象徴。冷たいお菓子の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of colorful ice cream scoops, summer treat, sweet coolness, refreshing dessert, joyful symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】麦わら帽子の夢が示す夏の装いと保護",
+      "slug": "straw-hat",
+      "mainKeyword": "麦わら帽子 夢占い",
+      "tags": ["straw-hat", "summer", "protection", "fashion", "sun", "countryside"],
+      "priority": "low",
+      "description": "麦わら帽子の夢は夏の装いと保護を象徴。日差しを遮る意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of classic straw hat in summer setting, sun protection, countryside atmosphere, traditional summer wear, natural materials, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】蚊取り線香の夢の意味！夏の香りと懐かしさ",
+      "slug": "mosquito-coil",
+      "mainKeyword": "蚊取り線香 夢占い",
+      "tags": ["mosquito-coil", "summer", "nostalgia", "protection", "tradition", "scent"],
+      "priority": "low",
+      "description": "蚊取り線香の夢は夏の香りと懐かしさを象徴。昔ながらの夏の風景の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of traditional mosquito coil burning with smoke, summer nostalgia, protective symbolism, traditional Japanese summer scene, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】冷麦の夢が示す涼しい食事と夏の味",
+      "slug": "cold-noodles",
+      "mainKeyword": "冷麦 夢占い",
+      "tags": ["cold-noodles", "summer", "refreshment", "food", "coolness", "tradition"],
+      "priority": "low",
+      "description": "冷麦の夢は涼しい食事と夏の味を象徴。冷たい麺料理の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of cold noodles in clear glass bowl, summer food, refreshing meal, cooling symbolism, traditional Japanese cuisine, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】盆踊りの夢の意味！夏の伝統と共同体の絆",
+      "slug": "bon-dance",
+      "mainKeyword": "盆踊り 夢占い",
+      "tags": ["bon-dance", "summer", "tradition", "community", "culture", "celebration"],
+      "priority": "medium",
+      "description": "盆踊りの夢は夏の伝統と共同体の絆を象徴。お盆の踊りの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of traditional bon dance festival, people in circle dancing, summer tradition, community celebration, cultural bonding, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】夏の夕立の夢が示す激しい感情と浄化",
+      "slug": "summer-shower",
+      "mainKeyword": "夏の夕立 夢占い",
+      "tags": ["summer-shower", "rain", "emotion", "purification", "refresh", "nature"],
+      "priority": "medium",
+      "description": "夏の夕立の夢は激しい感情と浄化を象徴。突然の雨の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of sudden summer rain shower, dramatic sky, emotional symbolism, purification meaning, refreshing atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】虫取りの夢の意味！夏の童心と探求心",
+      "slug": "insect-catching",
+      "mainKeyword": "虫取り 夢占い",
+      "tags": ["insect-catching", "summer", "childhood", "curiosity", "nature", "exploration"],
+      "priority": "medium",
+      "description": "虫取りの夢は夏の童心と探求心を象徴。昆虫採集の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of child catching insects with net in summer garden, childhood curiosity, exploration symbolism, nature discovery, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】ビーチボールの夢が示す夏の楽しさと無邪気",
+      "slug": "beach-ball",
+      "mainKeyword": "ビーチボール 夢占い",
+      "tags": ["beach-ball", "summer", "fun", "playfulness", "beach", "joy"],
+      "priority": "low",
+      "description": "ビーチボールの夢は夏の楽しさと無邪気を象徴。海辺の遊びの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of colorful beach ball on sandy beach, summer fun, playful atmosphere, carefree symbolism, vacation joy, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】ラムネの夢の意味！懐かしい夏の味と爽快感",
+      "slug": "ramune",
+      "mainKeyword": "ラムネ 夢占い",
+      "tags": ["ramune", "summer", "nostalgia", "refreshment", "tradition", "coolness"],
+      "priority": "low",
+      "description": "ラムネの夢は懐かしい夏の味と爽快感を象徴。日本の夏の飲み物の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of traditional ramune bottle with marble, summer refreshment, nostalgic atmosphere, Japanese tradition, cooling symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】夏休みの夢が示す自由と解放感",
+      "slug": "summer-vacation",
+      "mainKeyword": "夏休み 夢占い",
+      "tags": ["summer-vacation", "freedom", "liberation", "relaxation", "break", "joy"],
+      "priority": "high",
+      "description": "夏休みの夢は自由と解放感を象徴。休暇の開放的な意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of summer vacation scene with luggage and beach items, freedom symbolism, liberation meaning, relaxation atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】金魚すくいの夢の意味！夏祭りの楽しみと挑戦",
+      "slug": "goldfish-scooping",
+      "mainKeyword": "金魚すくい 夢占い",
+      "tags": ["goldfish-scooping", "summer", "festival", "challenge", "tradition", "skill"],
+      "priority": "medium",
+      "description": "金魚すくいの夢は夏祭りの楽しみと挑戦を象徴。お祭りの遊びの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of goldfish scooping game at summer festival, traditional activity, challenge symbolism, festival atmosphere, cultural tradition, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】日焼けの夢が示す夏の体験と変化",
+      "slug": "suntan",
+      "mainKeyword": "日焼け 夢占い",
+      "tags": ["suntan", "summer", "experience", "change", "sun", "transformation"],
+      "priority": "low",
+      "description": "日焼けの夢は夏の体験と変化を象徴。太陽の影響と成長の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of sun-tanned skin showing summer experience, transformation symbolism, sun exposure meaning, seasonal change, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】カブトムシの夢の意味！夏の王者と力強さ",
+      "slug": "beetle",
+      "mainKeyword": "カブトムシ 夢占い",
+      "tags": ["beetle", "summer", "strength", "power", "nature", "childhood"],
+      "priority": "medium",
+      "description": "カブトムシの夢は夏の王者と力強さを象徴。昆虫の王様の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of Japanese rhinoceros beetle on tree, summer insect, strength symbolism, power representation, nature's warrior, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】夏の海の夢が示す広がりと無限の可能性",
+      "slug": "summer-ocean",
+      "mainKeyword": "夏の海 夢占い",
+      "tags": ["summer-ocean", "vastness", "possibility", "freedom", "nature", "depth"],
+      "priority": "high",
+      "description": "夏の海の夢は広がりと無限の可能性を象徴。大海原の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of vast summer ocean with clear blue water, endless horizon, possibility symbolism, freedom meaning, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】夏の昼寝の夢の意味！暑さと安らぎの時間",
+      "slug": "summer-nap",
+      "mainKeyword": "夏の昼寝 夢占い",
+      "tags": ["summer-nap", "rest", "peace", "heat", "relaxation", "comfort"],
+      "priority": "low",
+      "description": "夏の昼寝の夢は暑さと安らぎの時間を象徴。午後の休息の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of peaceful summer afternoon nap scene, rest symbolism, comfort meaning, lazy summer day, relaxation atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】朝顔の夢の意味！清々しい朝と新しい始まり",
+      "slug": "morning-glory",
+      "mainKeyword": "朝顔 夢占い",
+      "tags": ["morning-glory", "morning", "fresh-start", "beauty", "summer", "flower"],
+      "priority": "medium",
+      "description": "朝顔の夢は清々しい朝と新しい始まりを象徴。夏の花の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful morning glory flowers blooming in early morning light, fresh start symbolism, summer flower, new beginning meaning, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】百合の夢が示す純粋さと夏の清らかさ",
+      "slug": "lily",
+      "mainKeyword": "百合 夢占い",
+      "tags": ["lily", "purity", "beauty", "summer", "flower", "innocence"],
+      "priority": "medium",
+      "description": "百合の夢は純粋さと夏の清らかさを象徴。白く美しい花の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of pure white lilies blooming in summer sunlight, symbolizing purity and beauty, lush green leaves, serene atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】蓮の花の夢が示す精神的成長と夏の静けさ",
+      "slug": "lotus",
+      "mainKeyword": "蓮 夢占い",
+      "tags": ["lotus", "spirituality", "growth", "summer", "flower", "tranquility"],
+      "priority": "medium",
+      "description": "蓮の花の夢は精神的成長と夏の静けさを象徴。水辺に咲く蓮の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of blooming lotus flowers on a tranquil pond in summer, spiritual symbolism, lush green leaves, peaceful water reflection, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】彼岸花の夢が示す情熱と儚さの夏の記憶",
+      "slug": "red-spider-lily",
+      "mainKeyword": "彼岸花 夢占い",
+      "tags": ["red-spider-lily", "passion", "transience", "summer", "flower", "memory"],
+      "priority": "medium",
+      "description": "彼岸花の夢は情熱と儚さの夏の記憶を象徴。鮮やかな赤い花の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of vibrant red spider lilies blooming in summer, symbolizing passion and transience, striking red petals, lush green background, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
-  "food_dreams": [],
-  "nature_elements": [],
-  "mwwp_priority": [
+  "food_dreams": [
+    {
+      "title": "【夢占い】寿司の夢の意味！繁栄と豊かさの象徴",
+      "slug": "sushi",
+      "mainKeyword": "寿司 夢占い",
+      "tags": ["sushi", "prosperity", "abundance", "culture", "tradition", "luxury"],
+      "priority": "medium",
+      "description": "寿司の夢は繁栄と豊かさを象徴。日本の食文化と関連する意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of elegant sushi presentation, fresh seafood, traditional Japanese cuisine, prosperity symbolism, culinary artistry, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】お米の夢が示す基本的な豊かさと安定",
+      "slug": "rice",
+      "mainKeyword": "お米 夢占い",
+      "tags": ["rice", "abundance", "stability", "nourishment", "tradition", "prosperity"],
+      "priority": "medium",
+      "description": "お米の夢は基本的な豊かさと安定を象徴。主食の意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of pristine white rice grains, abundance symbolism, nourishment representation, traditional staple food, prosperity meaning, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "nature_elements": [
+    {
+      "title": "【夢占い】虹の夢の意味！希望と約束の美しい架け橋",
+      "slug": "rainbow",
+      "mainKeyword": "虹 夢占い",
+      "tags": ["rainbow", "hope", "promise", "beauty", "connection", "luck"],
+      "priority": "high",
+      "description": "虹の夢は希望と約束の美しい架け橋を象徴。色彩豊かな意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bright rainbow after rain, hope symbolism, natural beauty, colorful arc in sky, promise representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】満月の夢が示す完成と神秘的な力",
+      "slug": "full-moon",
+      "mainKeyword": "満月 夢占い",
+      "tags": ["full-moon", "completion", "mystery", "power", "cycle", "illumination"],
+      "priority": "high",
+      "description": "満月の夢は完成と神秘的な力を象徴。月の満ちる意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bright full moon in night sky, mystical atmosphere, completion symbolism, lunar power, ethereal glow, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】桜の夢の意味！美しい瞬間と人生の儚さ",
+      "slug": "cherry-blossom",
+      "mainKeyword": "桜 夢占い",
+      "tags": ["cherry-blossom", "beauty", "transience", "spring", "renewal", "culture"],
+      "priority": "high",
+      "description": "桜の夢は美しい瞬間と人生の儚さを象徴。日本の春の象徴の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful cherry blossoms in full bloom, pink petals, spring symbolism, transient beauty, Japanese culture, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "priority": [
     {
       "title": "【夢占い】大きな蛇の夢が示す圧倒的な力と挑戦",
       "slug": "large-snake",
@@ -45,27 +365,6 @@
       "description": "大きな蛇の夢は圧倒的な力と挑戦を象徴。巨大な蛇が現れる意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of large impressive snake in natural habitat, dramatic lighting, powerful presence, majestic appearance, nature documentary style, high quality photo --ar 16:9 --v 7 --style raw"
-    },
-    {
-      "title": "【夢占い】海で泳ぐ夢の意味！夏の自由と感情の解放",
-      "slug": "swimming-in-sea",
-      "mainKeyword": "海で泳ぐ 夢占い",
-      "tags": ["swimming", "sea", "summer", "freedom", "emotion", "liberation"],
-      "priority": "high",
-      "description": "海で泳ぐ夢は自由と感情の解放を象徴。夏の海での体験と心の状態を解説。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of person swimming in beautiful blue ocean, summer atmosphere, clear water, freedom symbolism, joyful moment, high quality photo --ar 16:9 --v 7 --style raw"
-    },
-
-    {
-      "title": "【夢占い】蝉の夢の意味！夏の情熱と生命力の象徴",
-      "slug": "cicada",
-      "mainKeyword": "蝉 夢占い",
-      "tags": ["cicada", "summer", "noise", "life-cycle", "persistence", "vitality"],
-      "priority": "medium",
-      "description": "蝉の夢は夏の情熱と生命力を象徴。鳴き声や羽化の意味を詳しく解説。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of cicada on tree branch in summer, natural lighting, detailed insect photography, summer atmosphere, life cycle symbolism, high quality photo --ar 16:9 --v 7 --style raw"
     },
     {
       "title": "【夢占い】亀の夢が示す長寿と安定の智恵",
@@ -107,7 +406,6 @@
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic artistic photograph of phoenix bird with magnificent feathers, ethereal fire elements, rebirth symbolism, mystical atmosphere, divine presence, high quality photo --ar 16:9 --v 7 --style raw"
     },
-
     {
       "title": "【夢占い】台風の夢が示す人生の嵐と変化の力",
       "slug": "typhoon",
@@ -127,16 +425,6 @@
       "description": "入道雲の夢は夏の成長と力強い拡張を象徴。巨大な雲の意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of massive cumulonimbus cloud formation, dramatic summer sky, powerful natural phenomenon, growth symbolism, impressive scale, high quality photo --ar 16:9 --v 7 --style raw"
-    },
-    {
-      "title": "【夢占い】星座の夢が示す運命の導きと神秘の力",
-      "slug": "constellation",
-      "mainKeyword": "星座 夢占い",
-      "tags": ["constellation", "guidance", "destiny", "mystery", "navigation", "spiritual"],
-      "priority": "medium",
-      "description": "星座の夢は運命の導きと神秘の力を象徴。星の配置が示す意味を解説。",
-      "imagePath": "src/images/mv.png",
-      "imagePrompt": "A realistic photograph of constellation patterns in night sky, starry background, celestial guidance, mystical atmosphere, astronomical beauty, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ]
 }

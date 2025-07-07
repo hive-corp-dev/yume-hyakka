@@ -88,6 +88,11 @@ if (!relatedArticles || relatedArticles.length === 0) {
   padding: 0;
   margin: 0;
 
+  @include mixin.tab {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
   @include mixin.sp {
     grid-template-columns: 1fr;
     gap: 2.4rem;
