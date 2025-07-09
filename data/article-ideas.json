@@ -211,6 +211,36 @@
       "imagePrompt": "A realistic photograph of summer vacation scene with luggage and beach items, freedom symbolism, liberation meaning, relaxation atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
     },
     {
+      "title": "【夢占い】夏の夢の意味！青春と情熱の季節",
+      "slug": "summer-dreams",
+      "mainKeyword": "夏の夢 夢占い",
+      "tags": ["summer-dreams", "youth", "passion", "season", "energy", "vitality"],
+      "priority": "high",
+      "description": "夏の夢は青春と情熱の季節を象徴。太陽の輝く季節の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bright summer landscape with blue sky and sunlight, youthful energy, passion symbolism, seasonal beauty, vitality representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】狼の夢の意味！野生の力と本能の目覚め",
+      "slug": "wolf",
+      "mainKeyword": "狼 夢占い",
+      "tags": ["wolf", "wild", "instinct", "strength", "nature", "freedom"],
+      "priority": "high",
+      "description": "狼の夢は野生の力と本能の目覚めを象徴。オオカミの持つ力強さの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of majestic wolf in natural forest setting, powerful presence, wild instinct, strength symbolism, nature connection, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】クラゲの夢の意味！流れに身を任せる優雅さ",
+      "slug": "jellyfish",
+      "mainKeyword": "クラゲ 夢占い",
+      "tags": ["jellyfish", "grace", "adaptability", "water", "mystery"],
+      "priority": "medium",
+      "description": "クラゲの夢は流れに身を任せる優雅さを象徴。水中を漂う美しさの意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of graceful jellyfish floating in clear blue water, elegant movement, mysterious beauty, underwater tranquility, flowing symbolism, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
       "title": "【夢占い】金魚すくいの夢の意味！夏祭りの楽しみと挑戦",
       "slug": "goldfish-scooping",
       "mainKeyword": "金魚すくい 夢占い",
@@ -321,6 +351,46 @@
       "description": "お米の夢は基本的な豊かさと安定を象徴。主食の意味を詳しく解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of pristine white rice grains, abundance symbolism, nourishment representation, traditional staple food, prosperity meaning, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】パンの夢の意味！基本的な満足と日常の幸せ",
+      "slug": "bread",
+      "mainKeyword": "パン 夢占い",
+      "tags": ["bread", "satisfaction", "daily-life", "comfort", "nourishment", "simplicity"],
+      "priority": "medium",
+      "description": "パンの夢は基本的な満足と日常の幸せを象徴。身近な食べ物の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh baked bread, warm golden color, comfort symbolism, daily nourishment, simple pleasure, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】卵の夢の意味！新しい可能性と創造力",
+      "slug": "egg",
+      "mainKeyword": "卵 夢占い",
+      "tags": ["egg", "potential", "creativity", "new-beginning", "fertility", "life"],
+      "priority": "high",
+      "description": "卵の夢は新しい可能性と創造力を象徴。生命の始まりの意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh egg with soft lighting, potential symbolism, new beginning meaning, life creation, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】魚の夢の意味！豊穣と心の深層",
+      "slug": "fish-food",
+      "mainKeyword": "魚 夢占い",
+      "tags": ["fish", "abundance", "subconscious", "wisdom", "intuition", "depth"],
+      "priority": "high",
+      "description": "魚の夢は豊穣と心の深層を象徴。水の生き物が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh fish with natural lighting, abundance symbolism, subconscious representation, wisdom meaning, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】バナナの夢の意味！エネルギーと豊かさの象徴",
+      "slug": "banana",
+      "mainKeyword": "バナナ 夢占い",
+      "tags": ["banana", "energy", "abundance", "nutrition", "tropical", "vitality"],
+      "priority": "medium",
+      "description": "バナナの夢はエネルギーと豊かさの象徴。トロピカルフルーツが示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of ripe yellow bananas with natural lighting, energy symbolism, abundance meaning, tropical vitality, nutritional representation, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
   "nature_elements": [
@@ -353,6 +423,36 @@
       "description": "桜の夢は美しい瞬間と人生の儚さを象徴。日本の春の象徴の意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of beautiful cherry blossoms in full bloom, pink petals, spring symbolism, transient beauty, Japanese culture, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】星の夢の意味！願いと導きの光",
+      "slug": "star",
+      "mainKeyword": "星 夢占い",
+      "tags": ["star", "wish", "guidance", "light", "hope", "destiny"],
+      "priority": "high",
+      "description": "星の夢は願いと導きの光を象徴。夜空の星が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of bright stars in night sky, wish symbolism, guidance meaning, celestial beauty, hope representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】雪の夢の意味！純粋さと新しい始まり",
+      "slug": "snow",
+      "mainKeyword": "雪 夢占い",
+      "tags": ["snow", "purity", "new-beginning", "cleansing", "winter", "silence"],
+      "priority": "medium",
+      "description": "雪の夢は純粋さと新しい始まりを象徴。白い雪が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of pristine white snow covering landscape, purity symbolism, new beginning meaning, peaceful winter scene, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】山の夢の意味！目標と挑戦の象徴",
+      "slug": "mountain-nature",
+      "mainKeyword": "山 夢占い",
+      "tags": ["mountain", "goal", "challenge", "achievement", "stability", "strength"],
+      "priority": "high",
+      "description": "山の夢は目標と挑戦の象徴。高い山が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of majestic mountain peak with clear blue sky, goal symbolism, challenge meaning, natural strength, achievement representation, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
   "priority": [
@@ -425,6 +525,90 @@
       "description": "入道雲の夢は夏の成長と力強い拡張を象徴。巨大な雲の意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of massive cumulonimbus cloud formation, dramatic summer sky, powerful natural phenomenon, growth symbolism, impressive scale, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "animals": [
+    {
+      "title": "【夢占い】象の夢の意味！記憶と知恵の象徴",
+      "slug": "elephant",
+      "mainKeyword": "象 夢占い",
+      "tags": ["elephant", "memory", "wisdom", "strength", "luck", "prosperity"],
+      "priority": "high",
+      "description": "象の夢は記憶と知恵の象徴。大きな象が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of majestic elephant in natural habitat, wisdom symbolism, strength representation, memory meaning, gentle giant, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】ライオンの夢の意味！王者の威厳と勇気",
+      "slug": "lion-dream",
+      "mainKeyword": "ライオン 夢占い",
+      "tags": ["lion", "courage", "leadership", "power", "pride", "strength"],
+      "priority": "high",
+      "description": "ライオンの夢は王者の威厳と勇気を象徴。百獣の王が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of powerful lion with majestic mane, leadership symbolism, courage meaning, royal presence, natural strength, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】鹿の夢の意味！優美さと直感の力",
+      "slug": "deer",
+      "mainKeyword": "鹿 夢占い",
+      "tags": ["deer", "grace", "intuition", "gentleness", "sensitivity", "nature"],
+      "priority": "medium",
+      "description": "鹿の夢は優美さと直感の力を象徴。美しい鹿が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of graceful deer in forest setting, elegance symbolism, intuition meaning, gentle nature, natural beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】フクロウの夢の意味！夜の知恵と洞察力",
+      "slug": "owl-dream",
+      "mainKeyword": "フクロウ 夢占い",
+      "tags": ["owl", "wisdom", "insight", "night", "mystery", "intelligence"],
+      "priority": "medium",
+      "description": "フクロウの夢は夜の知恵と洞察力を象徴。賢い鳥が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of wise owl with penetrating eyes, wisdom symbolism, insight meaning, nocturnal mystery, intelligence representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】キツネの夢の意味！狡猾さと神秘の力",
+      "slug": "fox",
+      "mainKeyword": "キツネ 夢占い",
+      "tags": ["fox", "cunning", "mystery", "intelligence", "trickster", "spiritual"],
+      "priority": "medium",
+      "description": "キツネの夢は狡猾さと神秘の力を象徴。賢い狐が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of clever fox with alert expression, cunning symbolism, mystery meaning, intelligence representation, spiritual significance, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "emotions": [
+    {
+      "title": "【夢占い】泣く夢の意味！感情の解放と浄化",
+      "slug": "crying",
+      "mainKeyword": "泣く 夢占い",
+      "tags": ["crying", "emotion", "release", "purification", "healing", "catharsis"],
+      "priority": "high",
+      "description": "泣く夢は感情の解放と浄化を象徴。涙が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of tears on face with soft lighting, emotional release symbolism, purification meaning, healing representation, cathartic moment, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】笑う夢の意味！喜びと心の軽やかさ",
+      "slug": "laughing",
+      "mainKeyword": "笑う 夢占い",
+      "tags": ["laughing", "joy", "happiness", "lightness", "healing", "positivity"],
+      "priority": "high",
+      "description": "笑う夢は喜びと心の軽やかさを象徴。笑顔が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of genuine laughter with bright expression, joy symbolism, happiness meaning, lightness representation, positive emotion, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】怒る夢の意味！内なる力と変化への意志",
+      "slug": "angry",
+      "mainKeyword": "怒る 夢占い",
+      "tags": ["angry", "power", "change", "passion", "energy", "transformation"],
+      "priority": "medium",
+      "description": "怒る夢は内なる力と変化への意志を象徴。怒りの感情が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of intense emotional expression, power symbolism, transformation meaning, passionate energy, inner strength, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ]
 }

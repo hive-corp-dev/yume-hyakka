@@ -135,6 +135,11 @@ export const articleTags = [
     kana: "じこ",
   },
   {
+    slug: "adaptability",
+    label: "適応性",
+    kana: "てきおうせい",
+  },
+  {
     slug: "anxiety",
     label: "不安",
     kana: "ふあん",
@@ -313,6 +318,11 @@ export const articleTags = [
     slug: "good-luck",
     label: "幸運",
     kana: "こううん",
+  },
+  {
+    slug: "grace",
+    label: "優雅",
+    kana: "ゆうが",
   },
   {
     slug: "communication",
@@ -530,6 +540,11 @@ export const articleTags = [
     kana: "いんすぴれーしょん",
   },
   {
+    slug: "instinct",
+    label: "本能",
+    kana: "ほんのう",
+  },
+  {
     slug: "bee",
     label: "蜂",
     kana: "はち",
@@ -558,6 +573,11 @@ export const articleTags = [
     slug: "fear",
     label: "恐怖",
     kana: "きょうふ",
+  },
+  {
+    slug: "flower",
+    label: "花",
+    kana: "はな",
   },
   {
     slug: "dolphin",
@@ -618,6 +638,11 @@ export const articleTags = [
     slug: "line",
     label: "LINE",
     kana: "らいん",
+  },
+  {
+    slug: "lotus",
+    label: "蓮",
+    kana: "はす",
   },
   {
     slug: "flood",
@@ -715,9 +740,19 @@ export const articleTags = [
     kana: "くも",
   },
   {
+    slug: "banana",
+    label: "バナナ",
+    kana: "ばなな",
+  },
+  {
     slug: "bondage",
     label: "束縛",
     kana: "そくばく",
+  },
+  {
+    slug: "break",
+    label: "休憩",
+    kana: "きゅうけい",
   },
   {
     slug: "destiny",
@@ -755,6 +790,16 @@ export const articleTags = [
     kana: "くじら",
   },
   {
+    slug: "wild",
+    label: "野生",
+    kana: "やせい",
+  },
+  {
+    slug: "wolf",
+    label: "狼",
+    kana: "おおかみ",
+  },
+  {
     slug: "cake",
     label: "ケーキ",
     kana: "けーき",
@@ -768,6 +813,16 @@ export const articleTags = [
     slug: "happiness",
     label: "幸福",
     kana: "こうふく",
+  },
+  {
+    slug: "jellyfish",
+    label: "クラゲ",
+    kana: "くらげ",
+  },
+  {
+    slug: "joy",
+    label: "喜び",
+    kana: "よろこび",
   },
   {
     slug: "ufo",
@@ -793,6 +848,11 @@ export const articleTags = [
     slug: "summer-festival",
     label: "夏祭り",
     kana: "なつまつり",
+  },
+  {
+    slug: "summer-vacation",
+    label: "夏休み",
+    kana: "なつやすみ",
   },
   {
     slug: "night",
@@ -828,6 +888,11 @@ export const articleTags = [
     slug: "effort",
     label: "努力",
     kana: "どりょく",
+  },
+  {
+    slug: "energy",
+    label: "エネルギー",
+    kana: "えねるぎー",
   },
   {
     slug: "excitement",
@@ -1100,6 +1165,16 @@ export const articleTags = [
     kana: "ぎじゅつ",
   },
   {
+    slug: "tropical",
+    label: "トロピカル",
+    kana: "とろぴかる",
+  },
+  {
+    slug: "tranquility",
+    label: "静けさ",
+    kana: "しずけさ",
+  },
+  {
     slug: "goal-achievement",
     label: "目標達成",
     kana: "もくひょうたっせい",
@@ -1113,6 +1188,11 @@ export const articleTags = [
     slug: "nature",
     label: "自然",
     kana: "しぜん",
+  },
+  {
+    slug: "nutrition",
+    label: "栄養",
+    kana: "えいよう",
   },
   {
     slug: "watermelon",
@@ -1363,11 +1443,6 @@ export const articleTags = [
     slug: "festival",
     label: "祭り",
     kana: "まつり",
-  },
-  {
-    slug: "flower",
-    label: "花",
-    kana: "はな",
   },
   {
     slug: "morning-glory",
