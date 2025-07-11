@@ -30,6 +30,11 @@ export const articleTags = [
     kana: "まよい",
   },
   {
+    slug: "innocence",
+    label: "純真",
+    kana: "じゅんしん",
+  },
+  {
     slug: "self-discovery",
     label: "自己探究",
     kana: "じこたんきゅう",
@@ -245,6 +250,11 @@ export const articleTags = [
     kana: "くだもの",
   },
   {
+    slug: "full-moon",
+    label: "満月",
+    kana: "まんげつ",
+  },
+  {
     slug: "melon",
     label: "メロン",
     kana: "めろん",
@@ -320,6 +330,11 @@ export const articleTags = [
     kana: "こううん",
   },
   {
+    slug: "gentleness",
+    label: "優しさ",
+    kana: "やさしさ",
+  },
+  {
     slug: "grace",
     label: "優雅",
     kana: "ゆうが",
@@ -358,6 +373,16 @@ export const articleTags = [
     slug: "competitiveness",
     label: "競争心",
     kana: "きょうそうしん",
+  },
+  {
+    slug: "completion",
+    label: "完成",
+    kana: "かんせい",
+  },
+  {
+    slug: "maturity",
+    label: "成熟",
+    kana: "せいじゅく",
   },
   {
     slug: "meat",
@@ -410,6 +435,11 @@ export const articleTags = [
     kana: "ひみつ",
   },
   {
+    slug: "sensitivity",
+    label: "敏感さ",
+    kana: "びんかんさ",
+  },
+  {
     slug: "new-environment",
     label: "新しい環境",
     kana: "あたらしいかんきょう",
@@ -440,6 +470,11 @@ export const articleTags = [
     kana: "みぎ",
   },
   {
+    slug: "romance",
+    label: "ロマンス",
+    kana: "ろまんす",
+  },
+  {
     slug: "crocodile",
     label: "ワニ",
     kana: "わに",
@@ -450,6 +485,11 @@ export const articleTags = [
     kana: "はんえい",
   },
   {
+    slug: "purity",
+    label: "純粋",
+    kana: "じゅんすい",
+  },
+  {
     slug: "rain",
     label: "雨",
     kana: "あめ",
@@ -458,6 +498,11 @@ export const articleTags = [
     slug: "purification",
     label: "浄化",
     kana: "じょうか",
+  },
+  {
+    slug: "ramune",
+    label: "ラムネ",
+    kana: "らむね",
   },
   {
     slug: "rabbit",
@@ -543,6 +588,11 @@ export const articleTags = [
     slug: "instinct",
     label: "本能",
     kana: "ほんのう",
+  },
+  {
+    slug: "intuition",
+    label: "直感",
+    kana: "ちょっかん",
   },
   {
     slug: "bee",
@@ -735,6 +785,11 @@ export const articleTags = [
     kana: "かいほう",
   },
   {
+    slug: "lily",
+    label: "百合",
+    kana: "ゆり",
+  },
+  {
     slug: "spider",
     label: "蜘蛛",
     kana: "くも",
@@ -833,6 +888,11 @@ export const articleTags = [
     slug: "curiosity",
     label: "好奇心",
     kana: "こうきしん",
+  },
+  {
+    slug: "deer",
+    label: "鹿",
+    kana: "しか",
   },
   {
     slug: "ship",
@@ -983,6 +1043,11 @@ export const articleTags = [
     slug: "eggplant",
     label: "茄子",
     kana: "なす",
+  },
+  {
+    slug: "emerald",
+    label: "エメラルド",
+    kana: "えめらるど",
   },
   {
     slug: "morning-sun",
@@ -1140,6 +1205,11 @@ export const articleTags = [
     kana: "あまい",
   },
   {
+    slug: "sweetness",
+    label: "甘さ",
+    kana: "あまさ",
+  },
+  {
     slug: "cooling",
     label: "冷却",
     kana: "れいきゃく",
@@ -1188,6 +1258,11 @@ export const articleTags = [
     slug: "nature",
     label: "自然",
     kana: "しぜん",
+  },
+  {
+    slug: "nostalgia",
+    label: "懐かしさ",
+    kana: "なつかしさ",
   },
   {
     slug: "nutrition",
@@ -1465,6 +1540,11 @@ export const articleTags = [
     kana: "きおく",
   },
   {
+    slug: "moon",
+    label: "月",
+    kana: "つき",
+  },
+  {
     slug: "red-spider-lily",
     label: "彼岸花",
     kana: "ひがんばな",
@@ -1473,5 +1553,10 @@ export const articleTags = [
     slug: "transience",
     label: "儚さ",
     kana: "はかなさ",
+  },
+  {
+    slug: "sapphire",
+    label: "サファイア",
+    kana: "さふぁいあ",
   },
 ];

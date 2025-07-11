@@ -391,6 +391,36 @@
       "description": "バナナの夢はエネルギーと豊かさの象徴。トロピカルフルーツが示す意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of ripe yellow bananas with natural lighting, energy symbolism, abundance meaning, tropical vitality, nutritional representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】桃の夢の意味！愛と美しさの甘い象徴",
+      "slug": "peach",
+      "mainKeyword": "桃 夢占い",
+      "tags": ["fruits", "love", "beauty", "sweetness", "romance", "abundance"],
+      "priority": "medium",
+      "description": "桃の夢は愛と美しさの甘い象徴。ピンク色の果実が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of fresh ripe peaches with soft pink color, love symbolism, beauty meaning, sweet romance, abundance representation, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】柿の夢の意味！秋の実りと成熟の智恵",
+      "slug": "persimmon",
+      "mainKeyword": "柿 夢占い",
+      "tags": ["fruits", "wisdom", "maturity", "abundance", "patience", "tradition"],
+      "priority": "medium",
+      "description": "柿の夢は秋の実りと成熟の智恵を象徴。オレンジ色の果実が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of ripe orange persimmons hanging on tree, autumn harvest, wisdom symbolism, maturity meaning, traditional Japanese fruit, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】葡萄の夢の意味！豊穣と繁栄の房状の恵み",
+      "slug": "grape",
+      "mainKeyword": "葡萄 夢占い",
+      "tags": ["fruits", "abundance", "prosperity", "wealth", "celebration", "wine"],
+      "priority": "medium",
+      "description": "葡萄の夢は豊穣と繁栄を象徴。房状に実る果実が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of purple grape clusters hanging on vine, abundance symbolism, prosperity meaning, wealth representation, harvest celebration, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
   "nature_elements": [
@@ -408,11 +438,21 @@
       "title": "【夢占い】満月の夢が示す完成と神秘的な力",
       "slug": "full-moon",
       "mainKeyword": "満月 夢占い",
-      "tags": ["full-moon", "completion", "mystery", "power", "cycle", "illumination"],
+      "tags": ["moon", "full-moon", "completion", "mystery", "spiritual", "power", "beauty", "night"],
       "priority": "high",
       "description": "満月の夢は完成と神秘的な力を象徴。月の満ちる意味を詳しく解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of bright full moon in night sky, mystical atmosphere, completion symbolism, lunar power, ethereal glow, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】赤い月の夢の意味！情熱と警告の神秘的なサイン",
+      "slug": "red-moon",
+      "mainKeyword": "赤い月 夢占い",
+      "tags": ["moon", "red", "mystery", "spiritual", "passion", "warning", "night"],
+      "priority": "high",
+      "description": "赤い月の夢は情熱と警告を象徴。血のような赤い月が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of dramatic red moon in dark night sky, mystical atmosphere, warning symbolism, passionate energy, supernatural glow, high quality photo --ar 16:9 --v 7 --style raw"
     },
     {
       "title": "【夢占い】桜の夢の意味！美しい瞬間と人生の儚さ",
@@ -577,6 +617,70 @@
       "description": "キツネの夢は狡猾さと神秘の力を象徴。賢い狐が示す意味を解説。",
       "imagePath": "src/images/mv.png",
       "imagePrompt": "A realistic photograph of clever fox with alert expression, cunning symbolism, mystery meaning, intelligence representation, spiritual significance, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "gemstones": [
+    {
+      "title": "【夢占い】サファイアの夢の意味！知恵と真実の青い輝き",
+      "slug": "sapphire",
+      "mainKeyword": "サファイア 夢占い",
+      "tags": ["sapphire", "jewelry", "blue", "wisdom", "truth", "spiritual", "beauty", "mystery"],
+      "priority": "high",
+      "description": "サファイアの夢は知恵と真実を象徴。青く美しい宝石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of brilliant blue sapphire gemstone with magical lighting, wisdom symbolism, truth representation, spiritual beauty, mystical blue radiance, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】エメラルドの夢の意味！癒しと成長の緑の宝石",
+      "slug": "emerald",
+      "mainKeyword": "エメラルド 夢占い",
+      "tags": ["emerald", "jewelry", "green", "healing", "growth", "spiritual", "beauty", "mystery", "nature"],
+      "priority": "high",
+      "description": "エメラルドの夢は癒しと成長を象徴。緑色の美しい宝石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of brilliant green emerald gemstone with natural lighting, healing symbolism, growth representation, spiritual beauty, mystical green radiance, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】アメジストの夢の意味！精神的な平和と高貴な紫",
+      "slug": "amethyst",
+      "mainKeyword": "アメジスト 夢占い",
+      "tags": ["jewelry", "spiritual", "peace", "wisdom", "beauty", "mystery", "protection"],
+      "priority": "high",
+      "description": "アメジストの夢は精神的な平和と高貴さを象徴。紫色の宝石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of brilliant purple amethyst gemstone with ethereal lighting, peace symbolism, spiritual wisdom, mystical purple radiance, noble beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】ターコイズの夢の意味！保護と幸運の青緑色",
+      "slug": "turquoise",
+      "mainKeyword": "ターコイズ 夢占い",
+      "tags": ["jewelry", "protection", "good-luck", "spiritual", "beauty", "mystery", "healing"],
+      "priority": "medium",
+      "description": "ターコイズの夢は保護と幸運を象徴。青緑色の石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of beautiful turquoise gemstone with soft lighting, protection symbolism, good luck meaning, spiritual beauty, blue-green radiance, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】ダイヤモンドの夢の意味！永遠の輝きと純粋な力",
+      "slug": "diamond",
+      "mainKeyword": "ダイヤモンド 夢占い",
+      "tags": ["jewelry", "purity", "power", "beauty", "wealth", "love", "spiritual"],
+      "priority": "high",
+      "description": "ダイヤモンドの夢は永遠の輝きと純粋な力を象徴。最高の宝石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of brilliant diamond gemstone with dazzling light reflection, purity symbolism, eternal beauty, powerful radiance, luxurious sparkle, high quality photo --ar 16:9 --v 7 --style raw"
+    }
+  ],
+  "places": [
+    {
+      "title": "【夢占い】港町に住む夢の意味！新しい環境と海への憧れ",
+      "slug": "harbor-town",
+      "mainKeyword": "港町 夢占い",
+      "tags": ["sea", "new-environment", "adventure", "freedom", "change", "ship"],
+      "priority": "medium",
+      "description": "港町に住む夢は新しい環境と海への憧れを象徴。港の町での生活が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of picturesque harbor town with boats and sea, coastal living, adventure symbolism, freedom meaning, new environment representation, high quality photo --ar 16:9 --v 7 --style raw"
     }
   ],
   "emotions": [
