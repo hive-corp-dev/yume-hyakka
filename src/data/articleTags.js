@@ -140,6 +140,11 @@ export const articleTags = [
     kana: "じこ",
   },
   {
+    slug: "achievement",
+    label: "達成",
+    kana: "たっせい",
+  },
+  {
     slug: "adaptability",
     label: "適応性",
     kana: "てきおうせい",
@@ -380,6 +385,11 @@ export const articleTags = [
     kana: "かんせい",
   },
   {
+    slug: "mansion",
+    label: "豪邸",
+    kana: "ごうてい",
+  },
+  {
     slug: "maturity",
     label: "成熟",
     kana: "せいじゅく",
@@ -443,6 +453,11 @@ export const articleTags = [
     slug: "new-environment",
     label: "新しい環境",
     kana: "あたらしいかんきょう",
+  },
+  {
+    slug: "new-life",
+    label: "新しい人生",
+    kana: "あたらしいじんせい",
   },
   {
     slug: "airplane",
@@ -810,6 +825,11 @@ export const articleTags = [
     kana: "きゅうけい",
   },
   {
+    slug: "buying",
+    label: "購入",
+    kana: "こうにゅう",
+  },
+  {
     slug: "destiny",
     label: "運命",
     kana: "うんめい",
@@ -940,6 +960,11 @@ export const articleTags = [
     kana: "あり",
   },
   {
+    slug: "ascension",
+    label: "昇天",
+    kana: "しょうてん",
+  },
+  {
     slug: "diligence",
     label: "勤勉さ",
     kana: "きんべんさ",
@@ -985,6 +1010,11 @@ export const articleTags = [
     kana: "りゅう",
   },
   {
+    slug: "amethyst",
+    label: "アメジスト",
+    kana: "あめじすと",
+  },
+  {
     slug: "ambulance",
     label: "救急車",
     kana: "きゅうきゅうしゃ",
@@ -1023,6 +1053,11 @@ export const articleTags = [
     slug: "ideal",
     label: "理想",
     kana: "りそう",
+  },
+  {
+    slug: "independence",
+    label: "自立",
+    kana: "じりつ",
   },
   {
     slug: "connection",
@@ -1150,6 +1185,11 @@ export const articleTags = [
     kana: "こどく",
   },
   {
+    slug: "luxury",
+    label: "贅沢",
+    kana: "ぜいたく",
+  },
+  {
     slug: "spiderweb",
     label: "蜘蛛の巣",
     kana: "くものす",
@@ -1263,6 +1303,11 @@ export const articleTags = [
     slug: "nostalgia",
     label: "懐かしさ",
     kana: "なつかしさ",
+  },
+  {
+    slug: "mythical",
+    label: "神話的",
+    kana: "しんわてき",
   },
   {
     slug: "nutrition",

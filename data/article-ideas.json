@@ -211,6 +211,46 @@
       "imagePrompt": "A realistic photograph of summer vacation scene with luggage and beach items, freedom symbolism, liberation meaning, relaxation atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
     },
     {
+      "title": "【夢占い】龍の背中に乗る夢の意味！神秘の力と天への旅",
+      "slug": "riding-dragon",
+      "mainKeyword": "龍の背中に乗る 夢占い",
+      "tags": ["dragon", "mythical", "power", "spiritual", "ascension", "adventure"],
+      "priority": "high",
+      "description": "龍の背中に乗る夢は神秘的な力と天への旅を象徴。壮大な冒険の意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic artistic photograph of majestic dragon flying through clouds with rider, mythical power, spiritual ascension, divine journey, mystical atmosphere, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】車を買う夢の意味！新しい人生と自立の象徴",
+      "slug": "buying-car",
+      "mainKeyword": "車を買う 夢占い",
+      "tags": ["car", "buying", "independence", "freedom", "new-life", "achievement"],
+      "priority": "high",
+      "description": "車を買う夢は新しい人生と自立を象徴。自分の力で何かを手に入れる意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of person receiving car keys at dealership, achievement symbolism, independence meaning, new beginning representation, freedom concept, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】豪邸に住む夢の意味！成功と富の象徴",
+      "slug": "living-in-mansion",
+      "mainKeyword": "豪邸に住む 夢占い",
+      "tags": ["mansion", "luxury", "wealth", "success", "achievement", "prosperity"],
+      "priority": "high",
+      "description": "豪邸に住む夢は成功と富を象徴。大きな家での生活が示す意味を解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of luxurious mansion with elegant architecture, wealth symbolism, success meaning, prosperity representation, grand living space, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
+      "title": "【夢占い】アメジストの夢の意味！精神的な平和と高貴な紫",
+      "slug": "amethyst",
+      "mainKeyword": "アメジスト 夢占い",
+      "tags": ["amethyst", "jewelry", "spiritual", "peace", "wisdom", "beauty", "mystery", "protection"],
+      "priority": "high",
+      "description": "アメジストの夢は精神的な平和と高貴さを象徴。紫色の宝石が示す意味を詳しく解説。",
+      "imagePath": "src/images/mv.png",
+      "imagePrompt": "A realistic photograph of brilliant purple amethyst gemstone with ethereal lighting, peace symbolism, spiritual wisdom, mystical purple radiance, noble beauty, high quality photo --ar 16:9 --v 7 --style raw"
+    },
+    {
       "title": "【夢占い】夏の夢の意味！青春と情熱の季節",
       "slug": "summer-dreams",
       "mainKeyword": "夏の夢 夢占い",
