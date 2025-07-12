@@ -555,11 +555,6 @@ export const articleTags = [
     kana: "ながれぼし",
   },
   {
-    slug: "goal-achievement",
-    label: "目標達成",
-    kana: "もくひょうたっせい",
-  },
-  {
     slug: "wish",
     label: "願望",
     kana: "がんぼう",
