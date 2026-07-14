@@ -16,7 +16,7 @@ import { IoFolderOutline } from "react-icons/io5";
 export async function getStaticPaths() {
   const columnEntries = await getCollection('column');
   return columnEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { slug: entry.id }, props: { entry },
   }));
 }
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる

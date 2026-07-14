@@ -6,6 +6,8 @@ import sitemap from "@astrojs/sitemap";
 import partytown from "@astrojs/partytown";
 import remarkLinkCard from "remark-link-card";
 
+const srcDir = new URL("./src/", import.meta.url).pathname;
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://yume-hyakka.com",
@@ -14,8 +16,8 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           additionalData: `
-          @use "./src/styles/_mixin.scss" as mixin;
-          @use "./src/styles/_var.scss" as var;
+          @use "${srcDir}styles/_mixin.scss" as mixin;
+          @use "${srcDir}styles/_var.scss" as var;
           `,
         },
       },

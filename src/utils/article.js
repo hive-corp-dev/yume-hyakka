@@ -17,7 +17,7 @@ export const getRelatedArticles = (currentArticle, allArticles, limit = 6) => {
   
   // 現在の記事を除外
   const otherArticles = allArticles.filter(article => 
-    article.slug !== currentArticle.slug && article.data.isDraft === false
+    article.id !== currentArticle.id && article.data.isDraft === false
   );
   
   // 各記事に対して関連度スコアを計算

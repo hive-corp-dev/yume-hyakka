@@ -1,9 +1,9 @@
-// 1. `astro:content`からユーティリティをインポート
-import { z, defineCollection } from "astro:content";
-// 2. コレクションを定義
+import { defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
+
 const articleCollection = defineCollection({
-  /* ... */
-  type: "content",
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/article" }),
   schema: ({ image }) =>
     z.object({
       isDraft: z.boolean(),
@@ -26,6 +26,7 @@ const articleCollection = defineCollection({
           "ex-partner",
           "future",
           "relationships",
+          "friend",
           "left",
           "being-late",
           "upset",
@@ -238,6 +239,7 @@ const articleCollection = defineCollection({
           "hornet",
           "owl",
           "teacher",
+          "school",
           "casino",
           "roulette",
           "jewelry",
@@ -262,6 +264,7 @@ const articleCollection = defineCollection({
           "blue",
           "food",
           "cold",
+          "snow",
           "refreshing",
           "sweet",
           "sweetness",
@@ -331,6 +334,7 @@ const articleCollection = defineCollection({
           "morning-glory",
           "morning",
           "childhood",
+          "baby",
           "red-spider-lily",
           "transience",
           "vision",
@@ -343,8 +347,7 @@ const articleCollection = defineCollection({
 });
 
 const columnCollection = defineCollection({
-  /* ... */
-  type: "content",
+  loader: glob({ pattern: "**/*.mdx", base: "./src/content/column" }),
   schema: ({ image }) =>
     z.object({
       isDraft: z.boolean(),

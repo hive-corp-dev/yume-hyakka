@@ -1,6 +1,7 @@
 ---
+import { render } from "astro:content";
 const { entry, components = {} } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 import OuterLink from "@components/Parts/OuterLink.astro";
 import AmazonCard from "@components/Column/AmazonCard.astro";
 ---

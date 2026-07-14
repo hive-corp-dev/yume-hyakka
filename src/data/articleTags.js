@@ -10,6 +10,11 @@ export const articleTags = [
     kana: "へび",
   },
   {
+    slug: "baby",
+    label: "赤ちゃん",
+    kana: "あかちゃん",
+  },
+  {
     slug: "white-snake",
     label: "白蛇",
     kana: "しろへび",
@@ -78,6 +83,11 @@ export const articleTags = [
     slug: "relationships",
     label: "人間関係",
     kana: "にんげんかんけい",
+  },
+  {
+    slug: "friend",
+    label: "友達",
+    kana: "ともだち",
   },
   {
     slug: "left",
@@ -1120,6 +1130,11 @@ export const articleTags = [
     kana: "せんせい",
   },
   {
+    slug: "school",
+    label: "学校",
+    kana: "がっこう",
+  },
+  {
     slug: "casino",
     label: "カジノ",
     kana: "かじの",
@@ -1205,6 +1220,11 @@ export const articleTags = [
     kana: "こうもり",
   },
   {
+    slug: "beetle",
+    label: "カブトムシ",
+    kana: "かぶとむし",
+  },
+  {
     slug: "swimming",
     label: "水泳",
     kana: "すいえい",
@@ -1228,6 +1248,11 @@ export const articleTags = [
     slug: "cold",
     label: "冷たい",
     kana: "つめたい",
+  },
+  {
+    slug: "snow",
+    label: "雪",
+    kana: "ゆき",
   },
   {
     slug: "refreshing",

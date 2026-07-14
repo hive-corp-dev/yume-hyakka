@@ -21,7 +21,7 @@ import { Image } from 'astro:assets';
 export async function getStaticPaths() {
   const articleEntries = await getCollection('article');
   return articleEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { slug: entry.id }, props: { entry },
   }));
 }
 // 2. テンプレートでは、プロパティからエントリーを直接取得できる
