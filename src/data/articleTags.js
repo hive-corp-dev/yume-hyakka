@@ -80,6 +80,21 @@ export const articleTags = [
     kana: "みらい",
   },
   {
+    slug: "door",
+    label: "ドア",
+    kana: "どあ",
+  },
+  {
+    slug: "clock",
+    label: "時計",
+    kana: "とけい",
+  },
+  {
+    slug: "window",
+    label: "窓",
+    kana: "まど",
+  },
+  {
     slug: "relationships",
     label: "人間関係",
     kana: "にんげんかんけい",
@@ -88,6 +103,11 @@ export const articleTags = [
     slug: "friend",
     label: "友達",
     kana: "ともだち",
+  },
+  {
+    slug: "wedding",
+    label: "結婚式",
+    kana: "けっこんしき",
   },
   {
     slug: "left",
@@ -228,6 +248,11 @@ export const articleTags = [
     slug: "money",
     label: "お金",
     kana: "おかね",
+  },
+  {
+    slug: "wallet",
+    label: "財布",
+    kana: "さいふ",
   },
   {
     slug: "sunflower",
@@ -455,6 +480,11 @@ export const articleTags = [
     kana: "ひみつ",
   },
   {
+    slug: "key",
+    label: "鍵",
+    kana: "かぎ",
+  },
+  {
     slug: "sensitivity",
     label: "敏感さ",
     kana: "びんかんさ",
@@ -473,6 +503,16 @@ export const articleTags = [
     slug: "airplane",
     label: "飛行機",
     kana: "ひこうき",
+  },
+  {
+    slug: "airport",
+    label: "空港",
+    kana: "くうこう",
+  },
+  {
+    slug: "travel",
+    label: "旅行",
+    kana: "りょこう",
   },
   {
     slug: "adventure",
@@ -625,6 +665,11 @@ export const articleTags = [
     kana: "きょうちょうせい",
   },
   {
+    slug: "penguin",
+    label: "ペンギン",
+    kana: "ぺんぎん",
+  },
+  {
     slug: "warning",
     label: "警告",
     kana: "けいこく",
@@ -648,6 +693,11 @@ export const articleTags = [
     slug: "flower",
     label: "花",
     kana: "はな",
+  },
+  {
+    slug: "bouquet",
+    label: "花束",
+    kana: "はなたば",
   },
   {
     slug: "dolphin",
@@ -698,6 +748,11 @@ export const articleTags = [
     slug: "zombie",
     label: "ゾンビ",
     kana: "ぞんび",
+  },
+  {
+    slug: "river",
+    label: "川",
+    kana: "かわ",
   },
   {
     slug: "water",
@@ -880,6 +935,11 @@ export const articleTags = [
     kana: "おおかみ",
   },
   {
+    slug: "fox",
+    label: "狐",
+    kana: "きつね",
+  },
+  {
     slug: "cake",
     label: "ケーキ",
     kana: "けーき",
@@ -888,6 +948,11 @@ export const articleTags = [
     slug: "celebration",
     label: "祝祭",
     kana: "しゅくさい",
+  },
+  {
+    slug: "present",
+    label: "プレゼント",
+    kana: "ぷれぜんと",
   },
   {
     slug: "happiness",
@@ -1030,6 +1095,31 @@ export const articleTags = [
     kana: "たくしー",
   },
   {
+    slug: "bus",
+    label: "バス",
+    kana: "ばす",
+  },
+  {
+    slug: "train",
+    label: "電車",
+    kana: "でんしゃ",
+  },
+  {
+    slug: "station",
+    label: "駅",
+    kana: "えき",
+  },
+  {
+    slug: "bridge",
+    label: "橋",
+    kana: "はし",
+  },
+  {
+    slug: "stairs",
+    label: "階段",
+    kana: "かいだん",
+  },
+  {
     slug: "cherry-blossom",
     label: "桜",
     kana: "さくら",
@@ -1135,6 +1225,16 @@ export const articleTags = [
     kana: "がっこう",
   },
   {
+    slug: "classmate",
+    label: "同級生",
+    kana: "どうきゅうせい",
+  },
+  {
+    slug: "exam",
+    label: "試験",
+    kana: "しけん",
+  },
+  {
     slug: "casino",
     label: "カジノ",
     kana: "かじの",
@@ -1148,6 +1248,11 @@ export const articleTags = [
     slug: "jewelry",
     label: "宝石",
     kana: "ほうせき",
+  },
+  {
+    slug: "ring",
+    label: "指輪",
+    kana: "ゆびわ",
   },
   {
     slug: "ruby",
@@ -1240,6 +1345,16 @@ export const articleTags = [
     kana: "あお",
   },
   {
+    slug: "ramen",
+    label: "ラーメン",
+    kana: "らーめん",
+  },
+  {
+    slug: "bread",
+    label: "パン",
+    kana: "ぱん",
+  },
+  {
     slug: "food",
     label: "食べ物",
     kana: "たべもの",
@@ -1318,6 +1433,11 @@ export const articleTags = [
     slug: "nature",
     label: "自然",
     kana: "しぜん",
+  },
+  {
+    slug: "forest",
+    label: "森",
+    kana: "もり",
   },
   {
     slug: "nostalgia",
@@ -1475,6 +1595,11 @@ export const articleTags = [
     kana: "あんてい",
   },
   {
+    slug: "elephant",
+    label: "象",
+    kana: "ぞう",
+  },
+  {
     slug: "phoenix",
     label: "鳳凰",
     kana: "ほうおう",
@@ -1603,6 +1728,11 @@ export const articleTags = [
     slug: "memory",
     label: "記憶",
     kana: "きおく",
+  },
+  {
+    slug: "photo",
+    label: "写真",
+    kana: "しゃしん",
   },
   {
     slug: "moon",
